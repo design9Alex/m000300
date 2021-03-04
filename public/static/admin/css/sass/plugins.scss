@@ -1,0 +1,35 @@
+/*!
+ * Plugins
+ *
+ * @version 1.0.0 2018/01/01 00:00
+ * @author Jean <Jean@youweb.tw>
+ * @copyright (c) youweb.tw
+ * @link http://youweb.tw/
+ */
+
+/// ---------------------------------------------------------------------------
+/// Setups
+/// ---------------------------------------------------------------------------
+@import "../../../modules/bootstrap4/scss/functions";
+@import "config/_bootstrapConfig.scss";
+@import "../../../modules/bootstrap4/scss/variables";
+@import "../../../modules/bootstrap4/scss/mixins";
+@import "config/_config.scss";
+/// ---------------------------------------------------------------------------
+/// Plugins
+/// ---------------------------------------------------------------------------
+@import "plugins/bootstrap-select";
+@import "plugins/clipboard";
+@import "plugins/dataTables";
+@import "plugins/maxlength";
+@import "plugins/multiselect";
+@import "plugins/select2";
+@import "plugins/slimScroll";
+@import "plugins/typeahead";
+@import "plugins/docs";
+@import "plugins/jstree";
+@import "plugins/bootstrap-tagsinput";
+/// ---------------------------------------------------------------------------
+/// oter
+/// ---------------------------------------------------------------------------
+@import "plugins/highlight.scss";

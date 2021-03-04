@@ -1,0 +1,108 @@
+@charset "UTF-8";
+.markdown {
+  padding: 1rem; }
+  .markdown * {
+    color: #2c3e50;
+    font-family: "Roboto", Meiryo, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", "Segoe UI Emoji", "Segoe UI Symbol", "Apple Color Emoji", "Noto Color Emoji", "Noto Emoji", sans-serif, Arial;
+    outline: none;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    font-size: 16px; }
+  .markdown a, .markdown p a code {
+    color: #469fd6;
+    font-weight: 500;
+    text-decoration: none;
+    background-color: transparent; }
+  .markdown em {
+    color: #878787; }
+  .markdown code {
+    display: inline-block;
+    color: #476582;
+    padding: .25rem .5rem;
+    margin: 0 5px;
+    background-color: rgba(27, 31, 35, 0.05);
+    border-radius: 3px; }
+  .markdown blockquote {
+    border-left: 5px solid #dfe2e5;
+    padding-left: 15px;
+    margin-left: 0;
+    margin-top: 2rem;
+    color: #878787; }
+  .markdown strong, .markdown strong em {
+    font-weight: 600;
+    color: #2c3e50; }
+  .markdown ol, .markdown p, .markdown ul {
+    line-height: 1.7; }
+  .markdown ol, .markdown ul {
+    padding-left: 1.2em; }
+  .markdown ol, .markdown ul, .markdown dl {
+    margin-top: 0;
+    margin-bottom: 1rem; }
+  .markdown li {
+    line-height: 1.7;
+    margin-bottom: 3px; }
+  .markdown *, .markdown *::before, .markdown *::after {
+    box-sizing: border-box; }
+  .markdown h1, .markdown h2, .markdown h3, .markdown h4, .markdown h5, .markdown h6 {
+    font-weight: 600;
+    line-height: 1.25; }
+  .markdown h2, .markdown h3, .markdown h4 {
+    margin-bottom: 1rem; }
+  .markdown h1, .markdown h1 a {
+    font-size: 2.2rem; }
+  .markdown h2, .markdown h2 a {
+    font-size: 1.65rem; }
+  .markdown h3, .markdown h3 a {
+    font-size: 1.3rem; }
+  .markdown h4, .markdown h4 a {
+    font-size: 1.2rem; }
+  .markdown h1 {
+    border-bottom: 2px solid #000; }
+  .markdown h2 {
+    border-bottom: 1px solid #eaecef; }
+  .markdown h3:before {
+    content: '➤  ';
+    color: #000000;
+    margin-right: 15px; }
+  .markdown h1 {
+    margin-top: 0; }
+  .markdown h1, .markdown h2 {
+    padding-bottom: 1rem; }
+  .markdown h1, .markdown h2, .markdown h3, .markdown h4 {
+    line-height: 1.25;
+    margin-bottom: 2rem; }
+    .markdown h1:first-child + p, .markdown h2:first-child + p, .markdown h3:first-child + p, .markdown h4:first-child + p {
+      margin-top: 2rem; }
+  .markdown h2, .markdown h3, .markdown h4 {
+    margin-top: 4.6rem; }
+  .markdown h1 + h2, .markdown h2 + h3, .markdown h3 + h4, .markdown h4 + h5, .markdown h5 + h6 {
+    margin-top: 2rem; }
+  .markdown h5, .markdown h6 {
+    margin-top: -2.1rem;
+    padding-top: 2.6rem; }
+  .markdown img {
+    max-width: 100%;
+    border: 1px solid #dee2e6;
+    vertical-align: middle; }
+  .markdown table {
+    border-collapse: collapse;
+    margin: 1rem 0;
+    display: block;
+    border-spacing: 2px;
+    overflow-x: auto; }
+    .markdown table > tr:last-child {
+      border-bottom: 1px solid #dfe2e5; }
+    .markdown table td, .markdown table th {
+      padding: .6em 1em; }
+    .markdown table th {
+      color: #666f86;
+      background-color: #f8f9fa;
+      white-space: nowrap; }
+    .markdown table tr {
+      display: table-row;
+      vertical-align: inherit;
+      border-color: inherit;
+      border-top: 1px solid #dfe2e5; }
+    .markdown table td {
+      display: table-cell;
+      vertical-align: inherit; }

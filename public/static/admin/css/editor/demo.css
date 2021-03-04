@@ -1,0 +1,11 @@
+div.demo {
+    background: #f3f3f3;
+    box-sizing: border-box;
+    padding: 15px;
+    margin: 0 auto;
+    max-width: 730px;
+}
+
+div.demo img {
+    max-width: 100%;
+}

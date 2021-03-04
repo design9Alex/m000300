@@ -1,0 +1,157 @@
+
+/* -----------------------------------------
+   Default styles
+----------------------------------------- */
+a,
+button {
+  outline: none;
+}
+[v-cloak] {
+  display: none;
+}
+/* -----------------------------------------
+   Default-size styles
+----------------------------------------- */
+.container-xl {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.container-lg {
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.container-md {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.container-sm {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+$calc-margin:           20px;
+.h-10-c{
+  height: calc(10% - 20px);
+}
+.h-20-c{
+  height: calc(20% - 20px);
+}
+.h-30-c{
+  height: calc(30% - 20px);
+}
+.h-35-c{
+  height: calc(35% - 20px);
+}
+.h-40-c{
+  height: calc(40% - 20px);
+}
+.h-45-c{
+  height: calc(45% - 20px);
+}
+.h-50-c{
+  height: calc(50% - 20px);
+}
+.h-55-c{
+  height: calc(55% - 20px);
+}
+.h-60-c{
+  height: calc(60% - 20px);
+}
+.h-70-c{
+  height: calc(70% - 20px);
+}
+.h-80-c{
+  height: calc(80% - 20px);
+}
+.h-90-c{
+  height: calc(90% - 20px);
+}
+.h-100-c{
+  height: calc(100% - 20px);
+}
+.h-space-20 {
+  display: block;
+  height: 0;
+  margin-bottom: 20px;
+}
+/* -----------------------------------------
+   Default-font styles
+----------------------------------------- */
+.text-break-all {
+  word-break: break-all;
+}
+.text-break-word {
+  word-break: break-word;
+}
+.text-pre-line {
+  white-space: pre-line!important;
+}
+.no-focus {
+  border-color: inherit!important;
+  box-shadow: inherit!important;
+}
+.t-d-none {
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
+/* -----------------------------------------
+   Default-img styles
+----------------------------------------- */
+.imgFill {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+.thumb{
+  display: inline-block;
+}
+
+/* -----------------------------------------
+   Default-place styles
+----------------------------------------- */
+.o-h {
+  overflow: hidden;
+}
+.border-box {
+  box-sizing: border-box!important;
+}
+.center {
+  position: absolute;
+  left: 50%;
+  top: 70%;
+  bottom: auto;
+  right: auto;
+  transform: translateX(-50%) translateY(-50%);
+  text-align: center;
+}
+
+
+.noscroll{
+  overflow: hidden;
+  height: 100vh;
+
+
+}
+/* -----------------------------------------
+   Default-ui styles
+----------------------------------------- */
+.line-b {
+  border-bottom: 1px solid $input-border-color;
+}
+.i-o {
+  opacity: 0.3;
+}

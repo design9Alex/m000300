@@ -1,0 +1,437 @@
+/* -----------------------------------------
+   Common styles
+----------------------------------------- */
+
+.wrapper {
+  overflow: hidden;
+}
+.left-width {
+  width: $left-width;
+  .max-md-size .page-header & {
+    width: inherit;
+  }
+}
+.a-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
+}
+/* -----------------------------------------
+   Common-nav styles
+----------------------------------------- */
+.nav-tabs {
+  border-bottom: 1px solid rgba(33, 33, 33, 0.1);
+  .nav-link {
+    color: inherit;
+    &.active {
+      color: $main;
+    }
+  }
+}
+/* -----------------------------------------
+   Common-font styles
+----------------------------------------- */
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  font-weight: normal;
+}
+/* -----------------------------------------
+   Common-html styles
+----------------------------------------- */
+.html {
+  line-height: 1.8rem;
+  h1,
+  .h1,
+  h2,
+  .h2,
+  h3,
+  .h3,
+  h4,
+  .h4,
+  h5,
+  .h5,
+  h6,
+  .h6 {
+    color: #000;
+    line-height: 2.5rem;
+    font-weight: normal;
+    @include media-breakpoint-down(lg) {
+      line-height: 2rem;
+    }
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  a {
+    color: inherit;
+  }
+  br {
+    line-height: 1.5rem;
+    @include media-breakpoint-down(md) {
+      line-height: 1rem;
+    }
+  }
+  text-align: justify;
+}
+/* -----------------------------------------
+   Common-img styles
+----------------------------------------- */
+.image-container {
+  display: inline-block;
+}
+
+.thumb {
+  background-color: #fff;
+  padding: 3px;
+  border: 1px solid #dee2e6;
+  display: inline-block;
+  font-size: 0;
+  @include media-breakpoint-down(md) {
+    padding: 1px;
+  }
+  span {
+    width: 80px;
+    height: 60px;
+    display: inline-block;
+    @include media-breakpoint-down(md) {
+      width: 40px;
+      height: 30px;
+    }
+  }
+}
+.thumb-sm {
+  span {
+    width: 35px!important;
+    height: 35px!important;
+  }
+}
+
+.thumb-80 {
+  .thumb {
+    span {
+      width: 80px;
+      height: 80px;
+      @include media-breakpoint-down(md) {
+        width: 50px;
+        height: 50px;
+      }
+    }
+  }
+}
+/* -----------------------------------------
+   Common-table styles
+----------------------------------------- */
+
+.table {
+  thead {
+    th {
+      white-space: nowrap;
+    }
+  }
+  td {
+    .thumb {
+      span {
+        width: 80px;
+        height: 60px;
+        @include media-breakpoint-down(md) {
+          width: 40px;
+          height: 30px;
+        }
+      }
+    }
+  }
+}
+
+.talbe-sort {
+  .form-control {
+    width: 47px;
+    font-size: 11px;
+    margin-right: 5px;
+  }
+}
+.table-search-input {
+  @include media-breakpoint-down(lg) {
+    width: 100px!important;
+  }
+  @include media-breakpoint-down(sm) {
+    width: 100% !important;
+  }
+}
+
+#fileContent {
+  .table-search-input {
+    width: 100px !important;
+  }
+  .file-nav {
+    display: none;
+  }
+}
+/* -----------------------------------------
+   Common-ui styles
+----------------------------------------- */
+hr {
+  @include media-breakpoint-down(xs) {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+}
+.btn{
+  i{
+    line-height: $line-height-base;
+  }
+}
+.btn-lg{
+  i{
+    line-height: $line-height-lg;
+  }
+}
+
+.min-w-select {
+  min-width: 110px;
+}
+
+.badge-num {
+  width: 22px;
+  height: 22px;
+  line-height: 22px;
+  vertical-align: middle;
+  padding: 0;
+  text-align: center;
+  font-weight: normal;
+}
+.accordion-hover-btn {
+  position: relative;
+}
+.autoHeight{
+  min-height: 38px !important;
+}
+/* -----------------------------------------
+   Common-from styles
+----------------------------------------- */
+.form-btn-group {
+  .btn {
+    min-width: 150px;
+    @include media-breakpoint-down(sm) {
+      min-width: inherit;
+    }
+  }
+}
+
+.file-img {
+  .card {
+    width: 108px;
+    border: 0;
+    margin-right: 5px;
+    a {
+      background-color: #fff;
+      padding: 3px;
+      border: 1px solid $table-border-color;
+      display: inline-block;
+      text-align: center;
+      span {
+        width: 100px;
+        height: 100px;
+        display: inline-block;
+        @include media-breakpoint-down(md) {
+          width: 100px;
+          height: 100px;
+        }
+        i {
+          font-size: 80px;
+        }
+      }
+    }
+    .card-title {
+      margin: 0;
+      font-size: 12px;
+      overflow: hidden;
+      text-align: center;
+      padding: 0 3px;
+      height: 40px;
+    }
+    .card-body {
+      padding: 0;
+    }
+    .custom-control {
+      margin: 0;
+      position: absolute;
+      top: 0;
+      right: -2px;
+    }
+  }
+  .file-icon {
+    a {
+      i {
+        color: #ccc;
+      }
+    }
+  }
+  .file-folder a i {
+    color: #F7CA18;
+    font-size: 100px;
+  }
+}
+
+.file-img-list {
+  .card {
+    width: 138px;
+    border: 0;
+    margin-right: 5px;
+    .thumb {
+      margin-bottom: 5px;
+      span {
+        width: 130px;
+        height: 130px;
+      }
+    }
+    .card-title {
+      margin: 0;
+      font-size: 12px;
+      overflow: hidden;
+      text-align: center;
+      padding: 0 3px;
+      height: 40px;
+    }
+    .card-body {
+      padding: 0;
+    }
+    .custom-control {
+      margin: 0;
+      position: absolute;
+      top: 0;
+      right: -2px;
+    }
+    .btn-group-sm>.btn {
+      padding: 0.3rem 0.3rem;
+      font-size: 0.8rem;
+      line-height: 1;
+    }
+    .btn-group{
+      .btn{
+        line-height: 0.95rem;
+      }
+    }
+  }
+}
+
+.inbox-img-list {
+  .card {
+    width: 138px;
+    border: 0;
+    margin-right: 5px;
+    .thumb {
+      margin-bottom: 5px;
+      span {
+        width: 130px;
+        height: 130px;
+      }
+    }
+    .card-title {
+      margin: 0;
+      font-size: 12px;
+      overflow: hidden;
+      text-align: center;
+      padding: 0 3px;
+      height: 40px;
+    }
+    .card-body {
+      padding: 0;
+    }
+    .custom-control {
+      margin: 0;
+      position: absolute;
+      top: 0;
+      right: -2px;
+    }
+    .btn-group-sm>.btn {
+      padding: 0.3rem 0.3rem;
+      font-size: 0.8rem;
+      line-height: 1;
+    }
+    .btn-group{
+      .btn{
+        line-height: 0.95rem;
+      }
+    }
+  }
+}
+.jcrop-wp {
+  position: relative;
+  .jcrop-mark {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 3;
+    background: rgba(0, 0, 0, 0.3);
+  }
+  img {
+    z-index: 2;
+  }
+  .jcrop-holder {
+    z-index: 1;
+  }
+}
+
+/* -----------------------------------------
+   Common-timeline styles
+----------------------------------------- */
+.timeline{
+  margin: 0 0 30px;
+  padding: 0;
+  position: relative;
+  &:before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 4px;
+    background: #f5f6fa;
+    top: 20px;
+    bottom: 0;
+    margin-left: 38px
+  }
+  .timeline-badge{
+     margin-top: 20px;
+  }
+
+  .icon-c{
+    margin-left: 25px;
+    width: 40px;
+    height: 40px;
+    border:4px solid #f5f6fa;
+    background-color: #fff;
+    padding: 5px;
+
+  }
+  .timeline-body.talk{
+    padding: 20px;
+    background-color: #f5f6fa;
+    border-radius: 4px;
+    &:before{
+      content: '';
+      display: inline-block;
+      position: absolute;
+      top: 20px;
+      left: -10px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 10px 10px 10px 0;
+      border-color: transparent #f5f6fa transparent transparent
+    }
+  }
+
+}
+

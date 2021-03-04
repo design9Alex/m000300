@@ -1,0 +1,8 @@
+*
+!admin/
+!admin/**
+!analytics/
+!font/
+!font/**
+!public/
+!.gitignore

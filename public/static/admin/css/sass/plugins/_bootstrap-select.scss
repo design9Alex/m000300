@@ -1,0 +1,61 @@
+/**-- bootstrap-select.js  bootstrap3改4用---------------------------- */
+
+.bs-select {
+    .btn {
+        &:hover,
+        &:focus,
+        &:active {
+            color: inherit !important;
+            background-color: inherit !important;
+            box-shadow: inherit !important;
+        }
+    }
+    .btn-outline-light.dropdown-toggle {
+        color: inherit!important;
+        background-color: inherit !important;
+        border-color: #dee2e6;
+    }
+    .bs-caret{
+        display: none;
+    }
+    .dropdown-toggle{
+        position: relative;
+    }
+
+    .btn-sm{
+        height: 31px;
+    }
+}
+
+.bs-select.show {
+    .dropdown-menu {
+        max-height: 316px !important;
+    }
+    .inner {
+        max-height: 272px !important;
+    }
+    .bs-searchbox + .inner {
+        max-height: 226px !important;
+    }
+    .bs-actionsbox + .inner {
+        max-height: 239px !important;
+    }
+    .bs-searchbox + .bs-actionsbox + .inner {
+        max-height: 193px !important;
+    }
+}
+
+.bs-select.bootstrap-select.btn-group .dropdown-menu {
+    margin-top: 0px;
+    border: 1px solid #eee;
+}
+
+.bootstrap-select.btn-group .dropdown-menu li.selected a,
+.dropdown-menu a.selected {
+    background:$main!important;
+    color: #fff;
+
+}
+.bootstrap-select.btn-group li.hidden{
+    display: none;
+}
