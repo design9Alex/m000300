@@ -1,0 +1,77 @@
+.faq{display:flex;
+    .faqtab{width:160px;
+        .item{padding-bottom:13px;
+            a{display:block;width:100%;border-radius: 5px;border:1px solid #cdcdcd;@include height-set(50px,48px);background:#fff;text-align:center;
+                &:hover{background:#cdcdcd;color:$darkgray;}
+            }
+            &.active{
+                a{background:$green;color:#fff;border-color:$green;}
+            }
+        }
+    }
+    .faqcontent{width:calc(100% - 160px);padding-left:53px;
+        ol{border:1px solid #cdcdcd;border-radius: 5px;}
+        .faq-Q{padding:27px 45px;margin:0 auto 21px auto;
+            li{color:$darkgray;padding-bottom:20px;line-height:1.44em;list-style-position: inside;
+                a{color:$darkgray;}
+                &:hover{color:$green;@include trans-set(color);
+                    a{color:$green;}
+                }
+                &:nth-last-of-type(1){padding-bottom:0;}
+            }
+        }
+        .faq-A{padding:40px 50px;margin:0;
+            li{border-bottom:2px solid rgba(#76777a,0.2);list-style-position: inside;
+                p{padding-top:20px;
+                    a{color:#2b7fbd;
+                        &:hover{color:$green;}
+                    }
+                    a[href^="tel:"] {color:$darkgray;
+                        &:hover{color:$green;}
+                    }
+                }
+                .gotop{padding:10px 0 15px 0;display:flex; justify-content: flex-end;
+                    a{display:block;width:20px;@include height-set(20px,20px);}
+                }
+                & + li{padding-top:35px;}
+                &:nth-last-of-type(1){border-bottom:none;}
+            }
+        }
+    }
+    @media(max-width:768px){
+        flex-wrap:wrap;
+        .faqtab{width:100%;max-width: 768px;white-space:nowrap;overflow-x:scroll;
+            .item{width:auto;padding-right:5px;display:inline-block;
+                a{padding:0 15px;}
+            }
+        }
+        .faqcontent{width:100%;padding-left:0;
+            .faq-Q{padding:25px 30px;}
+            .faq-A{padding:25px 30px;
+                li{
+                    p{text-align:justify; text-align-last: left;}
+                }
+            }
+        }
+    }
+    @media(max-width:576px){
+        .faqtab{
+            .item{
+                a{@include height-set(40px, 38px);}
+            }
+        }
+        .faqcontent{
+            .faq-Q{padding:25px 15px 20px 15px;
+                li{padding-bottom:10px;}
+            }
+            .faq-A{padding:25px 15px 5px 15px;
+                li{
+                    p{padding-top:10px;}
+                    & + li{padding-top:20px;}
+                }
+            }
+        }
+
+    }
+}
+

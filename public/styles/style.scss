@@ -1,0 +1,35 @@
+@charset 'utf-8';
+@import url('scss/plugins/bootstrap.min.css');
+@import url('scss/plugins/bootstrap-reboot.min.css');
+@import url('scss/plugins/animate.css');
+@import url('scss/plugins/aos.css');
+@import url('fonts/css/fontello.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/css/select2.min.css');
+@import url('scss/plugins/slick.css');
+@import url('scss/plugins/slick-theme.css');
+@import url('scss/plugins/mCustomScrollbar.css');
+@import url('scss/plugins/jquery.fancybox.css');
+@import url('scss/plugins/bootstrap-select.css');
+
+@import 'scss/plugins/_flip-clock.scss';
+@import 'scss/plugins/lightcase/_lightcase.scss';
+
+// config
+@import 'scss/config/_config.scss';
+
+// layouts
+@import 'scss/layouts/_common.scss';
+@import 'scss/layouts/_layouts.scss';
+
+// pages
+@import 'scss/layouts/pages/_index.scss';
+@import 'scss/layouts/pages/_products.scss';
+@import 'scss/layouts/pages/_login.scss';
+@import 'scss/layouts/pages/_memcenter.scss';
+@import 'scss/layouts/pages/_cart.scss';
+@import 'scss/layouts/pages/_rule.scss';
+@import 'scss/layouts/pages/_faq.scss';
+@import 'scss/layouts/pages/_erceipt.scss';
+
+
+

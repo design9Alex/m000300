@@ -1,0 +1,41 @@
+/**
+ * Lightcase settings
+ *
+ * Note: Override default settings for your project without touching this source code by simply
+ * defining those variables within a SASS map called '$lightcase-custom'.
+ *
+ * // Example usage
+ * $lightcase-custom: (
+ *   'breakpoint': 768px
+ * );
+ */
+$lightcase-default: (
+  'font-path': './fonts/', // Path relative to the compiled css file
+
+  'breakpoint': 481px,
+
+  'overlay-color': #333,
+
+  'case-background': #fff,
+  'case-background-media': #fff,
+
+  'icon-font-size': 38px,
+  'icon-color': rgba(255, 255, 255, 1),
+  'icon-color-hover': rgba(255, 255, 255, 1),
+
+  'title-font-size': 17px,
+  'title-color': #fff,
+
+  'caption-font-size': 13px,
+  'caption-color': #fff,
+
+  'sequenceInfo-font-size': 11px,
+  'sequenceInfo-color': #fff,
+
+  'text-shadow': 0 0 10px rgba(0, 0, 0, 0.5),
+  'text-color-viewport-small': #fff,
+  'text-color-viewport-large': #333
+);
+
+$lightcase-custom: ()!default;
+$lightcase-settings: map-merge($lightcase-default, $lightcase-custom);

@@ -1,0 +1,301 @@
+.memberwrap{max-width:735px;margin:125px auto 0 auto;border:solid 1px #cdcdcd;padding:40px 0px;
+    &.wrapbottom{margin-bottom:125px;}
+    .datazoom{max-width:450px;margin:0 auto;}
+    .datarow{width:100%;display:flex;flex-wrap:wrap;padding-bottom:20px;position: relative;}
+    .itemrow{width:100%;display:flex;flex-wrap:wrap;}
+    .memer-tit{font-weight:500;color:$darkgray;}
+    .memberlink{color:#2b7fbd;
+        &:hover{color:$green;text-decoration: underline;}
+    }
+
+    .input-text{width:100%;@include input-set(#cdcdcd,5px,50px,48px);padding:0 20px;outline:none;color:$lightgray;
+        &::-webkit-input-placeholder{color:$lightgray;}
+        &::-moz-placeholder{color:$lightgray;}
+        &::-o-placeholder{color:$lightgray;}
+        &::-ms-placeholder{color:$lightgray;}
+        &::-ms-input-placeholder{color:$lightgray;}
+        &.lightplaceholder{
+            &::-webkit-input-placeholder{color:#989797;}
+            &::-moz-placeholder{color:#989797;}
+            &::-o-placeholder{color:#989797;}
+            &::-ms-placeholder{color:#989797;}
+            &::-ms-input-placeholder{color:#989797;}
+        }
+        &.flexgrow{width:50%;flex-grow: 1;}
+    }
+
+    .input-text:focus{border: 1px solid $green;}
+    .login-btn{@include height-set(50px,50px);width:100%;cursor: pointer;@include trans-set(background-color);
+        &:hover{background:$pink}
+    }
+
+    .input-checkbox{
+        input[type=checkbox]{display:none;
+            & + label{display:flex;cursor: pointer;color:#333;margin-bottom:0;
+                span{letter-spacing: 1.08px;color:$lightgray;padding-left:10px;
+                    &.check{border:1px solid #979797;width:18px;height:18px;border-radius:50%;background:#fff;margin-top:1px;padding-left:0px;
+                        img{width:15px;display:none;}
+                    }
+                }
+            }
+            &:checked + label {
+                span.check{
+                    img{display:block;}
+                }
+            }
+        }
+    }
+
+    .btn-box{border-top:1px solid #cdcdcd;margin-top:70px;padding:18px 0 0 0;display:flex;justify-content: space-between;}
+    .login-fb-btn,.login-line-btn{width:calc(50% - 3px);color:#fff;display:flex;align-items:center;}
+    .login-fb-btn{@include btn-set(#3357a3,5px,55px,55px);padding:0 20px;
+        img{height:26px;}
+        span{padding-left:20px;}
+        &:hover{background:#2a82db;}
+    }
+    .login-line-btn{@include btn-set(#00c800,5px,55px,55px);padding:0 23px;
+        svg{height:38px;
+            rect,path{fill:#fff !important;}
+        }
+        span{padding-left:30px;}
+        &:hover{background:#25df00;}
+    }
+
+    @media(max-width:576px){
+        .input-text{@include height-set(40px,38px);}
+        .login-btn{@include height-set(40px,40px);}
+        .input-checkbox{
+            input[type=checkbox]{
+                & + label{
+                    span{padding-left:5px;}
+                    span.check{width:15px;height:15px;margin-top:1.5px;
+                        img{width:12px;}
+                    }
+                }
+            }
+        }
+        .login-fb-btn,.login-line-btn{@include height-set(40px,40px); justify-content: center;padding:0 10px;margin-bottom:15px;
+            svg{height:35px;}
+            span{padding-left:10px;}
+        }
+    }
+    @media(max-width:420px){
+        .btn-box{flex-wrap: wrap;}
+        .login-fb-btn,.login-line-btn{width:100%;}
+    }
+
+    /*忘記密碼頁*/
+    .forgetpsdzoom{max-width:400px;width:calc(100% - 40px);margin:0 auto;padding-bottom:30px;
+        .stepzoom{width:100%;display:flex; justify-content: space-between;
+            .step{width:auto;position: relative;
+                span{display:block;color:#989797;text-align:center;
+                    &.number{color:#fff;background-color:#989797;border-radius: 50%;width:45px;height:45px;text-align:center;line-height:31px;margin:0 auto;border:7px solid #fff;}
+                }
+                &::before{width:220%;content:"";height:2px;background:#989797;position: absolute;top:50%;right:45px; transform: translateY(-50%);margin-top:-11px;z-index:-1;}
+                &:nth-of-type(1){
+                    &::before{display:none;}
+                }
+                &:nth-of-type(3){
+                    &::before{width:290%;z-index:-2;}
+                }
+                &.active{
+                    span{color:$green;}
+                    span.number{background:$green;color:#fff;}
+                    &::before{background:$green;}
+                }
+            }
+
+        }
+        .setphone{font-weight:500;color:$lightgray;padding:25px 0;letter-spacing:1.31px;
+            img{width:20px;margin-right:15px;}
+            i{font-style:normal;}
+        }
+        .empty-input{width:50px;height:50px;border-radius: 5px;border:1px solid #cdcdcd;margin-right:6px;text-align:center;outline: none;display:block;float:left;line-height:48px;padding:0;margin-left:0;}
+        @media(max-width:576px){
+            .setphone{padding:10px 0 15px 0;}
+            .empty-input{width:40px;height:40px;line-height: 38px;margin-right:5px;}
+        }
+
+        @media(max-width:420px){
+            .stepzoom{
+                .step{
+                    &::before{width:180%;}
+                }
+            }
+
+        }
+        @media(max-width:360px){
+            .number-group{margin:0 auto;display:flex;justify-content: center;}
+        }
+        @media(max-width:340px){
+            .stepzoom{
+                .step{
+                    &::before{width:110px;}
+                }
+            }
+        }
+
+
+    }
+    .next-step{margin-top:65px;
+        &:hover{background-color:$pink;}
+    }
+
+    .resetimg{width:31px;display:block;float:left;
+        img{@include img-set;}
+    }
+    .resettext{padding-left:14px;letter-spacing: 1.31px;}
+    @media(max-width:576px){
+        .resetimg{width:25px;}
+        .resettext{padding-left:8px;}
+    }
+
+    /*會員註冊*/
+    .registerzoom{max-width:615px;margin:0 auto;}
+    .phone-code{max-width:calc(100% - 145px);flex-grow:1;}
+    .border-box{border-top:1px solid #cdcdcd;margin-top:40px;padding:25px 0 0 0;display:flex;}
+    .register-btn{width: calc(100% + 2px);display:flex;position:relative;top:41px;left:-1px;margin-top:65px;
+        a{display:block;width:25%;border:1px solid #cdcdcd;float:left;border-left:none;
+            height:54px;padding:15px 0;text-align:center;line-height:24px;color:#989797;background:#fff;@include trans-set(all);
+            &:nth-of-type(1){border-left:1px solid #cdcdcd;}
+            &:hover{background:#989797;color:#fff;border-color:#989797;}
+            &.active{background:$green;color:#fff;border-color:$green;
+                &:hover{background:$green;color:#fff;}
+            }
+        }
+    }
+    .register-tit{color:$lightgray;width:87px;padding-right:12px;}
+    .register-input{flex-grow: 1;width:auto;
+        &.name{width:calc(100% - 232px);}
+    }
+    .sendto{width:100%;max-width:450px;margin:0 auto;}
+    .welcometext{color:$lightgray;width:315px;margin:0 auto;padding-bottom:20px;}
+    .max495{max-width:495px;margin-left:auto;margin-right:auto;}
+    .registercouponbox{border:1px solid #cdcdcd;border-radius:8px;padding:30px 15px;display:flex;align-items:center;
+        .denomination{padding:0 10px;min-width:150px;
+            span{line-height:1.33em;
+                &.number{font-weight:bold;color:currentColor;}
+                &.dollar{font-weight:700;margin-top:5px;margin-left:-5px;vertical-align:sub;}
+            }
+        }
+        .markdetail{padding:0 0 0 30px;border-left:2px solid #f3f3f3;
+            .tag{display:block;font-weight:500;letter-spacing: 1.31px;}
+            .text{display:block;letter-spacing: 1.08px;color:$darkgray;font-weight:300;line-height:1.4em;}
+            .text + .text{padding-top:20px;}
+        }
+    }
+    .register-submit{width:275px;padding:30px 0 20px 0;margin:0 auto;
+        a{width:100%;}
+    }
+    .register-fb-table{table-layout: fixed;
+        td:nth-of-type(1){width:78px;padding-right:9px;}
+        td:nth-of-type(2){width:calc(100% - 78px);}
+        td{padding-bottom:20px;}
+    }
+    @media(max-width:576px){
+        .registerzoom{
+            .gender{width:120px;}
+            .register-input.name{width:calc(100% - 120px);}
+            .register-input.phoneno{width:calc(100% - 160px);}
+        }
+        .register-tit{width:100%;margin-bottom:10px;}
+        .register-btn{margin-top:0px;top:26px;
+            a{width:auto;flex-grow:1;height:44px;padding:13px 10px;line-height:18px;}
+        }
+        .max495{padding:0 15px;}
+        .registercouponbox{flex-wrap:wrap;padding:20px 15px;
+            .denomination{width:100%;border-right:none;border-bottom:2px solid #f3f3f3;text-align:center;padding-bottom:20px;}
+            .markdetail{width:100%;padding-top:25px;}
+        }
+        .register-fb-table{
+            td{padding-bottom:15px;}
+        }
+    }
+    @media(max-width:450px){
+
+    }
+    @media(max-width:400px){
+        .register-btn{flex-wrap: wrap;
+            a{width:50%;flex-grow:0;}
+            a:nth-of-type(1),a:nth-of-type(2){border-bottom:none;}
+            a:nth-of-type(3){border-left:1px solid #cdcdcd;}
+        }
+    }
+    @media(max-width:350px){
+        .phone-code{max-width:100%;}
+    }
+}
+
+.alert{border:2px solid #eb4747;}
+.alertmsg{color:#eb4747;margin-top:9px;display:block;text-align:center;width:100%;}
+.alertposiiton{position: absolute;bottom:-9px;}
+.sendcode{color:#fff;width:135px;cursor: pointer;
+    &:hover{background-color:$pink;}
+}
+.resendcode{color:#fff;width:135px;cursor: pointer;
+    @media(max-width:420px){
+        width:auto;padding:0 10px;
+    }
+    @media(max-width:350px){width:100%;margin-top:15px;}
+}
+.modal-tit{color:$lightgray;text-align:center;}
+.modal-btn{@include height-set(40px,40px);margin:0 auto;width:auto;max-width:108px;}
+.select-bday{width:84px;float:left;margin-right:15px;position: relative;
+    &.year{width:107px;
+        .input-bday{text-align:right;}
+    }
+    &:nth-last-of-type(1){margin-right:0px;}
+    .input-bday{width:100%;@include input-set(#cdcdcd,5px,50px,48px);padding:0 45px 0 10px;outline:none;color:$lightgray;
+        text-align:center;
+        &::-webkit-input-placeholder, &::-moz-placeholder,  &::-o-placeholder, &::-ms-placeholder, &::-ms-input-placeholder{color:#cdcdcd;}
+        &:focus{border-color:$green;}
+    }
+    input[type=number]{display:block;
+        & + label{position: absolute;right:0;width:35px;top:0;@include height-set(50px,48px);text-align:center;display:flex;align-items:center; justify-content: center;z-index:10;cursor: pointer;border-left:1px solid #cdcdcd;
+            .btn-triangle{width:0;height:0;border-color:$lightgray transparent transparent transparent;border-width:8px 5px 0 5px;border-style:solid;@include trans-set(border);
+                &.active{
+                    border-color:transparent transparent $lightgray transparent;border-width:0 5px 8px 5px;
+                }
+            }
+        }
+    }
+    .bday-select{position: absolute;top:49px;left:0;width:100%;border:1px solid #cdcdcd;background:#fff;border-radius:5px;
+        padding:10px 0;max-height:200px;overflow-y:auto;display:none;z-index:10;margin-top:5px;
+        li{color:$lightgray;text-align:center;line-height:1.8em;cursor: pointer;}
+    }
+    @media(max-width:576px){width:74px;margin-right:8px;
+        &.year{width:90px;}
+        .input-bday{@include height-set(40px,38px);padding:0 30px 0 10px;}
+        input[type=number] + label{@include height-set(40px,38px);width:25px;}
+    }
+}
+
+#modal-sendcode{position: relative; overflow: visible;width:285px;height:130px;background:#fff;border-radius:3px;padding:25px;
+    .fancybox-close-small{width:30px;height:30px;border-radius:50%;background-color:#cacaca;padding:0;top:-15px;right:-15px;
+        position: absolute;opacity:1;@include trans-set(background-color);
+        &:hover{
+            background-color:$lightgray;
+        }
+    }
+}
+
+@media(max-width:768px){
+    .memberwrap{margin:75px auto 0 auto;width:calc(100% - 40px);
+        &.wrapbottom{margin-bottom:75px;}
+        .btn-box{margin-top:45px}
+        .registerzoom{width:calc(100% - 40px);}
+    }
+}
+@media(max-width:576px){
+    .memberwrap{margin:45px auto 0 auto;width:calc(100% - 30px);padding:25px 0;
+        &.wrapbottom{margin-bottom:20px;}
+        .datazoom{width:calc(100% - 30px);}
+        .datarow{padding-bottom:15px;}
+        .btn-box{margin-top:30px}
+        .forgetpsdzoom{width:calc(100% - 30px);padding-bottom:0;}
+        .next-step{margin-top:25px;}
+        .border-box{margin-top:25px;padding-top:20px;}
+        .registerzoom{width:calc(100% - 30px);}
+    }
+    .mb-20{margin-bottom:15px;}
+}

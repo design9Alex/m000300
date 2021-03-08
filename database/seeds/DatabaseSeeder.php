@@ -18,8 +18,9 @@ class DatabaseSeeder extends Seeder
 
         $this->call(ArticleElementSeeder::class);
         $this->call(ArticleElementAboutSeeder::class);
-        $this->call(ArticleElementManufacturingSeeder::class);
+        $this->call(AdvertisingAboutSeeder::class);
 
+        $this->call(ArticleElementManufacturingSeeder::class);
         $this->call(AdvertisingManufacturingSeeder::class);
 
         $this->call(RolePermissionsSeeder::class);

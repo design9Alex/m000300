@@ -1,0 +1,33 @@
+.docwrap{
+    max-width:1070px;padding:45px 20px 0px 20px;margin:0 auto;
+    .title{font-weight: normal;letter-spacing: 4px;}
+    .inner{padding-top:30px;
+        .rule-ol{margin:0;padding:0 0 0 20px;
+            li{padding-bottom:1rem;
+                &:nth-last-of-type(1){padding-bottom:0;}
+            }
+        }
+    }
+
+    @media(max-width:576px){
+        padding:30px 20px 0 20px;
+        .inner{padding-top:20px;}
+    }
+}
+#doucment-editor{
+    img{max-width:100%;}
+    h3{}
+    .greenset{font-weight:normal;}
+    p{line-height:1.44em;letter-spacing:0.8px;}
+    p.list{line-height: 2em;}
+    .borderbox{max-width:960px;margin:0 auto;padding:20px 30px;border:1px solid #979797;border-radius:5px;
+        p{line-height:1.7em;letter-spacing:0.65px;}
+    }
+    @media(max-width:576px){
+        .borderbox{
+            padding:20px 15px;
+            p{line-height:1.4em;}
+        }
+
+    }
+}

@@ -1,0 +1,48 @@
+.wp[data-tag="privacy"]{
+	.page-banner{height:350px;
+		.bn-textbox{padding:70px 15px 0 15px;}
+		@media(max-width:992px){
+			height:300px;
+		}
+		@media(max-width:576px){
+			height:220px;
+			.bn-textbox{padding:40px 15px 0 15px;}
+		}
+    }
+    .page-inner{
+		.guideline{background:#e5e5e5;top:-50px;
+			&.active{height:145px;}
+		}
+		@media(max-width:992px){
+			.guideline{
+				&.active{height:90px;}
+			}
+		}
+		@media(max-width:576px){
+			.guideline{top:-30px;
+				&.active{height:50px;}
+			}
+		}
+	}
+}
+
+
+.privacy-box{padding:70px 0 0 0;position:relative;
+    &:after{content:'';display:block;position:absolute;width:100%;height:930px;bottom:0;left:0;background-image:linear-gradient(to bottom, #FFFFFF, #f7f7f7);z-index:-1;}
+    .tag{letter-spacing: 0.05em;line-height:1.43;text-align:center;}
+    .box{padding:55px 0 130px 0;;}
+    .text{line-height:2;color:#333333;}
+    @media(max-width:768px){padding:50px 0 0 0;
+        .box{padding:35px 0 90px 0;}
+    }
+    @media(max-width:576px){padding:40px 0 0 0;
+        .box{padding:25px 0 60px 0;}
+    }
+}
+
+.policy-item{padding:60px 0 15px;
+    .subtit{color:#333333;}
+    .text{margin-top:10px;color:#5B5B5B;}
+    @media(max-width:768px){padding:35px 0 0;}
+    @media(max-width:576px){padding:25px 0 0;}
+}

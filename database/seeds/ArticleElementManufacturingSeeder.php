@@ -55,7 +55,6 @@ class ArticleElementManufacturingSeeder extends Seeder
             ['id' => $articleElementManufacturingId16 = uuidl(), 'title' => 'article_element.title.'.$articleElementManufacturingId16, 'details' => 'article_element.details.'.$articleElementManufacturingId16, 'sort' => 1, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp],
             ['id' => $articleElementManufacturingId17 = uuidl(), 'title' => 'article_element.title.'.$articleElementManufacturingId17, 'details' => 'article_element.details.'.$articleElementManufacturingId17, 'sort' => 1, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp],
             ['id' => $articleElementManufacturingId18 = uuidl(), 'title' => 'article_element.title.'.$articleElementManufacturingId18, 'details' => 'article_element.details.'.$articleElementManufacturingId18, 'sort' => 1, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp],
-            ['id' => $articleElementManufacturingId19 = uuidl(), 'title' => 'article_element.title.'.$articleElementManufacturingId19, 'details' => 'article_element.details.'.$articleElementManufacturingId19, 'sort' => 1, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp],
 
         ];
         DB::table('article_element')->insert($articleElementData);
@@ -77,7 +76,7 @@ HTML;
                             <div class="text fs_16">25年間5,600種類のキノコの研究に注力してきた菌株センター（台湾No.1の菌株センター）の原材料を使用します。更に、原材料の有効性を評価するために、さらに薬学博士を派遣し、有効性（薬理活性）、差異（追加有効性）、 人体に対する安全性という三つの要件を中心に、DAG会社に属する慢性疾患を予防する専用の原材料開発システムを確立してきました。その過程で、細胞と動物の実験は画像分析システムを介して分析され、使用される原材料の安全性を確保するために、生体内と生体の同時研究が行われます</div>
                         </div>
                     </div>
-                    <div class="bg-img jqimgFill"><img src="styles/images/manufacturing/manufacturing-01.jpg" alt=""></div>
+                    <div class="bg-img jqimgFill"><img src="/styles/images/manufacturing/manufacturing-01.jpg" alt=""></div>
                 </div>
 HTML;
 
@@ -91,13 +90,13 @@ HTML;
                                     <span class="fs_16">カスタマイズされた開発</span>
                                 </div>
                                 <div class="arrow">
-                                    <span><img src="styles/images/common/icon-arrow-right-orange.svg" alt="arrow"></span>
+                                    <span><img src="/styles/images/common/icon-arrow-right-orange.svg" alt="arrow"></span>
                                 </div>
                                 <div class="item" style="color:#008DDA">
                                     <span class="fs_16 max175">パフォーマンスおよび安全性テストレポート</span>
                                 </div>
                                 <div class="arrow">
-                                    <span><img src="styles/images/common/icon-arrow-right-orange.svg" alt="arrow"></span>
+                                    <span><img src="/styles/images/common/icon-arrow-right-orange.svg" alt="arrow"></span>
                                 </div>
                                 <div class="item" style="color:#78C7F0">
                                     <span class="fs_16">プロセス生産</span>
@@ -118,23 +117,23 @@ HTML;
                         <h2 class="tag darkgray fs_24 fw_bold text-center" data-aos="fade-up">栽培原料・栽培加工環境</h2>
                         <div class="pic-group">
                             <div class="item" data-aos="fade-up" data-aos-delay="200">
-                                <div class="pic jqimgFill"><img src="styles/images/manufacturing/manufacturing-02.jpg" alt="菌糸の消毒と植え付け"></div>
+                                <div class="pic jqimgFill"><img src="/styles/images/manufacturing/manufacturing-02.jpg" alt="菌糸の消毒と植え付け"></div>
                                 <div class="innerText">
-                                    <!-- <span class="arrow"><img src="styles/images/common/icon-arrow-right-orange.svg" alt="arrow"></span> -->
+                                    <!-- <span class="arrow"><img src="/styles/images/common/icon-arrow-right-orange.svg" alt="arrow"></span> -->
                                     <span class="text fs_16">菌糸の消毒と植え付け</span>
                                 </div>
                             </div>
                             <div class="item" data-aos="fade-up" data-aos-delay="400">
-                                <div class="pic jqimgFill"><img src="styles/images/manufacturing/manufacturing-03.jpg" alt="菌糸栽培環境"></div>
+                                <div class="pic jqimgFill"><img src="/styles/images/manufacturing/manufacturing-03.jpg" alt="菌糸栽培環境"></div>
                                 <div class="innerText">
-                                    <!-- <span class="arrow"><img src="styles/images/common/icon-arrow-right-orange.svg" alt="arrow"></span> -->
+                                    <!-- <span class="arrow"><img src="/styles/images/common/icon-arrow-right-orange.svg" alt="arrow"></span> -->
                                     <span class="text fs_16">菌糸栽培環境</span>
                                 </div>
                             </div>
                             <div class="item" data-aos="fade-up" data-aos-delay="600">
-                                <div class="pic jqimgFill"><img src="styles/images/manufacturing/manufacturing-04.jpg" alt="知能管理環境"></div>
+                                <div class="pic jqimgFill"><img src="/styles/images/manufacturing/manufacturing-04.jpg" alt="知能管理環境"></div>
                                 <div class="innerText">
-                                    <!-- <span class="arrow"><img src="styles/images/common/icon-arrow-right-orange.svg" alt="arrow"></span> -->
+                                    <!-- <span class="arrow"><img src="/styles/images/common/icon-arrow-right-orange.svg" alt="arrow"></span> -->
                                     <span class="text fs_16">知能管理環境</span>
                                 </div>
                             </div>
@@ -153,7 +152,7 @@ HTML;
 
         $facturingIdEditor6 = <<<HTML
         <div class="manufact-section">
-                    <div class="bg-img jqimgFill" data-aos="fade"><img src="styles/images/manufacturing/manufacturing-05.jpg" alt=""></div>
+                    <div class="bg-img jqimgFill" data-aos="fade"><img src="/styles/images/manufacturing/manufacturing-05.jpg" alt=""></div>
                     <div class="w1300">
                         <div class="inTextbox" data-aos="fade">
                             <h2 class="tit dash fw_bold fs_24">業界最高の特許取得済み生産技術</h2>
@@ -202,23 +201,23 @@ HTML;
                         <h2 class="tag darkgray fs_24 fw_bold text-center" data-aos="fade-up">研究センター-277種のキノコ</h2>
                         <div class="pic-group">
                             <div class="item" data-aos="fade-up" data-aos-delay="200">
-                                <div class="pic jqimgFill"><img src="styles/images/manufacturing/manufacturing-06.jpg" alt="母株"></div>
+                                <div class="pic jqimgFill"><img src="/styles/images/manufacturing/manufacturing-06.jpg" alt="母株"></div>
                                 <div class="innerText">
-                                    <!-- <span class="arrow"><img src="styles/images/common/icon-arrow-right-orange.svg" alt="arrow"></span> -->
+                                    <!-- <span class="arrow"><img src="/styles/images/common/icon-arrow-right-orange.svg" alt="arrow"></span> -->
                                     <span class="text fs_16">母株</span>
                                 </div>
                             </div>
                             <div class="item" data-aos="fade-up" data-aos-delay="400">
-                                <div class="pic jqimgFill"><img src="styles/images/manufacturing/manufacturing-07.jpg" alt="回転式濃縮機"></div>
+                                <div class="pic jqimgFill"><img src="/styles/images/manufacturing/manufacturing-07.jpg" alt="回転式濃縮機"></div>
                                 <div class="innerText">
-                                    <!-- <span class="arrow"><img src="styles/images/common/icon-arrow-right-orange.svg" alt="arrow"></span> -->
+                                    <!-- <span class="arrow"><img src="/styles/images/common/icon-arrow-right-orange.svg" alt="arrow"></span> -->
                                     <span class="text fs_16">回転式濃縮機</span>
                                 </div>
                             </div>
                             <div class="item" data-aos="fade-up" data-aos-delay="600">
-                                <div class="pic jqimgFill"><img src="styles/images/manufacturing/manufacturing-08.jpg" alt="菌糸測定"></div>
+                                <div class="pic jqimgFill"><img src="/styles/images/manufacturing/manufacturing-08.jpg" alt="菌糸測定"></div>
                                 <div class="innerText">
-                                    <!-- <span class="arrow"><img src="styles/images/common/icon-arrow-right-orange.svg" alt="arrow"></span> -->
+                                    <!-- <span class="arrow"><img src="/styles/images/common/icon-arrow-right-orange.svg" alt="arrow"></span> -->
                                     <span class="text fs_16">菌糸測定</span>
                                 </div>
                             </div>
@@ -239,7 +238,7 @@ HTML;
 
         $facturingIdEditor9 = <<<HTML
         <div class="manufact-section">
-                    <div class="bg-img jqimgFill" data-aos="fade"><img src="styles/images/manufacturing/manufacturing-09.jpg" alt=""></div>
+                    <div class="bg-img jqimgFill" data-aos="fade"><img src="/styles/images/manufacturing/manufacturing-09.jpg" alt=""></div>
                     <div class="w1300">
                         <div class="inTextbox" data-aos="fade">
                             <h2 class="tit dash fw_bold fs_24">安全で信頼性の高い製品を作る</h2>
@@ -255,8 +254,8 @@ HTML;
                                     </ul>
                                 </div>
                                 <div class="col">
-                                    <div class="safepd-pic"><img src="styles/images/manufacturing/manufacturing-10.jpg" alt=""></div>
-                                    <div class="safepd-pic"><img src="styles/images/manufacturing/manufacturing-11.jpg" alt=""></div>
+                                    <div class="safepd-pic"><img src="/styles/images/manufacturing/manufacturing-10.jpg" alt=""></div>
+                                    <div class="safepd-pic"><img src="/styles/images/manufacturing/manufacturing-11.jpg" alt=""></div>
                                 </div>
                             </div>
                         </div>
@@ -272,26 +271,26 @@ HTML;
                         <div class="pic-set">
                             <div class="group">
                                 <div class="picbox">
-                                    <div class="pic jqimgFill"><img src="styles/images/manufacturing/manufacturing-12.jpg" alt=""></div>
+                                    <div class="pic jqimgFill"><img src="/styles/images/manufacturing/manufacturing-12.jpg" alt=""></div>
                                 </div>
                                 <p class="text fs_15">野生の牛樟芝</p>
                             </div>
                             <div class="group twice">
                                 <div class="picbox">
-                                    <div class="pic jqimgFill"><img src="styles/images/manufacturing/manufacturing-13.jpg" alt=""></div>
-                                    <div class="pic jqimgFill"><img src="styles/images/manufacturing/manufacturing-14.jpg" alt=""></div>
+                                    <div class="pic jqimgFill"><img src="/styles/images/manufacturing/manufacturing-13.jpg" alt=""></div>
+                                    <div class="pic jqimgFill"><img src="/styles/images/manufacturing/manufacturing-14.jpg" alt=""></div>
                                 </div>
                                 <p class="text fs_15">培養された菌糸を観察する（表と裏）</p>
                             </div>
                             <div class="group">
                                 <div class="picbox">
-                                    <div class="pic jqimgFill"><img src="styles/images/manufacturing/manufacturing-15.jpg" alt=""></div>
+                                    <div class="pic jqimgFill"><img src="/styles/images/manufacturing/manufacturing-15.jpg" alt=""></div>
                                 </div>
                                 <p class="text fs_15">野生の牛樟芝</p>
                             </div>
                             <div class="group">
                                 <div class="picbox">
-                                    <div class="pic jqimgFill"><img src="styles/images/manufacturing/manufacturing-16.jpg" alt=""></div>
+                                    <div class="pic jqimgFill"><img src="/styles/images/manufacturing/manufacturing-16.jpg" alt=""></div>
                                 </div>
                                 <p class="text fs_15">野生の牛樟芝</p>
                             </div>
@@ -305,11 +304,11 @@ HTML;
                     <div class="w1300">
                         <div class="chart-box">
                             <div class="item">
-                                <span class="pic"><img src="styles/images/manufacturing/manufacturing-17.jpg" alt=""></span>
+                                <span class="pic"><img src="/styles/images/manufacturing/manufacturing-17.jpg" alt=""></span>
                                 <p class="text fs_15">EACはマウスモデルの腫瘍増殖を抑えた</p>
                             </div>
                             <div class="item">
-                                <span class="pic"><img src="styles/images/manufacturing/manufacturing-18.jpg" alt=""></span>
+                                <span class="pic"><img src="/styles/images/manufacturing/manufacturing-18.jpg" alt=""></span>
                                 <p class="text fs_15">コレステロール / トリグリセリド、全体の値が減少しました</p>
                             </div>
                         </div>
@@ -332,7 +331,7 @@ HTML;
 
         $facturingIdEditor13 = <<<HTML
         <div class="research-section">
-                    <div class="bg-img jqimgFill" data-aos="fade"><img src="styles/images/research/research-01.jpg" alt=""></div>
+                    <div class="bg-img jqimgFill" data-aos="fade"><img src="/styles/images/research/research-01.jpg" alt=""></div>
                     <div class="w1300">
                         <div class="inTextbox" data-aos="fade">
                             <h2 class="tit dash fw_bold fs_24">研究プロセス</h2>
@@ -346,28 +345,28 @@ HTML;
                         <div class="w1100 step-list">
                             <div class="step" data-aos="fade-up" data-aos-delay="200">
                                 <div class="picbox">
-                                    <div class="pic jqimgFill"><img src="styles/images/research/research-02.jpg" alt=""></div>
+                                    <div class="pic jqimgFill"><img src="/styles/images/research/research-02.jpg" alt=""></div>
                                 </div>
                                 <span class="label fs_15">STEP 01</span>
                                 <p class="text fs_15">検体の組織を確認すること</p>
                             </div>
                             <div class="step" data-aos="fade-up" data-aos-delay="400">
                                 <div class="picbox">
-                                    <div class="pic jqimgFill"><img src="styles/images/research/research-03.jpg" alt=""></div>
+                                    <div class="pic jqimgFill"><img src="/styles/images/research/research-03.jpg" alt=""></div>
                                 </div>
                                 <span class="label fs_15">STEP 02</span>
                                 <p class="text fs_15">栽培と厳選すること</p>
                             </div>
                             <div class="step" data-aos="fade-up" data-aos-delay="600">
                                 <div class="picbox">
-                                    <div class="pic jqimgFill"><img src="styles/images/research/research-04.jpg" alt=""></div>
+                                    <div class="pic jqimgFill"><img src="/styles/images/research/research-04.jpg" alt=""></div>
                                 </div>
                                 <span class="label fs_15">STEP 03</span>
                                 <p class="text fs_15">栽培テストをすること</p>
                             </div>
                             <div class="step" data-aos="fade-up" data-aos-delay="800">
                                 <div class="picbox">
-                                    <div class="pic jqimgFill"><img src="styles/images/research/research-05.jpg" alt=""></div>
+                                    <div class="pic jqimgFill"><img src="/styles/images/research/research-05.jpg" alt=""></div>
                                 </div>
                                 <span class="label fs_15">STEP 04</span>
                                 <p class="text fs_15">保存と管理すること</p>
@@ -379,7 +378,7 @@ HTML;
 
         $facturingIdEditor14 = <<<HTML
         <div class="research-section">
-                    <div class="bg-img jqimgFill" data-aos="fade"><img src="styles/images/research/research-06.jpg" alt=""></div>
+                    <div class="bg-img jqimgFill" data-aos="fade"><img src="/styles/images/research/research-06.jpg" alt=""></div>
                     <div class="w1300">
                         <div class="inTextbox med-center" data-aos="fade">
                             <h2 class="tit dash fw_bold fs_24">再生医療センター</h2>
@@ -398,23 +397,23 @@ HTML;
                         <h2 class="tag darkgray fs_24 fw_bold text-center" data-aos="fade-up">分析のための主な機器-品質と安全性の検査</h2>
                         <div class="pic-group">
                             <div class="item" data-aos="fade-up" data-aos-delay="200">
-                                <div class="pic jqimgFill"><img src="styles/images/research/research-07.jpg" alt="細胞の培養状態"></div>
+                                <div class="pic jqimgFill"><img src="/styles/images/research/research-07.jpg" alt="細胞の培養状態"></div>
                                 <div class="innerText">
-                                    <!-- <span class="arrow"><img src="styles/images/common/icon-arrow-right-orange.svg" alt="arrow"></span> -->
+                                    <!-- <span class="arrow"><img src="/styles/images/common/icon-arrow-right-orange.svg" alt="arrow"></span> -->
                                     <span class="text fs_16">細胞の培養状態</span>
                                 </div>
                             </div>
                             <div class="item" data-aos="fade-up" data-aos-delay="400">
-                                <div class="pic jqimgFill"><img src="styles/images/research/research-08.jpg" alt="細胞の生存率記録"></div>
+                                <div class="pic jqimgFill"><img src="/styles/images/research/research-08.jpg" alt="細胞の生存率記録"></div>
                                 <div class="innerText">
-                                    <!-- <span class="arrow"><img src="styles/images/common/icon-arrow-right-orange.svg" alt="arrow"></span> -->
+                                    <!-- <span class="arrow"><img src="/styles/images/common/icon-arrow-right-orange.svg" alt="arrow"></span> -->
                                     <span class="text fs_16">細胞の生存率記録</span>
                                 </div>
                             </div>
                             <div class="item" data-aos="fade-up" data-aos-delay="600">
-                                <div class="pic jqimgFill"><img src="styles/images/research/research-09.jpg" alt="細胞の安全性試験"></div>
+                                <div class="pic jqimgFill"><img src="/styles/images/research/research-09.jpg" alt="細胞の安全性試験"></div>
                                 <div class="innerText">
-                                    <!-- <span class="arrow"><img src="styles/images/common/icon-arrow-right-orange.svg" alt="arrow"></span> -->
+                                    <!-- <span class="arrow"><img src="/styles/images/common/icon-arrow-right-orange.svg" alt="arrow"></span> -->
                                     <span class="text fs_16">細胞の安全性試験</span>
                                 </div>
                             </div>
@@ -431,43 +430,43 @@ HTML;
                             <ul class="noneStyle safetylist">
                                 <li>
                                     <div class="box">
-                                        <div class="icon"><img src="styles/images/research/safety-icon-01.svg" alt=""></div>
+                                        <div class="icon"><img src="/styles/images/research/safety-icon-01.svg" alt=""></div>
                                         <div class="text fs_16 fw_500">ドナースクリーニング</div>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="box">
-                                        <div class="icon"><img src="styles/images/research/safety-icon-02.svg" alt=""></div>
+                                        <div class="icon"><img src="/styles/images/research/safety-icon-02.svg" alt=""></div>
                                         <div class="text fs_16 fw_500">検体テスト項目</div>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="box">
-                                        <div class="icon"><img src="styles/images/research/safety-icon-03.svg" alt=""></div>
+                                        <div class="icon"><img src="/styles/images/research/safety-icon-03.svg" alt=""></div>
                                         <div class="text fs_16 fw_500">安全性と毒性の検査及びテスト</div>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="box">
-                                        <div class="icon"><img src="styles/images/research/safety-icon-04.svg" alt=""></div>
+                                        <div class="icon"><img src="/styles/images/research/safety-icon-04.svg" alt=""></div>
                                         <div class="text fs_16 fw_500">製造工学管理</div>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="box">
-                                        <div class="icon"><img src="styles/images/research/safety-icon-05.svg" alt=""></div>
+                                        <div class="icon"><img src="/styles/images/research/safety-icon-05.svg" alt=""></div>
                                         <div class="text fs_16 fw_500">栽培と及び設備管理</div>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="box">
-                                        <div class="icon"><img src="styles/images/research/safety-icon-06.svg" alt=""></div>
+                                        <div class="icon"><img src="/styles/images/research/safety-icon-06.svg" alt=""></div>
                                         <div class="text fs_16 fw_500">パフォーマンスチェック</div>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="box">
-                                        <div class="icon"><img src="styles/images/research/safety-icon-07.svg" alt=""></div>
+                                        <div class="icon"><img src="/styles/images/research/safety-icon-07.svg" alt=""></div>
                                         <div class="text fs_16 fw_500">保存管理システム</div>
                                     </div>
                                 </li>
@@ -479,7 +478,7 @@ HTML;
 
         $facturingIdEditor17 = <<<HTML
         <div class="research-section">
-                    <div class="bg-img jqimgFill" data-aos="fade"><img src="styles/images/research/research-10.jpg" alt=""></div>
+                    <div class="bg-img jqimgFill" data-aos="fade"><img src="/styles/images/research/research-10.jpg" alt=""></div>
                     <div class="w1300">
                         <div class="inTextbox QC" data-aos="fade">
                             <h2 class="tit dash fw_bold fs_24">品質管理と品質認証</h2>
@@ -590,7 +589,7 @@ HTML;
                         </div>
                     </div>
                     <div class="bg-img jqimgFill">
-                        <img src="styles/images/research/research-11.jpg" alt="">
+                        <img src="/styles/images/research/research-11.jpg" alt="">
                         <p class="text fs_16">*米国連邦標準Fed.Std.209D（ターゲット粒子サイズ0.5μm）</p>
                     </div>
                     <div class="training-script">
