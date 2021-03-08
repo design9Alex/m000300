@@ -17,6 +17,8 @@ class SampleSeeder extends Seeder
         // to customer or upload to server.
         $this->updateAdminPassword();
 
+        $this->updateLanguageResource();
+
         $this->insertWebMenu();
 
         $this->insertInboxCategory();
@@ -44,6 +46,17 @@ class SampleSeeder extends Seeder
                 'password' => $admin->password, 'ip' => '127.0.0.1', 'created_at' => $timestamp],
         ]);
     }
+
+
+    protected function updateLanguageResource(){
+        $systemParameters = DB::table('language_resource')->where('key','like','%system_parameter_item.label.%')->where('language_id','1')->get();
+
+        foreach($systemParameters as $key => $item){
+            DB::table('language_resource')->where('key', $item->key)->whereIn('language_id',[3,4])->update(['text' => $item->text]);
+        }
+    }
+
+
 
     protected function insertWebMenu()
     {

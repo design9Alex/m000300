@@ -16,6 +16,12 @@ class DatabaseSeeder extends Seeder
         $this->call(SampleSeeder::class);
         $this->call(WebDataSeeder::class);
 
+        $this->call(ArticleElementSeeder::class);
+        $this->call(ArticleElementAboutSeeder::class);
+        $this->call(ArticleElementManufacturingSeeder::class);
+
+        $this->call(AdvertisingManufacturingSeeder::class);
+
         $this->call(RolePermissionsSeeder::class);
     }
 }

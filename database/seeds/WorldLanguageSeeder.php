@@ -21,8 +21,16 @@ class WorldLanguageSeeder extends Seeder
     protected function updateWorldLanguage()
     {
         DB::table('world_language')->whereIn('code', ['ja', 'en'])->update([
-            'active_admin' => false,
+            'active_admin' => true,
             'active' => true
         ]);
+
+        DB::table('world_language')->whereIn('code', ['zh-Hant'])->update([
+            'active_admin' => false,
+            'active' => false
+        ]);
+
+
+
     }
 }
