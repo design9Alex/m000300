@@ -17,11 +17,17 @@ class DatabaseSeeder extends Seeder
         $this->call(WebDataSeeder::class);
 
         $this->call(ArticleElementSeeder::class);
+
         $this->call(ArticleElementAboutSeeder::class);
         $this->call(AdvertisingAboutSeeder::class);
 
         $this->call(ArticleElementManufacturingSeeder::class);
         $this->call(AdvertisingManufacturingSeeder::class);
+
+        $this->call(ArticleElementProductSeeder::class);
+        $this->call(AdvertisingProductEstheticmedicineSeeder::class);
+        $this->call(ArticleElementProductDiseasepreventionSeeder::class);
+        $this->call(ArticleElementProductTherapeuticsSeeder::class);
 
         $this->call(RolePermissionsSeeder::class);
     }

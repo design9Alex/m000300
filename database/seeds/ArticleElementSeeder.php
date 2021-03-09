@@ -93,7 +93,7 @@ class ArticleElementSeeder extends Seeder
 
             [
                 'id' => $categoryId4 = uuidl(),
-                'uri' => 'cellregeneration',
+                'uri' => 'cellregenerations',
                 'parent_id' => $categoryId,
                 'title' => "article_category.title.{$categoryId4}",
                 'details' => "article_category.details.{$categoryId4}",
@@ -101,6 +101,46 @@ class ArticleElementSeeder extends Seeder
                 'seo' => "article_category.seo.{$categoryId4}",
                 'sort' => 4, 'editable' => false, 'protected' => true, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp
             ],
+                [
+                    'id' => $categoryId4_1 = uuidl(),
+                    'uri' => 'cellregeneration',
+                    'parent_id' => $categoryId4,
+                    'title' => "article_category.title.{$categoryId4_1}",
+                    'details' => "article_category.details.{$categoryId4_1}",
+                    'options' => null,
+                    'seo' => "article_category.seo.{$categoryId4_1}",
+                    'sort' => 1, 'editable' => false, 'protected' => true, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp
+                ],
+                [
+                    'id' => $categoryId4_2 = uuidl(),
+                    'uri' => 'estheticmedicine',
+                    'parent_id' => $categoryId4,
+                    'title' => "article_category.title.{$categoryId4_2}",
+                    'details' => "article_category.details.{$categoryId4_2}",
+                    'options' => null,
+                    'seo' => "article_category.seo.{$categoryId4_2}",
+                    'sort' => 1, 'editable' => false, 'protected' => true, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp
+                ],
+                [
+                    'id' => $categoryId4_3 = uuidl(),
+                    'uri' => 'diseaseprevention',
+                    'parent_id' => $categoryId4,
+                    'title' => "article_category.title.{$categoryId4_3}",
+                    'details' => "article_category.details.{$categoryId4_3}",
+                    'options' => null,
+                    'seo' => "article_category.seo.{$categoryId4_3}",
+                    'sort' => 1, 'editable' => false, 'protected' => true, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp
+                ],
+                [
+                    'id' => $categoryId4_4 = uuidl(),
+                    'uri' => 'therapeutics',
+                    'parent_id' => $categoryId4,
+                    'title' => "article_category.title.{$categoryId4_4}",
+                    'details' => "article_category.details.{$categoryId4_4}",
+                    'options' => null,
+                    'seo' => "article_category.seo.{$categoryId4_4}",
+                    'sort' => 1, 'editable' => false, 'protected' => true, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp
+                ],
 
         ];
         DB::table('article_category')->insert($articleCategoryData);
@@ -113,6 +153,10 @@ class ArticleElementSeeder extends Seeder
                 ['id' => $categoryId3_1, 'title' => '製造與開發', 'details' => null],
                 ['id' => $categoryId3_2, 'title' => ' 醫學研究', 'details' => null],
             ['id' => $categoryId4, 'title' => '我們的產品', 'details' => null],
+                ['id' => $categoryId4_1, 'title' => '細胞再生', 'details' => null],
+                ['id' => $categoryId4_2, 'title' => '醫學美容', 'details' => null],
+                ['id' => $categoryId4_3, 'title' => '疾病預防', 'details' => null],
+                ['id' => $categoryId4_4, 'title' => '治療疾病', 'details' => null],
         ];
         $articleCategoryLanguage = ['ja' => $data, 'en' => $data,];
         SeederHelper::setLanguageResource($this->languageResourceData, 'article_category', $articleCategoryLanguage, $this->languageList, null, false);

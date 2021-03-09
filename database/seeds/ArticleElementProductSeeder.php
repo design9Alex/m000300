@@ -6,6 +6,7 @@ use Minmax\Base\Helpers\Seeder as SeederHelper;
 
 class ArticleElementProductSeeder extends Seeder
 {
+    protected $timestamp,$languageList,$languageResourceData;
     /**
      * Run the database seeds.
      *
@@ -23,13 +24,13 @@ class ArticleElementProductSeeder extends Seeder
     }
 
     protected function insertData(){
-        $categoryId4 = DB::table('article_category')->where('uri', 'product')->value('id');
+        $categoryId4 = DB::table('article_category')->where('uri', 'cellregeneration')->value('id');
 
 
         //新增資料
         $articleElementData = [
 
-            //細胞再生
+            //細胞再生 cellregeneration
             ['id' => $articleElementCellregenerationId1 = uuidl(), 'title' => 'article_element.title.'.$articleElementCellregenerationId1, 'details' => 'article_element.details.'.$articleElementCellregenerationId1, 'sort' => 1, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp],
             ['id' => $articleElementCellregenerationId2 = uuidl(), 'title' => 'article_element.title.'.$articleElementCellregenerationId2, 'details' => 'article_element.details.'.$articleElementCellregenerationId2, 'sort' => 2, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp],
 
@@ -37,7 +38,7 @@ class ArticleElementProductSeeder extends Seeder
             ['id' => $articleElementCellregenerationId4 = uuidl(), 'title' => 'article_element.title.'.$articleElementCellregenerationId4, 'details' => 'article_element.details.'.$articleElementCellregenerationId4, 'sort' => 4, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp],
             ['id' => $articleElementCellregenerationId5 = uuidl(), 'title' => 'article_element.title.'.$articleElementCellregenerationId5, 'details' => 'article_element.details.'.$articleElementCellregenerationId5, 'sort' => 5, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp],
             ['id' => $articleElementCellregenerationId6 = uuidl(), 'title' => 'article_element.title.'.$articleElementCellregenerationId6, 'details' => 'article_element.details.'.$articleElementCellregenerationId6, 'sort' => 6, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp],
-            ['id' => $articleElementCellregenerationId7 = uuidl(), 'title' => 'article_element.title.'.$articleElementCellregenerationId7, 'details' => 'article_element.details.'.$articleElementCellregenerationId7, 'sort' => 6, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp],
+            ['id' => $articleElementCellregenerationId7 = uuidl(), 'title' => 'article_element.title.'.$articleElementCellregenerationId7, 'details' => 'article_element.details.'.$articleElementCellregenerationId7, 'sort' => 7, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp],
         ];
         DB::table('article_element')->insert($articleElementData);
 
