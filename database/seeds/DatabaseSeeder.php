@@ -28,6 +28,9 @@ class DatabaseSeeder extends Seeder
         $this->call(ArticleElementProductEstheticmedicineSeeder::class);
         $this->call(ArticleElementProductDiseasepreventionSeeder::class);
         $this->call(ArticleElementProductTherapeuticsSeeder::class);
+        $this->call(AdvertisingProductSeeder::class);
+
+        $this->call(SiteParameterContact::class);
 
         $this->call(RolePermissionsSeeder::class);
     }
