@@ -4,7 +4,7 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Minmax\Base\Helpers\Seeder as SeederHelper;
 
-class AdvertisingProductEstheticmedicineSeeder extends Seeder
+class ArticleElementProductEstheticmedicineSeeder extends Seeder
 {
     protected $timestamp,$languageList,$languageResourceData;
     /**
@@ -510,4 +510,5 @@ HTML;
         DB::table('language_resource')->insert($this->languageResourceData);
     }
 }
+
 
