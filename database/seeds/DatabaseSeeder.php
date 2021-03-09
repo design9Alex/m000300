@@ -31,6 +31,9 @@ class DatabaseSeeder extends Seeder
         $this->call(AdvertisingProductSeeder::class);
 
         $this->call(SiteParameterContact::class);
+        $this->call(ArticleElementContactSeeder::class);
+
+        $this->call(ArticlePagePrivacySeeder::class);
 
         $this->call(RolePermissionsSeeder::class);
     }

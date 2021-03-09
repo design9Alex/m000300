@@ -142,6 +142,17 @@ class ArticleElementSeeder extends Seeder
                     'sort' => 1, 'editable' => false, 'protected' => true, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp
                 ],
 
+            [
+                'id' => $categoryId5 = uuidl(),
+                'uri' => 'contact',
+                'parent_id' => $categoryId,
+                'title' => "article_category.title.{$categoryId5}",
+                'details' => "article_category.details.{$categoryId5}",
+                'options' => null,
+                'seo' => "article_category.seo.{$categoryId5}",
+                'sort' => 5, 'editable' => false, 'protected' => true, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp
+            ],
+
         ];
         DB::table('article_category')->insert($articleCategoryData);
 
@@ -157,6 +168,7 @@ class ArticleElementSeeder extends Seeder
                 ['id' => $categoryId4_2, 'title' => '醫學美容', 'details' => null],
                 ['id' => $categoryId4_3, 'title' => '疾病預防', 'details' => null],
                 ['id' => $categoryId4_4, 'title' => '治療疾病', 'details' => null],
+            ['id' => $categoryId5, 'title' => '聯繫我們', 'details' => null],
         ];
         $articleCategoryLanguage = ['ja' => $data, 'en' => $data,];
         SeederHelper::setLanguageResource($this->languageResourceData, 'article_category', $articleCategoryLanguage, $this->languageList, null, false);

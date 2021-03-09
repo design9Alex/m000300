@@ -49,6 +49,12 @@ class SampleSeeder extends Seeder
 
 
     protected function updateLanguageResource(){
+        $systemParameters = DB::table('language_resource')->where('key','like','%system_parameter_group.title.%')->where('language_id','1')->get();
+
+        foreach($systemParameters as $key => $item){
+            DB::table('language_resource')->where('key', $item->key)->whereIn('language_id',[3,4])->update(['text' => $item->text]);
+        }
+
         $systemParameters = DB::table('language_resource')->where('key','like','%system_parameter_item.label.%')->where('language_id','1')->get();
 
         foreach($systemParameters as $key => $item){

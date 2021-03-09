@@ -60,10 +60,6 @@ class AdvertisingAboutSeeder extends Seeder
                 'sort' => $rowTemplateId, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp
             ],
 
-
-
-
-
         ];
         DB::table('advertising_template')->insert($advertisingTemplateData);
 
