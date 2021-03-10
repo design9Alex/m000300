@@ -4,7 +4,7 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Minmax\Base\Helpers\Seeder as SeederHelper;
 
-class AdvertisingAboutSeeder extends Seeder
+class AdvertisingContactSeeder extends Seeder
 {
     protected $timestamp,$languageList,$languageResourceData;
     /**
@@ -23,7 +23,6 @@ class AdvertisingAboutSeeder extends Seeder
         $this->insertLanguageResource();
     }
 
-
     protected function insertData(){
         $categoryId = DB::table('system_parameter_group')->where('code', 'ad_template_group')->value('id');
 
@@ -32,7 +31,7 @@ class AdvertisingAboutSeeder extends Seeder
         $systemParameterItemData = [
             [
                 'group_id' => $categoryId,
-                'value' => 'menu-about',
+                'value' => 'menu-contact',
                 'label' => 'system_parameter_item.label.'. ++$rowParameterId,
                 'options' => json_encode(['class' => 'secondary', 'details' => null]),
                 'sort' => $rowParameterId, 'active' => true
@@ -41,7 +40,7 @@ class AdvertisingAboutSeeder extends Seeder
         DB::table('system_parameter_item')->insert($systemParameterItemData);
         // 多語系
         $data = [
-            ['label' => '關於我們群組'],
+            ['label' => '聯繫我們群組'],
         ];
         $adTemplateLanguage = ['ja' => $data, 'en' => $data,];
         SeederHelper::setLanguageResource($this->languageResourceData, 'system_parameter_item', $adTemplateLanguage, $this->languageList, $startParameterId, false);
@@ -53,7 +52,7 @@ class AdvertisingAboutSeeder extends Seeder
 
             [
                 'title' => 'advertising_template.title.' . $templateId1 = ++$rowTemplateId,
-                'code' => 'about_banner',
+                'code' => 'contact_banner',
                 'admin_view' => 'templates.template-admin-manufacturing-banner',
                 'web_view' => 'templates.web-menu-activity',
                 'template_group' => 'menu-manufacturing',
@@ -66,7 +65,7 @@ class AdvertisingAboutSeeder extends Seeder
 
         // 多語系
         $data = [
-            ['title' => '關於我們Banner'],
+            ['title' => '聯繫我們Banner'],
         ];
         $adTemplateLanguage = ['ja' => $data, 'en' => $data,];
         SeederHelper::setLanguageResource($this->languageResourceData, 'advertising_template', $adTemplateLanguage, $this->languageList, $startTemplateId, false);
@@ -88,7 +87,7 @@ class AdvertisingAboutSeeder extends Seeder
 
         // 多語系
         $data = [
-            ['title' => '關於我們', 'details' => null],
+            ['title' => '聯繫我們', 'details' => null],
 
             //['title' => '關於我們Banner', 'details' => null],
         ];
@@ -107,17 +106,17 @@ class AdvertisingAboutSeeder extends Seeder
 
 
         $adEditor1 = <<<HTML
-        <h1 class="bn-tit fs_36">会社案内</h1>
-        <p class="en fs_16">About Us</p>
+        <h1 class="bn-tit fs_36">お問い合わせ</h1>
+        <p class="en fs_16">Contact Us</p>
 HTML;
 
 
         $data = [
-            ['id' => $adId1,'title' => '關於我們Banner', 'details' => json_encode(
+            ['id' => $adId1,'title' => '聯繫我們Banner', 'details' => json_encode(
                 [
-                    'pic' => [['path' => '/styles/images/about/banner.jpg']],
-                    'pic2' => [['path' => '/styles/images/about/banner.jpg']],
-                    'topic' => '關於我們',
+                    'pic' => [['path' => '/styles/images/other/contact-banner.jpg']],
+                    'pic2' => [['path' => '/styles/images/other/contact-banner.jpg']],
+                    'topic' => '聯繫我們',
                     'description' => '',
                     'link' => '',
                     'editor' => $adEditor1
@@ -135,5 +134,4 @@ HTML;
     protected function insertLanguageResource(){
         DB::table('language_resource')->insert($this->languageResourceData);
     }
-
 }

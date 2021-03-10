@@ -29,6 +29,20 @@ class ArticleElementSeeder extends Seeder
         //調整欄位
         DB::table('article_category')->where('uri','article-element')->update(['options' => json_encode(['relation' => 'articleElement', 'route' => false])]);
 
+        DB::table('admin_menu')->where('uri','article-news')->update(['active' => false]);
+        DB::table('admin_menu')->where('uri','article-faq')->update(['active' => false]);
+        DB::table('admin_menu')->where('uri','article-download')->update(['active' => false]);
+        DB::table('admin_menu')->where('uri','article-column')->update(['active' => false]);
+        DB::table('admin_menu')->where('uri','article-location')->update(['active' => false]);
+        DB::table('admin_menu')->where('uri','article-team')->update(['active' => false]);
+
+        DB::table('article_category')->where('uri','article-news')->update(['active' => false]);
+        DB::table('article_category')->where('uri','article-faq')->update(['active' => false]);
+        DB::table('article_category')->where('uri','article-download')->update(['active' => false]);
+        DB::table('article_category')->where('uri','article-column')->update(['active' => false]);
+        DB::table('article_category')->where('uri','article-location')->update(['active' => false]);
+        DB::table('article_category')->where('uri','article-team')->update(['active' => false]);
+
         //刪除不須要的擴充欄位
         //$columnKeys = DB::table('column_extension')->where('table_name','article_element')->whereIn('sub_column_name',['pic','description'])->get()->pluck('title')->toArray();
         //DB::table('language_resource')->whereIn('key',$columnKeys)->delete();
@@ -42,7 +56,7 @@ class ArticleElementSeeder extends Seeder
         $articleCategoryData = [
             [
                 'id' => $categoryId1 = uuidl(),
-                'uri' => 'index',
+                'uri' => 'home',
                 'parent_id' => $categoryId,
                 'title' => "article_category.title.{$categoryId1}",
                 'details' => "article_category.details.{$categoryId1}",
