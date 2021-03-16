@@ -60,6 +60,14 @@ class SampleSeeder extends Seeder
         foreach($systemParameters as $key => $item){
             DB::table('language_resource')->where('key', $item->key)->whereIn('language_id',[3,4])->update(['text' => $item->text]);
         }
+
+        $systemParameters = DB::table('language_resource')->where('key','like','%site_dashboard.title.%')->where('language_id','1')->get();
+
+        foreach($systemParameters as $key => $item){
+            DB::table('language_resource')->where('key', $item->key)->whereIn('language_id',[3,4])->update(['text' => $item->text]);
+        }
+
+
     }
 
 
@@ -127,22 +135,22 @@ class SampleSeeder extends Seeder
                 ['id' => $menuRootId2, 'title' => '頁尾選單', 'link' => null]
             ],
             'zh-Hans' => [
-                ['id' => $menuRootId1, 'title' => '网站主选单', 'link' => null],
-                    ['id' => $menuId1, 'title' => '关于我们', 'link' => url('zh-hans/page/about')],
-                    ['id' => $menuId2, 'title' => '最新消息', 'link' => url('zh-hans/news/categories/with-category-id')],
-                ['id' => $menuRootId2, 'title' => '页尾选单', 'link' => null]
+                ['id' => $menuRootId1, 'title' => '網站主選單', 'link' => null],
+                ['id' => $menuId1, 'title' => '關於我們', 'link' => url('page/about')],
+                ['id' => $menuId2, 'title' => '最新消息', 'link' => url('news/categories/with-category-id')],
+                ['id' => $menuRootId2, 'title' => '頁尾選單', 'link' => null]
             ],
             'ja' => [
-                ['id' => $menuRootId1, 'title' => 'サイトメニュー', 'link' => null],
-                    ['id' => $menuId1, 'title' => '会社概要', 'link' => url('ja/page/about')],
-                    ['id' => $menuId2, 'title' => 'ニュース', 'link' => url('ja/news/categories/with-category-id')],
-                ['id' => $menuRootId2, 'title' => 'フッターメニュー', 'link' => null]
+                ['id' => $menuRootId1, 'title' => '網站主選單', 'link' => null],
+                ['id' => $menuId1, 'title' => '關於我們', 'link' => url('page/about')],
+                ['id' => $menuId2, 'title' => '最新消息', 'link' => url('news/categories/with-category-id')],
+                ['id' => $menuRootId2, 'title' => '頁尾選單', 'link' => null]
             ],
             'en' => [
-                ['id' => $menuRootId1, 'title' => 'Site Main Menu', 'link' => null],
-                    ['id' => $menuId1, 'title' => 'About', 'link' => url('en/page/about')],
-                    ['id' => $menuId2, 'title' => 'News', 'link' => url('en/news/categories/with-category-id')],
-                ['id' => $menuRootId2, 'title' => 'Footer Menu', 'link' => null]
+                ['id' => $menuRootId1, 'title' => '網站主選單', 'link' => null],
+                ['id' => $menuId1, 'title' => '關於我們', 'link' => url('page/about')],
+                ['id' => $menuId2, 'title' => '最新消息', 'link' => url('news/categories/with-category-id')],
+                ['id' => $menuRootId2, 'title' => '頁尾選單', 'link' => null]
             ],
         ];
         SeederHelper::setLanguageResource($languageResourceData, 'web_menu', $webMenuLanguage, $languageList, null, false);
