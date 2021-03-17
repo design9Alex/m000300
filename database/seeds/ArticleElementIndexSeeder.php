@@ -33,12 +33,48 @@ class ArticleElementIndexSeeder extends Seeder
             ['id' => $articleElementId1 = uuidl(), 'title' => 'article_element.title.'.$articleElementId1, 'details' => 'article_element.details.'.$articleElementId1, 'sort' => 1, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp],
             ['id' => $articleElementId2 = uuidl(), 'title' => 'article_element.title.'.$articleElementId2, 'details' => 'article_element.details.'.$articleElementId2, 'sort' => 2, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp],
             ['id' => $articleElementId3 = uuidl(), 'title' => 'article_element.title.'.$articleElementId3, 'details' => 'article_element.details.'.$articleElementId3, 'sort' => 3, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp],
+            ['id' => $articleElementId4 = uuidl(), 'title' => 'article_element.title.'.$articleElementId4, 'details' => 'article_element.details.'.$articleElementId4, 'sort' => 4, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp],
 
 
         ];
         DB::table('article_element')->insert($articleElementData);
 
         $editor1 = <<<HTML
+
+			<div class="home-banner">
+				<div class="banner">
+					<div class="slider" data-aos="fade">
+						<!-- 圖片尺寸 w1920 * h820 -->
+						<div class="item jqimgFill rellax" data-rellax-speed="3" data-rellax-xs-speed="1" data-rellax-mobile-speed="2"
+                data-rellax-tablet-speed="2">
+							<img src="/styles/images/index/banner01.jpg" alt="">
+							<div class="text-box">
+								<p class="word fs_24">高純度のサケDNAにより、表皮細胞の成長活性を促進し、皮膚のコラーゲン、皮膚の弾力性、およびヒアルロン酸を再生します。</p>
+							</div>
+						</div>
+						<div class="item jqimgFill rellax" data-rellax-speed="3" data-rellax-xs-speed="1" data-rellax-mobile-speed="2"
+                data-rellax-tablet-speed="2">
+						 	<img src="/styles/images/index/banner02.jpg" alt="">
+							<div class="text-box darkbg">
+								<p class="word white fs_24">
+									<span class="d-block">免疫医学および自然医学</span>
+									<span class="d-block">に関する機能性製品の研究開発</span>
+								</p>
+							</div>
+						</div>
+						<div class="item jqimgFill rellax" data-rellax-speed="3" data-rellax-xs-speed="1" data-rellax-mobile-speed="2"
+                data-rellax-tablet-speed="2">
+							<img src="/styles/images/index/banner03.jpg" alt="">
+							<div class="text-box">
+								<p class="word white fs_24">修復外用ゲルシリーズ：特に癒しにくい創傷の治癒のために開発され糖尿病や湿疹やニキビによる皮膚の問題を対応できる</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+HTML;
+
+        $editor2 = <<<HTML
         <div class="home-section home-about">
 				<div class="zoom">
 					<div class="scriptbox" data-aos="fade-right">
@@ -56,7 +92,7 @@ class ArticleElementIndexSeeder extends Seeder
 			</div>
 HTML;
 
-        $editor2 = <<<HTML
+        $editor3 = <<<HTML
         <div class="home-section home-products">
 				<div class="pd-bn">
 					<div class="bg-img jqimgFill"><img src="/styles/images//index/index-pd-bn.jpg" alt=""></div>
@@ -125,7 +161,7 @@ HTML;
 			</div>
 HTML;
 
-        $editor3 = <<<HTML
+        $editor4 = <<<HTML
         <div class="home-section home-therapy">
 				<div class="zoom">
 					<div class="scriptbox">
@@ -164,9 +200,10 @@ HTML;
 
 
         $data = [
-            ['id' => $articleElementId1, 'title' => '私たちについて','details' => json_encode(['editor' => $editor1])],
-            ['id' => $articleElementId2, 'title' => '高品質の製品','details' => json_encode(['editor' => $editor2])],
-            ['id' => $articleElementId3, 'title' => '自己血清サイトカイン増殖療法','details' => json_encode(['editor' => $editor3])],
+            ['id' => $articleElementId1, 'title' => '首頁','details' => json_encode(['editor' => $editor1])],
+            ['id' => $articleElementId2, 'title' => '私たちについて','details' => json_encode(['editor' => $editor2])],
+            ['id' => $articleElementId3, 'title' => '高品質の製品','details' => json_encode(['editor' => $editor3])],
+            ['id' => $articleElementId4, 'title' => '自己血清サイトカイン増殖療法','details' => json_encode(['editor' => $editor4])],
         ];
         $articleTeamLanguage = ['ja' => $data, 'en' => $data];
         SeederHelper::setLanguageResource($this->languageResourceData, 'article_element', $articleTeamLanguage, $this->languageList, null, false);
@@ -176,6 +213,7 @@ HTML;
             ['category_id' => $categoryId5, 'object_id' => $articleElementId1, 'model' => 'Minmax\Article\Models\ArticleElement'],
             ['category_id' => $categoryId5, 'object_id' => $articleElementId2, 'model' => 'Minmax\Article\Models\ArticleElement'],
             ['category_id' => $categoryId5, 'object_id' => $articleElementId3, 'model' => 'Minmax\Article\Models\ArticleElement'],
+            ['category_id' => $categoryId5, 'object_id' => $articleElementId4, 'model' => 'Minmax\Article\Models\ArticleElement'],
         ];
         DB::table('article_category_relation')->insert($articleCategoryRelationData);
 

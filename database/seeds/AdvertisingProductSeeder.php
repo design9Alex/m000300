@@ -54,10 +54,10 @@ class AdvertisingProductSeeder extends Seeder
         $rowTemplateId--;
         $advertisingTemplateData = [
 
-            //細胞再生
+            //我們的產品
             [
                 'title' => 'advertising_template.title.' . $templateId1 = ++$rowTemplateId,
-                'code' => 'cellregeneration_banner',
+                'code' => 'product_banner',
                 'admin_view' => 'templates.template-admin-manufacturing-banner',
                 'web_view' => 'templates.web-menu-activity',
                 'template_group' => 'menu-product',
@@ -67,49 +67,7 @@ class AdvertisingProductSeeder extends Seeder
 
             [
                 'title' => 'advertising_template.title.' . $templateId2 = ++$rowTemplateId,
-                'code' => 'cellregeneration',
-                'admin_view' => 'MinmaxAd::templates.normal-admin',
-                'web_view' => 'adTemplates.web-menu-activity',
-                'template_group' => 'menu-product',
-                'options' => null,
-                'sort' => $rowTemplateId, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp
-            ],
-
-            //医療美容
-            [
-                'title' => 'advertising_template.title.' . $templateId3 = ++$rowTemplateId,
-                'code' => 'estheticmedicine_banner',
-                'admin_view' => 'templates.template-admin-manufacturing-banner',
-                'web_view' => 'templates.web-menu-activity',
-                'template_group' => 'menu-product',
-                'options' => null,
-                'sort' => $rowTemplateId, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp
-            ],
-
-            [
-                'title' => 'advertising_template.title.' . $templateId4 = ++$rowTemplateId,
-                'code' => 'estheticmedicine',
-                'admin_view' => 'MinmaxAd::templates.normal-admin',
-                'web_view' => 'adTemplates.web-menu-activity',
-                'template_group' => 'menu-product',
-                'options' => null,
-                'sort' => $rowTemplateId, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp
-            ],
-
-            //疾病預防
-            [
-                'title' => 'advertising_template.title.' . $templateId5 = ++$rowTemplateId,
-                'code' => 'diseaseprevention_banner',
-                'admin_view' => 'templates.template-admin-manufacturing-banner',
-                'web_view' => 'templates.web-menu-activity',
-                'template_group' => 'menu-product',
-                'options' => null,
-                'sort' => $rowTemplateId, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp
-            ],
-
-            [
-                'title' => 'advertising_template.title.' . $templateId6 = ++$rowTemplateId,
-                'code' => 'diseaseprevention',
+                'code' => 'product_advertising',
                 'admin_view' => 'MinmaxAd::templates.normal-admin',
                 'web_view' => 'adTemplates.web-menu-activity',
                 'template_group' => 'menu-product',
@@ -118,26 +76,11 @@ class AdvertisingProductSeeder extends Seeder
             ],
 
 
-            //治療疾病
-            [
-                'title' => 'advertising_template.title.' . $templateId7 = ++$rowTemplateId,
-                'code' => 'therapeutics_banner',
-                'admin_view' => 'templates.template-admin-manufacturing-banner',
-                'web_view' => 'templates.web-menu-activity',
-                'template_group' => 'menu-product',
-                'options' => null,
-                'sort' => $rowTemplateId, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp
-            ],
 
-            [
-                'title' => 'advertising_template.title.' . $templateId8 = ++$rowTemplateId,
-                'code' => 'therapeutics',
-                'admin_view' => 'MinmaxAd::templates.normal-admin',
-                'web_view' => 'adTemplates.web-menu-activity',
-                'template_group' => 'menu-product',
-                'options' => null,
-                'sort' => $rowTemplateId, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp
-            ],
+
+
+
+
 
 
 
@@ -147,17 +90,10 @@ class AdvertisingProductSeeder extends Seeder
 
         // 多語系
         $data = [
-            ['title' => '細胞再生-Banner'],
-            ['title' => '細胞再生-聯繫我們'],
+            ['title' => '我們的產品-Banner'],
+            ['title' => '我們的產品-聯繫我們'],
 
-            ['title' => '醫學美容-Banner'],
-            ['title' => '醫學美容-聯繫我們'],
 
-            ['title' => '疾病預防-Banner'],
-            ['title' => '疾病預防-聯繫我們'],
-
-            ['title' => '疾病治療-Banner'],
-            ['title' => '疾病治療-聯繫我們'],
         ];
         $adTemplateLanguage = ['ja' => $data, 'en' => $data,];
         SeederHelper::setLanguageResource($this->languageResourceData, 'advertising_template', $adTemplateLanguage, $this->languageList, $startTemplateId, false);
@@ -209,14 +145,14 @@ class AdvertisingProductSeeder extends Seeder
             ['id' => $adId1 = uuidl(), 'category_id' => $categoryId1, 'template_id' => $templateId1, 'title' => "advertising.title.{$adId1}", 'details' => "advertising.details.{$adId1}", 'options' => json_encode(['target' => '_self']), 'start_at' => null, 'end_at' => null, 'sort' => 1, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp,],
             ['id' => $adId2 = uuidl(), 'category_id' => $categoryId1, 'template_id' => $templateId2, 'title' => "advertising.title.{$adId2}", 'details' => "advertising.details.{$adId2}", 'options' => json_encode(['target' => '_self']), 'start_at' => null, 'end_at' => null, 'sort' => 2, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp,],
 
-            ['id' => $adId3 = uuidl(), 'category_id' => $categoryId2, 'template_id' => $templateId3, 'title' => "advertising.title.{$adId3}", 'details' => "advertising.details.{$adId3}", 'options' => json_encode(['target' => '_self']), 'start_at' => null, 'end_at' => null, 'sort' => 1, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp,],
-            ['id' => $adId4 = uuidl(), 'category_id' => $categoryId2, 'template_id' => $templateId4, 'title' => "advertising.title.{$adId4}", 'details' => "advertising.details.{$adId4}", 'options' => json_encode(['target' => '_self']), 'start_at' => null, 'end_at' => null, 'sort' => 2, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp,],
+            ['id' => $adId3 = uuidl(), 'category_id' => $categoryId2, 'template_id' => $templateId1, 'title' => "advertising.title.{$adId3}", 'details' => "advertising.details.{$adId3}", 'options' => json_encode(['target' => '_self']), 'start_at' => null, 'end_at' => null, 'sort' => 1, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp,],
+            ['id' => $adId4 = uuidl(), 'category_id' => $categoryId2, 'template_id' => $templateId2, 'title' => "advertising.title.{$adId4}", 'details' => "advertising.details.{$adId4}", 'options' => json_encode(['target' => '_self']), 'start_at' => null, 'end_at' => null, 'sort' => 2, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp,],
 
-            ['id' => $adId5 = uuidl(), 'category_id' => $categoryId3, 'template_id' => $templateId5, 'title' => "advertising.title.{$adId5}", 'details' => "advertising.details.{$adId5}", 'options' => json_encode(['target' => '_self']), 'start_at' => null, 'end_at' => null, 'sort' => 1, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp,],
-            ['id' => $adId6 = uuidl(), 'category_id' => $categoryId3, 'template_id' => $templateId6, 'title' => "advertising.title.{$adId6}", 'details' => "advertising.details.{$adId6}", 'options' => json_encode(['target' => '_self']), 'start_at' => null, 'end_at' => null, 'sort' => 2, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp,],
+            ['id' => $adId5 = uuidl(), 'category_id' => $categoryId3, 'template_id' => $templateId1, 'title' => "advertising.title.{$adId5}", 'details' => "advertising.details.{$adId5}", 'options' => json_encode(['target' => '_self']), 'start_at' => null, 'end_at' => null, 'sort' => 1, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp,],
+            ['id' => $adId6 = uuidl(), 'category_id' => $categoryId3, 'template_id' => $templateId2, 'title' => "advertising.title.{$adId6}", 'details' => "advertising.details.{$adId6}", 'options' => json_encode(['target' => '_self']), 'start_at' => null, 'end_at' => null, 'sort' => 2, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp,],
 
-            ['id' => $adId7 = uuidl(), 'category_id' => $categoryId4, 'template_id' => $templateId7, 'title' => "advertising.title.{$adId7}", 'details' => "advertising.details.{$adId7}", 'options' => json_encode(['target' => '_self']), 'start_at' => null, 'end_at' => null, 'sort' => 1, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp,],
-            ['id' => $adId8 = uuidl(), 'category_id' => $categoryId4, 'template_id' => $templateId8, 'title' => "advertising.title.{$adId8}", 'details' => "advertising.details.{$adId8}", 'options' => json_encode(['target' => '_self']), 'start_at' => null, 'end_at' => null, 'sort' => 2, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp,],
+            ['id' => $adId7 = uuidl(), 'category_id' => $categoryId4, 'template_id' => $templateId1, 'title' => "advertising.title.{$adId7}", 'details' => "advertising.details.{$adId7}", 'options' => json_encode(['target' => '_self']), 'start_at' => null, 'end_at' => null, 'sort' => 1, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp,],
+            ['id' => $adId8 = uuidl(), 'category_id' => $categoryId4, 'template_id' => $templateId2, 'title' => "advertising.title.{$adId8}", 'details' => "advertising.details.{$adId8}", 'options' => json_encode(['target' => '_self']), 'start_at' => null, 'end_at' => null, 'sort' => 2, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp,],
 
         ];
         DB::table('advertising')->insert($advertisingData);
@@ -281,7 +217,7 @@ HTML;
                     'pic2' => [['path' => '/styles/images/product/cell-banner.jpg']],
                     'topic' => '細胞再生',
                     'description' => '',
-                    'link' => '',
+                    'link' => '/products/cellregeneration',
                     'editor' => $adEditor1
                 ]
             ),],
@@ -291,46 +227,46 @@ HTML;
 
             ['id' => $adId3,'title' => '醫學美容Banner', 'details' => json_encode(
                 [
-                    'pic' => [['path' => '/styles/images/product/cell-banner.jpg']],
-                    'pic2' => [['path' => '/styles/images/product/cell-banner.jpg']],
+                    'pic' => [['path' => '/styles/images/product/medicine-banner.jpg']],
+                    'pic2' => [['path' => '/styles/images/product/medicine-banner.jpg']],
                     'topic' => '醫學美容',
                     'description' => '',
-                    'link' => '',
+                    'link' => '/products/estheticmedicine',
                     'editor' => $adEditor3
                 ]
             ),],
 
-            ['id' => $adId4,'title' => 'お問い合わせ', 'details' => json_encode(['pic' => [['path' => '/styles/images/product/cell-contact.jpg']], 'topic' => 'お問い合わせ', 'description' => '', 'link' => 'contact','editor' => $adEditor4]),],
+            ['id' => $adId4,'title' => 'お問い合わせ', 'details' => json_encode(['pic' => [['path' => '/styles/images/product/medicine-contact.jpg']], 'topic' => 'お問い合わせ', 'description' => '', 'link' => 'contact','editor' => $adEditor4]),],
 
 
 
             ['id' => $adId5,'title' => '疾病預防Banner', 'details' => json_encode(
                 [
-                    'pic' => [['path' => '/styles/images/product/cell-banner.jpg']],
-                    'pic2' => [['path' => '/styles/images/product/cell-banner.jpg']],
+                    'pic' => [['path' => '/styles/images/product/disease-banner.jpg']],
+                    'pic2' => [['path' => '/styles/images/product/disease-banner.jpg']],
                     'topic' => '疾病預防',
                     'description' => '',
-                    'link' => '',
+                    'link' => '/products/diseaseprevention',
                     'editor' => $adEditor5
                 ]
             ),],
 
-            ['id' => $adId6,'title' => 'お問い合わせ', 'details' => json_encode(['pic' => [['path' => '/styles/images/product/cell-contact.jpg']], 'topic' => 'お問い合わせ', 'description' => '', 'link' => 'contact','editor' => $adEditor6]),],
+            ['id' => $adId6,'title' => 'お問い合わせ', 'details' => json_encode(['pic' => [['path' => '/styles/images/product/disease-contact.jpg']], 'topic' => 'お問い合わせ', 'description' => '', 'link' => 'contact','editor' => $adEditor6]),],
 
 
 
             ['id' => $adId7,'title' => '疾病治療Banner', 'details' => json_encode(
                 [
-                    'pic' => [['path' => '/styles/images/product/cell-banner.jpg']],
-                    'pic2' => [['path' => '/styles/images/product/cell-banner.jpg']],
+                    'pic' => [['path' => '/styles/images/product/therapeutics-banner.jpg']],
+                    'pic2' => [['path' => '/styles/images/product/therapeutics-banner.jpg']],
                     'topic' => '疾病治療',
                     'description' => '',
-                    'link' => '',
+                    'link' => '/products/therapeutics',
                     'editor' => $adEditor7
                 ]
             ),],
 
-            ['id' => $adId8,'title' => 'お問い合わせ', 'details' => json_encode(['pic' => [['path' => '/styles/images/product/cell-contact.jpg']], 'topic' => 'お問い合わせ', 'description' => '', 'link' => 'contact','editor' => $adEditor8]),],
+            ['id' => $adId8,'title' => 'お問い合わせ', 'details' => json_encode(['pic' => [['path' => '/styles/images/product/therapeutics-contact.jpg']], 'topic' => 'お問い合わせ', 'description' => '', 'link' => 'contact','editor' => $adEditor8]),],
 
         ];
         $advertisingLanguage = [ 'ja' => $data, 'en' => $data,];

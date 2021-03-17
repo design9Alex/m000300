@@ -38,6 +38,7 @@ class ArticleElementProductTherapeuticsSeeder extends Seeder
             ['id' => $articleElementId4 = uuidl(), 'title' => 'article_element.title.'.$articleElementId4, 'details' => 'article_element.details.'.$articleElementId4, 'sort' => 4, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp],
             ['id' => $articleElementId5 = uuidl(), 'title' => 'article_element.title.'.$articleElementId5, 'details' => 'article_element.details.'.$articleElementId5, 'sort' => 5, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp],
             ['id' => $articleElementId6 = uuidl(), 'title' => 'article_element.title.'.$articleElementId6, 'details' => 'article_element.details.'.$articleElementId6, 'sort' => 6, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp],
+            ['id' => $articleElementId7 = uuidl(), 'title' => 'article_element.title.'.$articleElementId7, 'details' => 'article_element.details.'.$articleElementId7, 'sort' => 6, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp],
 
         ];
         DB::table('article_element')->insert($articleElementData);
@@ -281,6 +282,23 @@ HTML;
                     </div>
 HTML;
 
+        $editor7 = <<<HTML
+<div class="page-bt-linkbox">
+                    <div class="bg-img jqimgFill"><img src="/styles/images/product/therapeutics-contact.jpg" alt=""></div>
+                    <div class="w1100 zoom">
+                        <h2 class="hidden">お問い合わせ</h2>
+                        <a href="contact">
+                            <span class="link-data">
+                                <span class="tit fs_28 fw_500" style="color:#413D3C">お問い合わせ</span>
+                                <span class="subtit fs_16" style="color:#0990D0">Contact</span>
+                                <span class="text fs_16" style="color:#333333">ご不明な点がございましたら、お気軽にお問い合わせください</span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+HTML;
+
+
 
 
 
@@ -291,6 +309,7 @@ HTML;
             ['id' => $articleElementId4, 'title' => 'SANAKIN','details' => json_encode(['editor' => $editor4])],
             ['id' => $articleElementId5, 'title' => 'APPLIMED-O2','details' => json_encode(['editor' => $editor5])],
             ['id' => $articleElementId6, 'title' => 'マルチレーザーデリバリーシステム（MLDS）','details' => json_encode(['editor' => $editor6])],
+            ['id' => $articleElementId7, 'title' => 'お問い合わせ','details' => json_encode(['editor' => $editor7])],
         ];
         $articleTeamLanguage = ['ja' => $data, 'en' => $data];
         SeederHelper::setLanguageResource($this->languageResourceData, 'article_element', $articleTeamLanguage, $this->languageList, null, false);
@@ -303,6 +322,7 @@ HTML;
             ['category_id' => $categoryId4, 'object_id' => $articleElementId4, 'model' => 'Minmax\Article\Models\ArticleElement'],
             ['category_id' => $categoryId4, 'object_id' => $articleElementId5, 'model' => 'Minmax\Article\Models\ArticleElement'],
             ['category_id' => $categoryId4, 'object_id' => $articleElementId6, 'model' => 'Minmax\Article\Models\ArticleElement'],
+            ['category_id' => $categoryId4, 'object_id' => $articleElementId7, 'model' => 'Minmax\Article\Models\ArticleElement'],
         ];
         DB::table('article_category_relation')->insert($articleCategoryRelationData);
 

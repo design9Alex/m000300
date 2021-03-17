@@ -39,6 +39,7 @@ class ArticleElementProductEstheticmedicineSeeder extends Seeder
             ['id' => $articleElementEstheticmedicineId5 = uuidl(), 'title' => 'article_element.title.'.$articleElementEstheticmedicineId5, 'details' => 'article_element.details.'.$articleElementEstheticmedicineId5, 'sort' => 5, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp],
             ['id' => $articleElementEstheticmedicineId6 = uuidl(), 'title' => 'article_element.title.'.$articleElementEstheticmedicineId6, 'details' => 'article_element.details.'.$articleElementEstheticmedicineId6, 'sort' => 6, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp],
             ['id' => $articleElementEstheticmedicineId7 = uuidl(), 'title' => 'article_element.title.'.$articleElementEstheticmedicineId7, 'details' => 'article_element.details.'.$articleElementEstheticmedicineId7, 'sort' => 7, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp],
+            ['id' => $articleElementEstheticmedicineId8 = uuidl(), 'title' => 'article_element.title.'.$articleElementEstheticmedicineId8, 'details' => 'article_element.details.'.$articleElementEstheticmedicineId8, 'sort' => 7, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp],
         ];
         DB::table('article_element')->insert($articleElementData);
 
@@ -399,83 +400,19 @@ HTML;
 HTML;
 
         $estheticmedicineEeditor7 = <<<HTML
-        <div class="pd-section" id="pdsection-05">
-                        <div class="w1300 content">
-                            <div class="imgbox">
-                                <!-- 圖片尺寸 w600 * h460 建議為png透明背景-->
-                                <div class="pd-slider" data-aos="fade-up" data-aos-delay="50" data-aos-offset="20">
-                                    <div class="pdimg jqimgFill"><img src="/styles/images/product/pd-laracinemask.png" alt="LA RACINE MASK"></div>
-                                </div>
-                                <!-- 產品圖標籤，客戶可以自己增加樣式 w70 * h70，格式為svg檔案 -->
-                                <div class="pdlabel" data-aos="fade">
-                                    <span class="label"><img src="/styles/images/product/label-09.svg" alt=""></span>
-                                    <span class="label"><img src="/styles/images/product/label-10.svg" alt=""></span>
-                                </div>
-                                <div class="pdremarks">
-                                    <div class="inData"></div>
-                                </div>
-                            </div>
-                            <div class="pdData" data-aos="fade-up" data-aos-offset="20">
-                                <div class="sublabel fs_14 fw_500 hidden"><!-- 沒有資料就hidden --></div>
-                                <p class="subtitle fs_16 hidden"><!-- 沒有資料就hidden --></p>
-                                <h3 class="pdname dash">
-                                    <span class="name fs_28 fw_bold">LA RACINE MASK</span>
-                                    <span class="madein fs_14">台湾生産</span>
-                                </h3>
-                                <div class="pdtext fs_16 gray">すぐに持続する保湿効果があり、高効率の保湿活性成分であるセラミドにより、乾燥肌の活力を取り戻し、保湿機能を強化します。特に、皮膚の脱水状態を改善することができ、皮膚を傷つきやすい医療美容後の治療にもお勧めします。肌は光沢があり弾力性があります。</div>
-
-                                <ul class="ul-style">
-                                    <li class="orange"><p class="fs_16 gray"><span class="fw_bold">主な成分：</span>SKフラックスV、スクアラン、セラミド複合体、有機フライシ    ャーヤナギ葉抽出物、ヒアルロン酸、ヒアルロン酸</p></li>
-                                </ul>
-                                <div class="detail">
-                                    <div class="item">
-                                        <span class="taglabel fs_14 fw_bold">適応症</span>
-                                        <span class="script fs_16">くすみ、肌の色むら、乾燥、もろさ、過敏症</span>
-                                    </div>
-                                    <div class="item">
-                                        <span class="taglabel fs_14 fw_bold">容量</span>
-                                        <span class="script fs_16">25mL×3個</span>
-                                    </div>
-                                </div>
-
-                                <!-- 客戶自訂連結到產品介紹頁面 -->
-                                <!-- <a class="pd-detaillink fs_16" href="https://www.bire.jp/" target="_blank">ブランドサイト</a> -->
-                            </div>
-                        </div>
-
-                         <!-- 沒有影片連結、縮圖、dm時，整區 pd-wrapper隱藏-->
-                         <div class="pd-wrapper hidden">
-                            <div class="w1300 zoom">
-                                <div class="wpData" data-aos="fade-right">
-
-                                    <p class="wpscript fs_16">スイスと日本の医療用精密機器は、注射の過程で医師を支援するために使用されます。治療経験の時間効率を最大化することに伴い、患者の痛みを最小限に抑え、非外傷性の概念を実現します。</p>
-                                    <!-- 有上傳dm圖片時顯示, 若上傳的是pdf則另開視窗 -->
-                                    <div class="dm-btn">
-                                        <!-- 上傳的dm是圖片 -->
-                                        <a class="lightbtn dmclick" href="styles/images/product/pd-laracine-dm.jpg" title="ララシーン-ADH">
-                                            <span class="fs_16">ララシーン-ADH </span>
-                                            <span class="icon"><img class="svg" src="/styles/images/common/icon-arrow-right-white.svg" alt="arrow"></span>
-                                        </a>
-                                        <!-- 上傳的dm是pdf檔案 dmclick拿掉 -->
-                                        <!-- <a class="lightbtn" href="styles/images/product/demo-dm.pdf" target="_blank" title="ララシーン-ADH">
-                                            <span class="fs_16">ララシーン-ADH </span>
-                                            <span class="icon"><img class="svg" src="/styles/images/common/icon-arrow-right-white.svg" alt="arrow"></span>
-                                        </a> -->
-                                    </div>
-                                </div>
-                                 <!-- 如果沒有上傳縮圖+影片id，video-pic 整區隱藏 加上hidden class-->
-                                 <!-- 沒有影片連結有上傳影片圖片，隱藏playicon -->
-                                 <div class="video-pic" data-aos="fade">
-                                    <a data-rel="lightcase" href="https://www.youtube.com/embed/gG7uCskUOrA">
-                                        <span class="img jqimgFill">
-                                            <img src="/styles/images/product/pd-laracine-video.jpg" alt="">
-                                            <span class="playicon"><img class="svg" src="/styles/images/common/icon-video-triangle.svg" alt=""></span>
-                                        </span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
+<div class="page-bt-linkbox">
+                    <div class="bg-img jqimgFill"><img src="/styles/images/product/medicine-contact.jpg" alt=""></div>
+                    <div class="w1100 zoom">
+                        <h2 class="hidden">お問い合わせ</h2>
+                        <a href="contact">
+                            <span class="link-data">
+                                <span class="tit fs_28 fw_500" style="color:#413D3C">お問い合わせ</span>
+                                <span class="subtit fs_16" style="color:#0990D0">Contact</span>
+                                <span class="text fs_16" style="color:#333333">ご不明な点がございましたら、お気軽にお問い合わせください</span>
+                            </span>
+                        </a>
                     </div>
+                </div>
 HTML;
 
 
@@ -487,7 +424,7 @@ HTML;
             ['id' => $articleElementEstheticmedicineId4, 'title' => 'S-CDM1⁺','details' => json_encode(['editor' => $estheticmedicineEeditor4])],
             ['id' => $articleElementEstheticmedicineId5, 'title' => 'LACTOLAB PRO','details' => json_encode(['editor' => $estheticmedicineEeditor5])],
             ['id' => $articleElementEstheticmedicineId6, 'title' => 'La Racine - Automated Dermal Hydrator 医療美容機器は','details' => json_encode(['editor' => $estheticmedicineEeditor6])],
-            ['id' => $articleElementEstheticmedicineId7, 'title' => 'La Racine - Automated Dermal Hydrator 医療美容機器は','details' => json_encode(['editor' => $estheticmedicineEeditor7])],
+            ['id' => $articleElementEstheticmedicineId7, 'title' => 'お問い合わせ','details' => json_encode(['editor' => $estheticmedicineEeditor7])],
         ];
         $articleTeamLanguage = ['ja' => $data, 'en' => $data];
         SeederHelper::setLanguageResource($this->languageResourceData, 'article_element', $articleTeamLanguage, $this->languageList, null, false);

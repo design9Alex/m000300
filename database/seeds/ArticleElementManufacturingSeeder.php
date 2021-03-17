@@ -34,27 +34,31 @@ class ArticleElementManufacturingSeeder extends Seeder
 
             //製造與開發
             ['id' => $articleElementManufacturingId1 = uuidl(), 'title' => 'article_element.title.'.$articleElementManufacturingId1, 'details' => 'article_element.details.'.$articleElementManufacturingId1, 'sort' => 1, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp],
-            ['id' => $articleElementManufacturingId2 = uuidl(), 'title' => 'article_element.title.'.$articleElementManufacturingId2, 'details' => 'article_element.details.'.$articleElementManufacturingId2, 'sort' => 1, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp],
-            ['id' => $articleElementManufacturingId3 = uuidl(), 'title' => 'article_element.title.'.$articleElementManufacturingId3, 'details' => 'article_element.details.'.$articleElementManufacturingId3, 'sort' => 1, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp],
-            ['id' => $articleElementManufacturingId4 = uuidl(), 'title' => 'article_element.title.'.$articleElementManufacturingId4, 'details' => 'article_element.details.'.$articleElementManufacturingId4, 'sort' => 1, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp],
-            ['id' => $articleElementManufacturingId5 = uuidl(), 'title' => 'article_element.title.'.$articleElementManufacturingId5, 'details' => 'article_element.details.'.$articleElementManufacturingId5, 'sort' => 1, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp],
-            ['id' => $articleElementManufacturingId6 = uuidl(), 'title' => 'article_element.title.'.$articleElementManufacturingId6, 'details' => 'article_element.details.'.$articleElementManufacturingId6, 'sort' => 1, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp],
-            ['id' => $articleElementManufacturingId7 = uuidl(), 'title' => 'article_element.title.'.$articleElementManufacturingId7, 'details' => 'article_element.details.'.$articleElementManufacturingId7, 'sort' => 1, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp],
-            ['id' => $articleElementManufacturingId8 = uuidl(), 'title' => 'article_element.title.'.$articleElementManufacturingId8, 'details' => 'article_element.details.'.$articleElementManufacturingId8, 'sort' => 1, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp],
-            ['id' => $articleElementManufacturingId9 = uuidl(), 'title' => 'article_element.title.'.$articleElementManufacturingId9, 'details' => 'article_element.details.'.$articleElementManufacturingId9, 'sort' => 1, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp],
-            ['id' => $articleElementManufacturingId10 = uuidl(), 'title' => 'article_element.title.'.$articleElementManufacturingId10, 'details' => 'article_element.details.'.$articleElementManufacturingId10, 'sort' => 1, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp],
-            ['id' => $articleElementManufacturingId11 = uuidl(), 'title' => 'article_element.title.'.$articleElementManufacturingId11, 'details' => 'article_element.details.'.$articleElementManufacturingId11, 'sort' => 1, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp],
+            ['id' => $articleElementManufacturingId2 = uuidl(), 'title' => 'article_element.title.'.$articleElementManufacturingId2, 'details' => 'article_element.details.'.$articleElementManufacturingId2, 'sort' => 2, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp],
+            ['id' => $articleElementManufacturingId3 = uuidl(), 'title' => 'article_element.title.'.$articleElementManufacturingId3, 'details' => 'article_element.details.'.$articleElementManufacturingId3, 'sort' => 3, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp],
+            ['id' => $articleElementManufacturingId4 = uuidl(), 'title' => 'article_element.title.'.$articleElementManufacturingId4, 'details' => 'article_element.details.'.$articleElementManufacturingId4, 'sort' => 4, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp],
+            ['id' => $articleElementManufacturingId5 = uuidl(), 'title' => 'article_element.title.'.$articleElementManufacturingId5, 'details' => 'article_element.details.'.$articleElementManufacturingId5, 'sort' => 5, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp],
+            ['id' => $articleElementManufacturingId6 = uuidl(), 'title' => 'article_element.title.'.$articleElementManufacturingId6, 'details' => 'article_element.details.'.$articleElementManufacturingId6, 'sort' => 6, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp],
+            ['id' => $articleElementManufacturingId7 = uuidl(), 'title' => 'article_element.title.'.$articleElementManufacturingId7, 'details' => 'article_element.details.'.$articleElementManufacturingId7, 'sort' => 7, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp],
+            ['id' => $articleElementManufacturingId8 = uuidl(), 'title' => 'article_element.title.'.$articleElementManufacturingId8, 'details' => 'article_element.details.'.$articleElementManufacturingId8, 'sort' => 8, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp],
+            ['id' => $articleElementManufacturingId9 = uuidl(), 'title' => 'article_element.title.'.$articleElementManufacturingId9, 'details' => 'article_element.details.'.$articleElementManufacturingId9, 'sort' => 9, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp],
+            ['id' => $articleElementManufacturingId10 = uuidl(), 'title' => 'article_element.title.'.$articleElementManufacturingId10, 'details' => 'article_element.details.'.$articleElementManufacturingId10, 'sort' => 10, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp],
+            ['id' => $articleElementManufacturingId11 = uuidl(), 'title' => 'article_element.title.'.$articleElementManufacturingId11, 'details' => 'article_element.details.'.$articleElementManufacturingId11, 'sort' => 11, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp],
+            ['id' => $articleElementManufacturingId19 = uuidl(), 'title' => 'article_element.title.'.$articleElementManufacturingId19, 'details' => 'article_element.details.'.$articleElementManufacturingId19, 'sort' => 12, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp],
+
 
 
             //醫學研究
 
             ['id' => $articleElementManufacturingId12 = uuidl(), 'title' => 'article_element.title.'.$articleElementManufacturingId12, 'details' => 'article_element.details.'.$articleElementManufacturingId12, 'sort' => 1, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp],
-            ['id' => $articleElementManufacturingId13 = uuidl(), 'title' => 'article_element.title.'.$articleElementManufacturingId13, 'details' => 'article_element.details.'.$articleElementManufacturingId13, 'sort' => 1, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp],
-            ['id' => $articleElementManufacturingId14 = uuidl(), 'title' => 'article_element.title.'.$articleElementManufacturingId14, 'details' => 'article_element.details.'.$articleElementManufacturingId14, 'sort' => 1, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp],
-            ['id' => $articleElementManufacturingId15 = uuidl(), 'title' => 'article_element.title.'.$articleElementManufacturingId15, 'details' => 'article_element.details.'.$articleElementManufacturingId15, 'sort' => 1, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp],
-            ['id' => $articleElementManufacturingId16 = uuidl(), 'title' => 'article_element.title.'.$articleElementManufacturingId16, 'details' => 'article_element.details.'.$articleElementManufacturingId16, 'sort' => 1, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp],
-            ['id' => $articleElementManufacturingId17 = uuidl(), 'title' => 'article_element.title.'.$articleElementManufacturingId17, 'details' => 'article_element.details.'.$articleElementManufacturingId17, 'sort' => 1, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp],
-            ['id' => $articleElementManufacturingId18 = uuidl(), 'title' => 'article_element.title.'.$articleElementManufacturingId18, 'details' => 'article_element.details.'.$articleElementManufacturingId18, 'sort' => 1, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp],
+            ['id' => $articleElementManufacturingId13 = uuidl(), 'title' => 'article_element.title.'.$articleElementManufacturingId13, 'details' => 'article_element.details.'.$articleElementManufacturingId13, 'sort' => 2, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp],
+            ['id' => $articleElementManufacturingId14 = uuidl(), 'title' => 'article_element.title.'.$articleElementManufacturingId14, 'details' => 'article_element.details.'.$articleElementManufacturingId14, 'sort' => 3, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp],
+            ['id' => $articleElementManufacturingId15 = uuidl(), 'title' => 'article_element.title.'.$articleElementManufacturingId15, 'details' => 'article_element.details.'.$articleElementManufacturingId15, 'sort' => 4, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp],
+            ['id' => $articleElementManufacturingId16 = uuidl(), 'title' => 'article_element.title.'.$articleElementManufacturingId16, 'details' => 'article_element.details.'.$articleElementManufacturingId16, 'sort' => 5, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp],
+            ['id' => $articleElementManufacturingId17 = uuidl(), 'title' => 'article_element.title.'.$articleElementManufacturingId17, 'details' => 'article_element.details.'.$articleElementManufacturingId17, 'sort' => 6, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp],
+            ['id' => $articleElementManufacturingId18 = uuidl(), 'title' => 'article_element.title.'.$articleElementManufacturingId18, 'details' => 'article_element.details.'.$articleElementManufacturingId18, 'sort' => 7, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp],
+            ['id' => $articleElementManufacturingId20 = uuidl(), 'title' => 'article_element.title.'.$articleElementManufacturingId20, 'details' => 'article_element.details.'.$articleElementManufacturingId20, 'sort' => 8, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp],
+
 
         ];
         DB::table('article_element')->insert($articleElementData);
@@ -600,6 +604,75 @@ HTML;
                 </div>
 HTML;
 
+        $facturingIdEditor19 = <<<HTML
+
+                <div class="manufact-adbox">
+                    <div class="item">
+                        <h2 class="hidden">革新的な医療食品</h2>
+                        <a href="diseaseprevention#pdsection-02">
+                            <span class="bg-img jqimgFill"><img src="/styles/images/manufacturing/pd-ad-01.png" alt=""></span>
+                            <span class="pd-data" data-aos="fade">
+                                <span class="tit fs_24 fw_bold">革新的な医療食品</span>
+                                <span class="subtit fw_bold">
+                                    <span class="fs_20">スプレー方法</span>
+                                    <span class="icon"><img class="svg" src="/styles/images/common/icon-arrow-right-lightblue.svg" alt="arrow"></span>
+                                </span>
+                                <span class="text fs_16">粘膜はすぐに吸収される   *医療機関限定</span>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <h2 class="hidden">革新的な医療食品</h2>
+                        <a href="estheticmedicine#pdsection-05">
+                            <span class="bg-img jqimgFill"><img src="/styles/images/manufacturing/pd-ad-02.png" alt=""></span>
+                            <span class="pd-data" data-aos="fade">
+                                <span class="tit fs_24 fw_bold">革新的な医療食品</span>
+                                <span class="subtit fw_bold">
+                                    <span class="fs_20">健康補助カプセル</span>
+                                    <span class="icon"><img class="svg" src="/styles/images/common/icon-arrow-right-lightblue.svg" alt="arrow"></span>
+                                </span>
+                                <span class="text fs_16">医療機関で使用するために特別に開発されました</span>
+                            </span>
+
+                        </a>
+                    </div>
+                </div>
+
+                <div class="manufact-pdAdbox">
+                    <div class="w1300 zoom">
+                        <h2 class="hidden">ヘルスケア製品</h2>
+                        <a class="pdlink" href="diseaseprevention#pdsection-01">
+                            <span class="pd-data">
+                                <span class="tit fs_36 fw_500">ヘルスケア製品</span>
+                                <span class="subtit fs_16">Products</span>
+                                <span class="text fs_16">さらに優れた医薬品の研究開発と製造能力を卓越します</span>
+                            </span>
+                            <span class="bg-img jqimgFill"><img src="/styles/images/manufacturing/pd-ad-03.png" alt=""></span>
+                        </a>
+                    </div>
+                </div>
+
+HTML;
+
+        $facturingIdEditor20 = <<<HTML
+
+                <div class="page-bt-linkbox">
+                    <div class="bg-img jqimgFill"><img src="/styles/images/research/research-13.jpg" alt=""></div>
+                    <div class="w1100 zoom">
+                        <h2 class="hidden">お問い合わせ</h2>
+                        <a href="contact">
+                            <span class="link-data">
+                                <span class="tit fs_28 fw_500" style="color:#fff">お問い合わせ</span>
+                                <span class="subtit fs_16" style="color:#fff">Contact</span>
+                                <span class="text fs_16" style="color:#fff">ご不明な点がございましたら、お気軽にお問い合わせください</span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+
+HTML;
+
+
 
 
 
@@ -615,6 +688,7 @@ HTML;
             ['id' => $articleElementManufacturingId9, 'title' => '安全で信頼性の高い製品を作る','details' => json_encode(['editor' => $facturingIdEditor9])],
             ['id' => $articleElementManufacturingId10, 'title' => 'きのこ菌糸栽培プロセス','details' => json_encode(['editor' => $facturingIdEditor10])],
             ['id' => $articleElementManufacturingId11, 'title' => 'EACはマウスモデルの腫瘍増殖を抑えた','details' => json_encode(['editor' => $facturingIdEditor11])],
+            ['id' => $articleElementManufacturingId19, 'title' => 'EACはマウスモデルの腫瘍増殖を抑えた','details' => json_encode(['editor' => $facturingIdEditor19])],
 
 
             ['id' => $articleElementManufacturingId12, 'title' => '幹細胞、免疫療法、炎症免疫療法','details' => json_encode(['editor' => $facturingIdEditor12])],
@@ -624,6 +698,7 @@ HTML;
             ['id' => $articleElementManufacturingId16, 'title' => 'ドナースクリーニング','details' => json_encode(['editor' => $facturingIdEditor16])],
             ['id' => $articleElementManufacturingId17, 'title' => '品質管理と品質認証','details' => json_encode(['editor' => $facturingIdEditor17])],
             ['id' => $articleElementManufacturingId18, 'title' => 'CPCトレーニングルーム','details' => json_encode(['editor' => $facturingIdEditor18])],
+            ['id' => $articleElementManufacturingId20, 'title' => 'CPCトレーニングルーム','details' => json_encode(['editor' => $facturingIdEditor20])],
         ];
         $articleTeamLanguage = ['ja' => $data, 'en' => $data];
         SeederHelper::setLanguageResource($this->languageResourceData, 'article_element', $articleTeamLanguage, $this->languageList, null, false);
@@ -641,6 +716,7 @@ HTML;
             ['category_id' => $categoryId3_1, 'object_id' => $articleElementManufacturingId9, 'model' => 'Minmax\Article\Models\ArticleElement'],
             ['category_id' => $categoryId3_1, 'object_id' => $articleElementManufacturingId10, 'model' => 'Minmax\Article\Models\ArticleElement'],
             ['category_id' => $categoryId3_1, 'object_id' => $articleElementManufacturingId11, 'model' => 'Minmax\Article\Models\ArticleElement'],
+            ['category_id' => $categoryId3_1, 'object_id' => $articleElementManufacturingId19, 'model' => 'Minmax\Article\Models\ArticleElement'],
 
             ['category_id' => $categoryId3_2, 'object_id' => $articleElementManufacturingId12, 'model' => 'Minmax\Article\Models\ArticleElement'],
             ['category_id' => $categoryId3_2, 'object_id' => $articleElementManufacturingId13, 'model' => 'Minmax\Article\Models\ArticleElement'],
@@ -649,6 +725,7 @@ HTML;
             ['category_id' => $categoryId3_2, 'object_id' => $articleElementManufacturingId16, 'model' => 'Minmax\Article\Models\ArticleElement'],
             ['category_id' => $categoryId3_2, 'object_id' => $articleElementManufacturingId17, 'model' => 'Minmax\Article\Models\ArticleElement'],
             ['category_id' => $categoryId3_2, 'object_id' => $articleElementManufacturingId18, 'model' => 'Minmax\Article\Models\ArticleElement'],
+            ['category_id' => $categoryId3_2, 'object_id' => $articleElementManufacturingId20, 'model' => 'Minmax\Article\Models\ArticleElement'],
         ];
         DB::table('article_category_relation')->insert($articleCategoryRelationData);
 

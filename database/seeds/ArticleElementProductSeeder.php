@@ -39,6 +39,7 @@ class ArticleElementProductSeeder extends Seeder
             ['id' => $articleElementCellregenerationId5 = uuidl(), 'title' => 'article_element.title.'.$articleElementCellregenerationId5, 'details' => 'article_element.details.'.$articleElementCellregenerationId5, 'sort' => 5, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp],
             ['id' => $articleElementCellregenerationId6 = uuidl(), 'title' => 'article_element.title.'.$articleElementCellregenerationId6, 'details' => 'article_element.details.'.$articleElementCellregenerationId6, 'sort' => 6, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp],
             ['id' => $articleElementCellregenerationId7 = uuidl(), 'title' => 'article_element.title.'.$articleElementCellregenerationId7, 'details' => 'article_element.details.'.$articleElementCellregenerationId7, 'sort' => 7, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp],
+            ['id' => $articleElementCellregenerationId8 = uuidl(), 'title' => 'article_element.title.'.$articleElementCellregenerationId8, 'details' => 'article_element.details.'.$articleElementCellregenerationId8, 'sort' => 7, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp],
         ];
         DB::table('article_element')->insert($articleElementData);
 
@@ -390,6 +391,24 @@ HTML;
 HTML;
 
 
+        $cellregenerationEeditor8 = <<<HTML
+
+                <div class="page-bt-linkbox">
+                    <div class="bg-img jqimgFill"><img src="/styles/images/product/cell-contact.jpg" alt=""></div>
+                    <div class="w1100 zoom">
+                        <h2 class="hidden">お問い合わせ</h2>
+                        <a href="contact">
+                            <span class="link-data">
+                                <span class="tit fs_28 fw_500" style="color:#413D3C">お問い合わせ</span>
+                                <span class="subtit fs_16" style="color:#0990D0">Contact</span>
+                                <span class="text fs_16" style="color:#333333">ご不明な点がございましたら、お気軽にお問い合わせください</span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+HTML;
+
+
 
         $data = [
             ['id' => $articleElementCellregenerationId1, 'title' => '幹細胞は多方向の分化能力と自己再生能力を持っている','details' => json_encode(['editor' => $cellregenerationEeditor1])],
@@ -399,6 +418,7 @@ HTML;
             ['id' => $articleElementCellregenerationId5, 'title' => '臨床治療症例の説明','details' => json_encode(['editor' => $cellregenerationEeditor5])],
             ['id' => $articleElementCellregenerationId6, 'title' => '幹細胞のOEM製造プロセス','details' => json_encode(['editor' => $cellregenerationEeditor6])],
             ['id' => $articleElementCellregenerationId7, 'title' => '再生医療の提供（臨床研究・治療）','details' => json_encode(['editor' => $cellregenerationEeditor7])],
+            ['id' => $articleElementCellregenerationId8, 'title' => 'お問い合わせ','details' => json_encode(['editor' => $cellregenerationEeditor8])],
         ];
         $articleTeamLanguage = ['ja' => $data, 'en' => $data];
         SeederHelper::setLanguageResource($this->languageResourceData, 'article_element', $articleTeamLanguage, $this->languageList, null, false);
@@ -412,6 +432,7 @@ HTML;
             ['category_id' => $categoryId4, 'object_id' => $articleElementCellregenerationId5, 'model' => 'Minmax\Article\Models\ArticleElement'],
             ['category_id' => $categoryId4, 'object_id' => $articleElementCellregenerationId6, 'model' => 'Minmax\Article\Models\ArticleElement'],
             ['category_id' => $categoryId4, 'object_id' => $articleElementCellregenerationId7, 'model' => 'Minmax\Article\Models\ArticleElement'],
+            ['category_id' => $categoryId4, 'object_id' => $articleElementCellregenerationId8, 'model' => 'Minmax\Article\Models\ArticleElement'],
         ];
         DB::table('article_category_relation')->insert($articleCategoryRelationData);
 

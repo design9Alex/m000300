@@ -38,6 +38,7 @@ class ArticleElementAboutSeeder extends Seeder
             ['id' => $articleElementAboutId4 = uuidl(), 'title' => 'article_element.title.'.$articleElementAboutId4, 'details' => 'article_element.details.'.$articleElementAboutId4, 'sort' => 4, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp],
             ['id' => $articleElementAboutId5 = uuidl(), 'title' => 'article_element.title.'.$articleElementAboutId5, 'details' => 'article_element.details.'.$articleElementAboutId5, 'sort' => 5, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp],
             ['id' => $articleElementAboutId6 = uuidl(), 'title' => 'article_element.title.'.$articleElementAboutId6, 'details' => 'article_element.details.'.$articleElementAboutId6, 'sort' => 6, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp],
+
         ];
         DB::table('article_element')->insert($articleElementData);
 
@@ -155,6 +156,7 @@ HTML;
                     <div class="pic jqimgFill" data-aos="fade"><img src="styles/images/about/about-src-01.jpg" alt=""></div>
                 </div>
 HTML;
+
 
 
 

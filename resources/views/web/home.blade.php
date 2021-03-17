@@ -1,37 +1,55 @@
-<?php
-/**
- * @var \Illuminate\Support\Collection|\Minmax\Base\Models\WorldLanguage[] $languageData
- * @var \Minmax\Base\Models\WebData $webData
- * @var \Minmax\Base\Models\WebMenu $pageData
- * @var array $systemMenu
- * @var string $rootUri
- */
-?>
+@section('mainClass', 'wp')
+@section('mainID', 'index')
+@section('tagID', 'index')
+@extends('web.include.base')
 
-@extends('MinmaxBase::web.layouts.site')
+@section('content')
+    <main class="main">
 
-@section('site-content')
-<div id="home" class="flex-center position-ref full-height">
-    <div class="content">
-        <h1 class="title">Hello!</h1>
-        <div>Here is a demo home page via {{ config('app.author_en') }} system.</div>
-    </div>
-</div>
+        @foreach($articleElements as $key => $item)
+            {!! array_get($item,'details.editor') !!}
+        @endForeach
+    </main>
+
+
 @endsection
+@push('scripts')
+    <script>
+        $(function() {
+            $('.home-banner .slider').slick({
+                dots:true,
+                arrows:true,
+                fade: true,
+                speed:1200,
+                autoplay:true,
+                autoplaySpeed: 3000,
+                prevArrow: "<div class='slick-arrow slick-prev'><img src='styles/images/common/icon-arrow-left.svg' alt='arrow'/></div>",
+                nextArrow: "<div class='slick-arrow slick-next'><img src='styles/images/common/icon-arrow-right.svg' alt='arrow'/></div>",
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            arrows:false,
+                        }
+                    },
+                ]
 
-@push('styles')
-<link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-<style>
-html, body {
-    background-color: #fff;
-    color: #636b6f;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 100;
-    height: 100vh;
-    margin: 0;
-}
-#home { height: 100vh; display: flex; align-items: center; justify-content: center; position: relative; }
-#home .content { text-align: center; font-size: 36px; }
-#home .title { font-size: 56px; padding: 20px; }
-</style>
+            });
+
+            var rellax = new Rellax('.rellax', {
+                // center: true
+                callback: function (position) {
+                    // callback every position change
+                    console.log(position);
+                },
+                breakpoints: [576, 768, 1024]
+            });
+
+        });
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                AOS.refresh();
+            }, 100);
+        }, false);
+    </script>
 @endpush

@@ -13,7 +13,9 @@ return [
     |
     */
 
-    'failed' => 'これらの資格情報は私たちの記録と一致しません。',
-    'throttle' => 'ログイン試行回数が多すぎます。 :seconds 秒後にもう一度やり直してください。',
+    'home' => 'ホーム',
+    'manufacturings' => '医学研究および製造',
+    'cellregeneration' => '私たちの製品',
+    'contactUs' => 'お問い合わせ',
 
 ];

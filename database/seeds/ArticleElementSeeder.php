@@ -92,7 +92,7 @@ class ArticleElementSeeder extends Seeder
                     'details' => "article_category.details.{$categoryId3_1}",
                     'options' => null,
                     'seo' => "article_category.seo.{$categoryId3_1}",
-                    'sort' => 1, 'editable' => false, 'protected' => true, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp
+                    'sort' => 1, 'editable' => true, 'protected' => true, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp
                 ],
                 [
                     'id' => $categoryId3_2 = uuidl(),
@@ -102,12 +102,12 @@ class ArticleElementSeeder extends Seeder
                     'details' => "article_category.details.{$categoryId3_2}",
                     'options' => null,
                     'seo' => "article_category.seo.{$categoryId3_2}",
-                    'sort' => 2, 'editable' => false, 'protected' => true, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp
+                    'sort' => 2, 'editable' => true, 'protected' => true, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp
                 ],
 
             [
                 'id' => $categoryId4 = uuidl(),
-                'uri' => 'cellregenerations',
+                'uri' => 'products',
                 'parent_id' => $categoryId,
                 'title' => "article_category.title.{$categoryId4}",
                 'details' => "article_category.details.{$categoryId4}",
@@ -123,7 +123,7 @@ class ArticleElementSeeder extends Seeder
                     'details' => "article_category.details.{$categoryId4_1}",
                     'options' => null,
                     'seo' => "article_category.seo.{$categoryId4_1}",
-                    'sort' => 1, 'editable' => false, 'protected' => true, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp
+                    'sort' => 1, 'editable' => true, 'protected' => true, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp
                 ],
                 [
                     'id' => $categoryId4_2 = uuidl(),
@@ -133,7 +133,7 @@ class ArticleElementSeeder extends Seeder
                     'details' => "article_category.details.{$categoryId4_2}",
                     'options' => null,
                     'seo' => "article_category.seo.{$categoryId4_2}",
-                    'sort' => 1, 'editable' => false, 'protected' => true, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp
+                    'sort' => 1, 'editable' => true, 'protected' => true, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp
                 ],
                 [
                     'id' => $categoryId4_3 = uuidl(),
@@ -143,7 +143,7 @@ class ArticleElementSeeder extends Seeder
                     'details' => "article_category.details.{$categoryId4_3}",
                     'options' => null,
                     'seo' => "article_category.seo.{$categoryId4_3}",
-                    'sort' => 1, 'editable' => false, 'protected' => true, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp
+                    'sort' => 1, 'editable' => true, 'protected' => true, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp
                 ],
                 [
                     'id' => $categoryId4_4 = uuidl(),
@@ -153,7 +153,7 @@ class ArticleElementSeeder extends Seeder
                     'details' => "article_category.details.{$categoryId4_4}",
                     'options' => null,
                     'seo' => "article_category.seo.{$categoryId4_4}",
-                    'sort' => 1, 'editable' => false, 'protected' => true, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp
+                    'sort' => 1, 'editable' => true, 'protected' => true, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp
                 ],
 
             [
@@ -169,6 +169,8 @@ class ArticleElementSeeder extends Seeder
 
         ];
         DB::table('article_category')->insert($articleCategoryData);
+
+
 
         // 多語系
         $data = [

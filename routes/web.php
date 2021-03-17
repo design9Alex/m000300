@@ -12,3 +12,11 @@
 */
 
 Route::get('/', 'SiteController@index')->name('home');
+Route::get('/about', 'AboutController@about')->name('about');
+
+Route::get('/manufacturing', 'manufacturingController@manufacturing')->name('manufacturing');
+Route::get('/research', 'manufacturingController@research')->name('research');
+
+Route::get('products/{serial}', 'productController@product')->name('product');
+
+Route::get('contact', 'contactController@contact')->name('contact');
