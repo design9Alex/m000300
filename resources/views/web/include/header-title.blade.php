@@ -31,3 +31,4 @@
 <script src="{{asset('scripts/plugins/html5shiv.min.js')}}"></script>
 <script src="{{asset('scripts/plugins/respond.min.js')}}"></script>
 <![endif]-->
+

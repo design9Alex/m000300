@@ -2,6 +2,8 @@
 <html lang="ja">
 <head>
 @include('web.include.header-title')
+
+@stack('styles')
 </head>
 <body>
 {!! $BaseWebData->options['body'] !!}

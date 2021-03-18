@@ -17,9 +17,13 @@ class SampleSeeder extends Seeder
         // to customer or upload to server.
         $this->updateAdminPassword();
 
+        $this->updateInboxReceived();
+
         $this->updateLanguageResource();
 
         $this->insertWebMenu();
+
+        $this->insertNotifyEmail();
 
         $this->insertInboxCategory();
     }
@@ -45,8 +49,8 @@ class SampleSeeder extends Seeder
             ['id' => uuidl(), 'user_id' => $admin->id, 'user_type' => \Minmax\Base\Models\Admin::class,
                 'password' => $admin->password, 'ip' => '127.0.0.1', 'created_at' => $timestamp],
         ]);
-    }
 
+    }
 
     protected function updateLanguageResource(){
         $systemParameters = DB::table('language_resource')->where('key','like','%system_parameter_group.title.%')->where('language_id','1')->get();
@@ -70,6 +74,10 @@ class SampleSeeder extends Seeder
 
     }
 
+
+    protected function updateInboxReceived(){
+        DB::statement("ALTER TABLE `inbox_received` MODIFY COLUMN `content` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL COMMENT '內容' AFTER `subject`;");
+    }
 
 
     protected function insertWebMenu()
@@ -519,6 +527,96 @@ HTML;
 
         DB::table('language_resource')->insert($languageResourceData);
     }
+
+
+
+    protected function insertNotifyEmail()
+    {
+        $timestamp = date('Y-m-d H:i:s');
+        $languageList = SeederHelper::getLanguageIdList();
+        $languageResourceData = [];
+
+        DB::table('notify_email')->where('code','contact-received')->delete();
+
+        $templateCustomEditorReceived = view('editorDemo.contact.mail-custom')->render();
+        $templateAdminEditorReceived = view('editorDemo.contact.mail-admin')->render();
+
+        $receivers = [];
+        if ($webData = DB::table('web_data')->where('guard', 'web')->first()) {
+            $receivers[] = "web_data.system_email.{$webData->id}";
+            $receivers[] = "web_data.contact.{$webData->id}.email";
+        }
+        foreach (DB::table('admin')->where('username', '!=', 'sysadmin')->get() as $adminData) {
+            $receivers[] = "admin.email.{$adminData->id}";
+        }
+
+        $emailServiceId = DB::table('service_config')->where('code', 'smtp')->value('id');
+        $startNotifyEmailId = $rowNotifyEmailId = SeederHelper::getTableNextIncrement('notify_email');
+        $rowNotifyEmailId--;
+        $insertNotifyEmailData = [
+            [
+                'code' => 'contact-received',
+                'title' => 'notify_email.title.' . ++$rowNotifyEmailId,
+                'service_id' => $emailServiceId,
+                'notifiable' => true,
+                'receivers' => json_encode($receivers),
+                'custom_subject' => 'notify_email.custom_subject.' . $rowNotifyEmailId,
+                'custom_preheader' => 'notify_email.custom_preheader.' . $rowNotifyEmailId,
+                'custom_editor' => 'notify_email.custom_editor.' . $rowNotifyEmailId,
+                'custom_mailable' => '\App\Mail\ContactCMail',
+                'admin_subject' => 'notify_email.admin_subject.' . $rowNotifyEmailId,
+                'admin_preheader' => 'notify_email.admin_preheader.' . $rowNotifyEmailId,
+                'admin_editor' => 'notify_email.admin_editor.' . $rowNotifyEmailId,
+                'admin_mailable' => '\App\Mail\ContactAMail',
+                'replacements' => 'notify_email.replacements.' . $rowNotifyEmailId,
+                'queueable' => false,
+                'sort' => 50,
+                'created_at' => $timestamp,
+                'updated_at' => $timestamp,
+            ],
+        ];
+        DB::table('notify_email')->insert($insertNotifyEmailData);
+
+        $langData = [
+            [
+                'title' => '客服中心',
+                'custom_subject' => '感謝您的來信',
+                'custom_preheader' => '我們已經收到您透過聯絡表單的來信。',
+                'custom_editor' => $templateCustomEditorReceived,
+                'admin_subject' => '客服信件通知',
+                'admin_preheader' => '您有一封客服信件，請儘速處理回覆。',
+                'admin_editor' => $templateAdminEditorReceived,
+                'replacements' => json_encode([
+                    'serial' => '案件單號',
+                    'formDate' => '來信日期',
+
+                    'formServiceItem' => '諮詢服務',
+                    'formParticipation' => '參加類別',
+                    'formCountry' => '國家',
+                    'formCompany' => '公司',
+                    'formTitle' => '標題',
+                    'formFirstName' => '姓',
+                    'formLastName' => '名',
+                    'formAreacode' => '區碼',
+                    'formTel' => '電話',
+                    'formEmail' => 'email',
+                    'formContactItem' => '產品',
+
+                    'receivedUrl' => '案件後臺路徑',
+                    'websitePhone' => '客服電話',
+                    'websiteEmail' => '客服信箱',
+                    'websiteName' => '網站名稱',
+                    'websiteUrl' => '網站網址'
+                ])
+            ]
+        ];
+        // 多語系
+        $notifyEmailLanguage = ['ja' => $langData, 'en' => $langData,];
+        SeederHelper::setLanguageResource($languageResourceData, 'notify_email', $notifyEmailLanguage, $languageList, $startNotifyEmailId, false);
+        DB::table('language_resource')->insert($languageResourceData);
+    }
+
+
 
     protected function insertInboxCategory()
     {
