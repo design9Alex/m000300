@@ -19,7 +19,7 @@ class DatabaseSeeder extends Seeder
         $this->call(ArticleElementSeeder::class);
 
         $this->call(ArticleElementIndexSeeder::class);
-        //$this->call(AdvertisingIndexSeeder::class);
+        $this->call(AdvertisingIndexSeeder::class);
 
         $this->call(ArticleElementAboutSeeder::class);
         //$this->call(AdvertisingAboutSeeder::class);

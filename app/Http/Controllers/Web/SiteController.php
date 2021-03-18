@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\Web;
+use App\Repositories\Web\AdvertisingRepository;
 use App\Repositories\Web\ArticleElementRepository;
 
 /**
@@ -13,7 +14,7 @@ class SiteController extends BaseController
         $this->viewData['thisMenu'] = 'index';
         $this->viewData['mainMenuData'] = $mainMenuData = $this->getMainMenuData($this->viewData['thisMenu']);
 
-
+        $this->viewData['bannerData'] = $bannerData = (new AdvertisingRepository())->getAdvertising('home_banner');
 
         $seo = array();
         $seo['title'] = $this->viewData['mainMenuData']->title;

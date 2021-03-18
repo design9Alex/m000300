@@ -20,6 +20,7 @@
         "minmax/io": "^1.1.5",
         "minmax/notify": "^1.2.13",
         "minmax/world": "^1.1.7",
+        "minmax/inbox": "^1.1.6",
         "nesbot/carbon": "2.42.0 as 1.26.6",
         "queueworker/sansdaemon": "^1.1",
         "symfony/console": "4.3.9",

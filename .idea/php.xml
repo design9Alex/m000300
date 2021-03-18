@@ -136,6 +136,7 @@
       <path value="$PROJECT_DIR$/vendor/dragonmantank/cron-expression" />
       <path value="$PROJECT_DIR$/vendor/minmax/io" />
       <path value="$PROJECT_DIR$/vendor/minmax/world" />
+      <path value="$PROJECT_DIR$/vendor/minmax/inbox" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.1" />

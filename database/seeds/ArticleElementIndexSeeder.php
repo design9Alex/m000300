@@ -30,7 +30,7 @@ class ArticleElementIndexSeeder extends Seeder
         //新增資料
         $articleElementData = [
 
-            ['id' => $articleElementId1 = uuidl(), 'title' => 'article_element.title.'.$articleElementId1, 'details' => 'article_element.details.'.$articleElementId1, 'sort' => 1, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp],
+            //['id' => $articleElementId1 = uuidl(), 'title' => 'article_element.title.'.$articleElementId1, 'details' => 'article_element.details.'.$articleElementId1, 'sort' => 1, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp],
             ['id' => $articleElementId2 = uuidl(), 'title' => 'article_element.title.'.$articleElementId2, 'details' => 'article_element.details.'.$articleElementId2, 'sort' => 2, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp],
             ['id' => $articleElementId3 = uuidl(), 'title' => 'article_element.title.'.$articleElementId3, 'details' => 'article_element.details.'.$articleElementId3, 'sort' => 3, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp],
             ['id' => $articleElementId4 = uuidl(), 'title' => 'article_element.title.'.$articleElementId4, 'details' => 'article_element.details.'.$articleElementId4, 'sort' => 4, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp],
@@ -200,7 +200,7 @@ HTML;
 
 
         $data = [
-            ['id' => $articleElementId1, 'title' => '首頁','details' => json_encode(['editor' => $editor1])],
+            //['id' => $articleElementId1, 'title' => '首頁','details' => json_encode(['editor' => $editor1])],
             ['id' => $articleElementId2, 'title' => '私たちについて','details' => json_encode(['editor' => $editor2])],
             ['id' => $articleElementId3, 'title' => '高品質の製品','details' => json_encode(['editor' => $editor3])],
             ['id' => $articleElementId4, 'title' => '自己血清サイトカイン増殖療法','details' => json_encode(['editor' => $editor4])],
@@ -210,7 +210,7 @@ HTML;
 
         //文章及類別關聯
         $articleCategoryRelationData = [
-            ['category_id' => $categoryId5, 'object_id' => $articleElementId1, 'model' => 'Minmax\Article\Models\ArticleElement'],
+            //['category_id' => $categoryId5, 'object_id' => $articleElementId1, 'model' => 'Minmax\Article\Models\ArticleElement'],
             ['category_id' => $categoryId5, 'object_id' => $articleElementId2, 'model' => 'Minmax\Article\Models\ArticleElement'],
             ['category_id' => $categoryId5, 'object_id' => $articleElementId3, 'model' => 'Minmax\Article\Models\ArticleElement'],
             ['category_id' => $categoryId5, 'object_id' => $articleElementId4, 'model' => 'Minmax\Article\Models\ArticleElement'],

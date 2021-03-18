@@ -1,6 +1,6 @@
 <header id="header">
     <div class="headerbox">
-        <div class="logo"><a href="./"><img src="/styles/images/logo.svg" alt=""></a></div>
+        <div class="logo"><a href="/"><img src="/styles/images/logo.svg" alt=""></a></div>
         <nav>
             <ul class="noneStyle menu">
                 <li class="" data-id="about">

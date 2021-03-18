@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "285dd16f2c0d1c8686dc7953a824e681",
+    "content-hash": "6bd3fcc8b30a0bd17d5ad6faae857d9a",
     "packages": [
         {
             "name": "barryvdh/elfinder-flysystem-driver",
@@ -385,27 +385,27 @@
         },
         {
             "name": "egulias/email-validator",
-            "version": "2.1.25",
+            "version": "3.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/egulias/EmailValidator.git",
-                "reference": "0dbf5d78455d4d6a41d186da50adc1122ec066f4"
+                "reference": "62c3b73c581c834885acf6e120b412b76acc495a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/0dbf5d78455d4d6a41d186da50adc1122ec066f4",
-                "reference": "0dbf5d78455d4d6a41d186da50adc1122ec066f4",
+                "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/62c3b73c581c834885acf6e120b412b76acc495a",
+                "reference": "62c3b73c581c834885acf6e120b412b76acc495a",
                 "shasum": ""
             },
             "require": {
-                "doctrine/lexer": "^1.0.1",
-                "php": ">=5.5",
-                "symfony/polyfill-intl-idn": "^1.10"
+                "doctrine/lexer": "^1.2",
+                "php": ">=7.2",
+                "symfony/polyfill-intl-idn": "^1.15"
             },
             "require-dev": {
-                "dominicsayers/isemail": "^3.0.7",
-                "phpunit/phpunit": "^4.8.36|^7.5.15",
-                "satooshi/php-coveralls": "^1.0.1"
+                "php-coveralls/php-coveralls": "^2.2",
+                "phpunit/phpunit": "^8.5.8|^9.3.3",
+                "vimeo/psalm": "^4"
             },
             "suggest": {
                 "ext-intl": "PHP Internationalization Libraries are required to use the SpoofChecking validation"
@@ -413,7 +413,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.1.x-dev"
+                    "dev-master": "3.0.x-dev"
                 }
             },
             "autoload": {
@@ -445,7 +445,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2020-12-29T14:50:06+00:00"
+            "time": "2021-03-07T14:33:28+00:00"
         },
         {
             "name": "erusev/parsedown",
@@ -810,16 +810,16 @@
         },
         {
             "name": "google/apiclient-services",
-            "version": "v0.162.0",
+            "version": "v0.164.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/googleapis/google-api-php-client-services.git",
-                "reference": "9085ff13f32f5baf8b3d2917ea63e2e029ecedb6"
+                "reference": "266557af3f595681eb9199853641f334a913d1bf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/googleapis/google-api-php-client-services/zipball/9085ff13f32f5baf8b3d2917ea63e2e029ecedb6",
-                "reference": "9085ff13f32f5baf8b3d2917ea63e2e029ecedb6",
+                "url": "https://api.github.com/repos/googleapis/google-api-php-client-services/zipball/266557af3f595681eb9199853641f334a913d1bf",
+                "reference": "266557af3f595681eb9199853641f334a913d1bf",
                 "shasum": ""
             },
             "require": {
@@ -843,7 +843,7 @@
             "keywords": [
                 "google"
             ],
-            "time": "2021-02-28T12:20:02+00:00"
+            "time": "2021-03-13T12:20:04+00:00"
         },
         {
             "name": "google/auth",
@@ -966,16 +966,16 @@
         },
         {
             "name": "guzzlehttp/promises",
-            "version": "1.4.0",
+            "version": "1.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/promises.git",
-                "reference": "60d379c243457e073cff02bc323a2a86cb355631"
+                "reference": "8e7d04f1f6450fef59366c399cfad4b9383aa30d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/promises/zipball/60d379c243457e073cff02bc323a2a86cb355631",
-                "reference": "60d379c243457e073cff02bc323a2a86cb355631",
+                "url": "https://api.github.com/repos/guzzle/promises/zipball/8e7d04f1f6450fef59366c399cfad4b9383aa30d",
+                "reference": "8e7d04f1f6450fef59366c399cfad4b9383aa30d",
                 "shasum": ""
             },
             "require": {
@@ -1013,7 +1013,7 @@
             "keywords": [
                 "promise"
             ],
-            "time": "2020-09-30T07:37:28+00:00"
+            "time": "2021-03-07T09:25:29+00:00"
         },
         {
             "name": "guzzlehttp/psr7",
@@ -2094,20 +2094,20 @@
         },
         {
             "name": "minmax/ad",
-            "version": "v1.3.13",
+            "version": "v1.3.15",
             "source": {
                 "type": "git",
                 "url": "https://bitbucket.org/minmax-dev/ad.git",
-                "reference": "241a92769c768e7a1e38efd346e0aec5cdbe6693"
+                "reference": "f3d753461f224b1fb26839103c5dd92b4fc29dba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://bitbucket.org/minmax-dev/ad/get/241a92769c768e7a1e38efd346e0aec5cdbe6693.zip",
-                "reference": "241a92769c768e7a1e38efd346e0aec5cdbe6693",
+                "url": "https://bitbucket.org/minmax-dev/ad/get/f3d753461f224b1fb26839103c5dd92b4fc29dba.zip",
+                "reference": "f3d753461f224b1fb26839103c5dd92b4fc29dba",
                 "shasum": ""
             },
             "require": {
-                "minmax/base": "^1.3.58"
+                "minmax/base": "^1.3.62"
             },
             "type": "library",
             "extra": {
@@ -2135,26 +2135,26 @@
             "description": "Advertising management",
             "homepage": "https://bitbucket.org/minmax-dev/ad",
             "support": {
-                "source": "https://bitbucket.org/minmax-dev/ad/src/241a92769c768e7a1e38efd346e0aec5cdbe6693/?at=v1.3.13"
+                "source": "https://bitbucket.org/minmax-dev/ad/src/f3d753461f224b1fb26839103c5dd92b4fc29dba/?at=v1.3.15"
             },
-            "time": "2021-02-23T02:31:20+00:00"
+            "time": "2021-03-17T08:34:12+00:00"
         },
         {
             "name": "minmax/article",
-            "version": "v1.4.15",
+            "version": "v1.4.18",
             "source": {
                 "type": "git",
                 "url": "https://bitbucket.org/minmax-dev/article.git",
-                "reference": "48e83dc226fd5c442d9f8a8a97bb33a59c3b4caf"
+                "reference": "fab0c33e7008452c8760bbf9a3f8bd2147572db1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://bitbucket.org/minmax-dev/article/get/48e83dc226fd5c442d9f8a8a97bb33a59c3b4caf.zip",
-                "reference": "48e83dc226fd5c442d9f8a8a97bb33a59c3b4caf",
+                "url": "https://bitbucket.org/minmax-dev/article/get/fab0c33e7008452c8760bbf9a3f8bd2147572db1.zip",
+                "reference": "fab0c33e7008452c8760bbf9a3f8bd2147572db1",
                 "shasum": ""
             },
             "require": {
-                "minmax/base": "^1.3.58",
+                "minmax/base": "^1.3.62",
                 "minmax/io": "^1.1.5"
             },
             "type": "library",
@@ -2179,22 +2179,22 @@
             "description": "Article management",
             "homepage": "https://bitbucket.org/minmax-dev/article",
             "support": {
-                "source": "https://bitbucket.org/minmax-dev/article/src/48e83dc226fd5c442d9f8a8a97bb33a59c3b4caf/?at=v1.4.15"
+                "source": "https://bitbucket.org/minmax-dev/article/src/fab0c33e7008452c8760bbf9a3f8bd2147572db1/?at=v1.4.18"
             },
-            "time": "2021-02-23T02:27:53+00:00"
+            "time": "2021-03-17T08:32:41+00:00"
         },
         {
             "name": "minmax/base",
-            "version": "v1.3.58",
+            "version": "v1.3.62",
             "source": {
                 "type": "git",
                 "url": "https://bitbucket.org/minmax-dev/base.git",
-                "reference": "9774e6a3b2c514c44cbbb5df2276dcde472f68e5"
+                "reference": "d774b99e32170c8fb4ab13ff7392ac1d01de933b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://bitbucket.org/minmax-dev/base/get/9774e6a3b2c514c44cbbb5df2276dcde472f68e5.zip",
-                "reference": "9774e6a3b2c514c44cbbb5df2276dcde472f68e5",
+                "url": "https://bitbucket.org/minmax-dev/base/get/d774b99e32170c8fb4ab13ff7392ac1d01de933b.zip",
+                "reference": "d774b99e32170c8fb4ab13ff7392ac1d01de933b",
                 "shasum": ""
             },
             "require": {
@@ -2248,9 +2248,54 @@
                 "minmax"
             ],
             "support": {
-                "source": "https://bitbucket.org/minmax-dev/base/src/9774e6a3b2c514c44cbbb5df2276dcde472f68e5/?at=v1.3.58"
+                "source": "https://bitbucket.org/minmax-dev/base/src/d774b99e32170c8fb4ab13ff7392ac1d01de933b/?at=v1.3.62"
             },
-            "time": "2021-02-23T02:11:45+00:00"
+            "time": "2021-03-08T09:22:54+00:00"
+        },
+        {
+            "name": "minmax/inbox",
+            "version": "v1.1.6",
+            "source": {
+                "type": "git",
+                "url": "https://bitbucket.org/minmax-dev/inbox.git",
+                "reference": "8de9a0ddadf07cc5be00a10fcf03084dba3941d9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://bitbucket.org/minmax-dev/inbox/get/8de9a0ddadf07cc5be00a10fcf03084dba3941d9.zip",
+                "reference": "8de9a0ddadf07cc5be00a10fcf03084dba3941d9",
+                "shasum": ""
+            },
+            "require": {
+                "minmax/base": "^1.3.62",
+                "minmax/notify": "^1.2.14"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Minmax\\Inbox\\ServiceProvider",
+                        "Minmax\\Inbox\\EventServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Minmax\\Inbox\\": "src/"
+                }
+            },
+            "authors": [
+                {
+                    "name": "Jeffy",
+                    "email": "jeffy.chen@minmax.biz"
+                }
+            ],
+            "description": "Inbox management",
+            "homepage": "https://bitbucket.org/minmax-dev/inbox",
+            "support": {
+                "source": "https://bitbucket.org/minmax-dev/inbox/src/8de9a0ddadf07cc5be00a10fcf03084dba3941d9/?at=v1.1.6"
+            },
+            "time": "2021-03-08T09:34:18+00:00"
         },
         {
             "name": "minmax/io",
@@ -2298,20 +2343,20 @@
         },
         {
             "name": "minmax/notify",
-            "version": "v1.2.13",
+            "version": "v1.2.14",
             "source": {
                 "type": "git",
                 "url": "https://bitbucket.org/minmax-dev/notify.git",
-                "reference": "a0579517c40130d88ebaafca33810acfb9a4b54a"
+                "reference": "23fa3db251f421620e9f7fd43a85bbbf93c7ef5c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://bitbucket.org/minmax-dev/notify/get/a0579517c40130d88ebaafca33810acfb9a4b54a.zip",
-                "reference": "a0579517c40130d88ebaafca33810acfb9a4b54a",
+                "url": "https://bitbucket.org/minmax-dev/notify/get/23fa3db251f421620e9f7fd43a85bbbf93c7ef5c.zip",
+                "reference": "23fa3db251f421620e9f7fd43a85bbbf93c7ef5c",
                 "shasum": ""
             },
             "require": {
-                "minmax/base": "^1.3.52"
+                "minmax/base": "^1.3.62"
             },
             "type": "library",
             "extra": {
@@ -2338,26 +2383,26 @@
             "description": "System notify management",
             "homepage": "https://bitbucket.org/minmax-dev/notify",
             "support": {
-                "source": "https://bitbucket.org/minmax-dev/notify/src/a0579517c40130d88ebaafca33810acfb9a4b54a/?at=v1.2.13"
+                "source": "https://bitbucket.org/minmax-dev/notify/src/23fa3db251f421620e9f7fd43a85bbbf93c7ef5c/?at=v1.2.14"
             },
-            "time": "2021-01-15T07:48:26+00:00"
+            "time": "2021-03-08T09:31:48+00:00"
         },
         {
             "name": "minmax/world",
-            "version": "v1.1.7",
+            "version": "v1.1.10",
             "source": {
                 "type": "git",
                 "url": "https://bitbucket.org/minmax-dev/world.git",
-                "reference": "a97369c27f40ccf9a43996c6f3097cb9eff7f687"
+                "reference": "42074827548415510165aa695893a61571b57e60"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://bitbucket.org/minmax-dev/world/get/a97369c27f40ccf9a43996c6f3097cb9eff7f687.zip",
-                "reference": "a97369c27f40ccf9a43996c6f3097cb9eff7f687",
+                "url": "https://bitbucket.org/minmax-dev/world/get/42074827548415510165aa695893a61571b57e60.zip",
+                "reference": "42074827548415510165aa695893a61571b57e60",
                 "shasum": ""
             },
             "require": {
-                "minmax/base": "^1.3.48",
+                "minmax/base": "^1.3.62",
                 "minmax/io": "^1.1.5"
             },
             "type": "library",
@@ -2385,9 +2430,9 @@
             "description": "World data management",
             "homepage": "https://bitbucket.org/minmax-dev/world",
             "support": {
-                "source": "https://bitbucket.org/minmax-dev/world/src/a97369c27f40ccf9a43996c6f3097cb9eff7f687/?at=v1.1.7"
+                "source": "https://bitbucket.org/minmax-dev/world/src/42074827548415510165aa695893a61571b57e60/?at=v1.1.10"
             },
-            "time": "2021-01-04T02:29:37+00:00"
+            "time": "2021-03-16T10:25:31+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -2874,16 +2919,16 @@
         },
         {
             "name": "phpseclib/phpseclib",
-            "version": "3.0.5",
+            "version": "3.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpseclib/phpseclib.git",
-                "reference": "7c751ea006577e4c2e83326d90c8b1e8c11b8ede"
+                "reference": "906a5fafabe5e6ba51ef3dc65b2722a677908837"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpseclib/phpseclib/zipball/7c751ea006577e4c2e83326d90c8b1e8c11b8ede",
-                "reference": "7c751ea006577e4c2e83326d90c8b1e8c11b8ede",
+                "url": "https://api.github.com/repos/phpseclib/phpseclib/zipball/906a5fafabe5e6ba51ef3dc65b2722a677908837",
+                "reference": "906a5fafabe5e6ba51ef3dc65b2722a677908837",
                 "shasum": ""
             },
             "require": {
@@ -2977,7 +3022,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-02-12T16:18:16+00:00"
+            "time": "2021-03-10T13:58:31+00:00"
         },
         {
             "name": "psr/cache",
@@ -3027,27 +3072,22 @@
         },
         {
             "name": "psr/container",
-            "version": "1.0.0",
+            "version": "1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/container.git",
-                "reference": "b7ce3b176482dbbc1245ebf52b181af44c2cf55f"
+                "reference": "8622567409010282b7aeebe4bb841fe98b58dcaf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/container/zipball/b7ce3b176482dbbc1245ebf52b181af44c2cf55f",
-                "reference": "b7ce3b176482dbbc1245ebf52b181af44c2cf55f",
+                "url": "https://api.github.com/repos/php-fig/container/zipball/8622567409010282b7aeebe4bb841fe98b58dcaf",
+                "reference": "8622567409010282b7aeebe4bb841fe98b58dcaf",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.0"
+                "php": ">=7.2.0"
             },
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                }
-            },
             "autoload": {
                 "psr-4": {
                     "Psr\\Container\\": "src/"
@@ -3060,7 +3100,7 @@
             "authors": [
                 {
                     "name": "PHP-FIG",
-                    "homepage": "http://www.php-fig.org/"
+                    "homepage": "https://www.php-fig.org/"
                 }
             ],
             "description": "Common Container Interface (PHP FIG PSR-11)",
@@ -3072,7 +3112,7 @@
                 "container-interop",
                 "psr"
             ],
-            "time": "2017-02-14T16:28:37+00:00"
+            "time": "2021-03-05T17:36:06+00:00"
         },
         {
             "name": "psr/http-client",
@@ -3699,20 +3739,20 @@
         },
         {
             "name": "swiftmailer/swiftmailer",
-            "version": "v6.2.5",
+            "version": "v6.2.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/swiftmailer/swiftmailer.git",
-                "reference": "698a6a9f54d7eb321274de3ad19863802c879fb7"
+                "reference": "15f7faf8508e04471f666633addacf54c0ab5933"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/698a6a9f54d7eb321274de3ad19863802c879fb7",
-                "reference": "698a6a9f54d7eb321274de3ad19863802c879fb7",
+                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/15f7faf8508e04471f666633addacf54c0ab5933",
+                "reference": "15f7faf8508e04471f666633addacf54c0ab5933",
                 "shasum": ""
             },
             "require": {
-                "egulias/email-validator": "^2.0",
+                "egulias/email-validator": "^2.0|^3.1",
                 "php": ">=7.0.0",
                 "symfony/polyfill-iconv": "^1.0",
                 "symfony/polyfill-intl-idn": "^1.10",
@@ -3766,7 +3806,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-01-12T09:35:59+00:00"
+            "time": "2021-03-09T12:30:35+00:00"
         },
         {
             "name": "symfony/console",
@@ -3845,7 +3885,7 @@
         },
         {
             "name": "symfony/css-selector",
-            "version": "v5.2.3",
+            "version": "v5.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/css-selector.git",
@@ -3907,16 +3947,16 @@
         },
         {
             "name": "symfony/debug",
-            "version": "v4.4.19",
+            "version": "v4.4.20",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/debug.git",
-                "reference": "af4987aa4a5630e9615be9d9c3ed1b0f24ca449c"
+                "reference": "157bbec4fd773bae53c5483c50951a5530a2cc16"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/debug/zipball/af4987aa4a5630e9615be9d9c3ed1b0f24ca449c",
-                "reference": "af4987aa4a5630e9615be9d9c3ed1b0f24ca449c",
+                "url": "https://api.github.com/repos/symfony/debug/zipball/157bbec4fd773bae53c5483c50951a5530a2cc16",
+                "reference": "157bbec4fd773bae53c5483c50951a5530a2cc16",
                 "shasum": ""
             },
             "require": {
@@ -3969,7 +4009,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-01-27T09:09:26+00:00"
+            "time": "2021-01-28T16:54:48+00:00"
         },
         {
             "name": "symfony/deprecation-contracts",
@@ -4037,16 +4077,16 @@
         },
         {
             "name": "symfony/error-handler",
-            "version": "v4.4.19",
+            "version": "v4.4.20",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/error-handler.git",
-                "reference": "d603654eaeb713503bba3e308b9e748e5a6d3f2e"
+                "reference": "a191550d46b73a527b9d244f185fef439d41cf15"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/error-handler/zipball/d603654eaeb713503bba3e308b9e748e5a6d3f2e",
-                "reference": "d603654eaeb713503bba3e308b9e748e5a6d3f2e",
+                "url": "https://api.github.com/repos/symfony/error-handler/zipball/a191550d46b73a527b9d244f185fef439d41cf15",
+                "reference": "a191550d46b73a527b9d244f185fef439d41cf15",
                 "shasum": ""
             },
             "require": {
@@ -4099,11 +4139,11 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-01-27T09:09:26+00:00"
+            "time": "2021-02-11T08:19:35+00:00"
         },
         {
             "name": "symfony/event-dispatcher",
-            "version": "v4.4.19",
+            "version": "v4.4.20",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/event-dispatcher.git",
@@ -4259,16 +4299,16 @@
         },
         {
             "name": "symfony/finder",
-            "version": "v4.4.19",
+            "version": "v4.4.20",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/finder.git",
-                "reference": "25d79cfccfc12e84e7a63a248c3f0720fdd92db6"
+                "reference": "2543795ab1570df588b9bbd31e1a2bd7037b94f6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/finder/zipball/25d79cfccfc12e84e7a63a248c3f0720fdd92db6",
-                "reference": "25d79cfccfc12e84e7a63a248c3f0720fdd92db6",
+                "url": "https://api.github.com/repos/symfony/finder/zipball/2543795ab1570df588b9bbd31e1a2bd7037b94f6",
+                "reference": "2543795ab1570df588b9bbd31e1a2bd7037b94f6",
                 "shasum": ""
             },
             "require": {
@@ -4313,7 +4353,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-01-27T09:09:26+00:00"
+            "time": "2021-02-12T10:48:09+00:00"
         },
         {
             "name": "symfony/http-client-contracts",
@@ -4393,16 +4433,16 @@
         },
         {
             "name": "symfony/http-foundation",
-            "version": "v4.4.19",
+            "version": "v4.4.20",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-foundation.git",
-                "reference": "8888741b633f6c3d1e572b7735ad2cae3e03f9c5"
+                "reference": "02d968647fe61b2f419a8dc70c468a9d30a48d3a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/8888741b633f6c3d1e572b7735ad2cae3e03f9c5",
-                "reference": "8888741b633f6c3d1e572b7735ad2cae3e03f9c5",
+                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/02d968647fe61b2f419a8dc70c468a9d30a48d3a",
+                "reference": "02d968647fe61b2f419a8dc70c468a9d30a48d3a",
                 "shasum": ""
             },
             "require": {
@@ -4454,20 +4494,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-01-27T09:09:26+00:00"
+            "time": "2021-02-25T17:11:33+00:00"
         },
         {
             "name": "symfony/http-kernel",
-            "version": "v4.4.19",
+            "version": "v4.4.20",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-kernel.git",
-                "reference": "07ea794a327d7c8c5d76e3058fde9fec6a711cb4"
+                "reference": "4f36548465489f293b05406f1770492f6efb8adb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-kernel/zipball/07ea794a327d7c8c5d76e3058fde9fec6a711cb4",
-                "reference": "07ea794a327d7c8c5d76e3058fde9fec6a711cb4",
+                "url": "https://api.github.com/repos/symfony/http-kernel/zipball/4f36548465489f293b05406f1770492f6efb8adb",
+                "reference": "4f36548465489f293b05406f1770492f6efb8adb",
                 "shasum": ""
             },
             "require": {
@@ -4493,7 +4533,7 @@
                 "psr/log-implementation": "1.0"
             },
             "require-dev": {
-                "psr/cache": "~1.0",
+                "psr/cache": "^1.0|^2.0|^3.0",
                 "symfony/browser-kit": "^4.3|^5.0",
                 "symfony/config": "^3.4|^4.0|^5.0",
                 "symfony/console": "^3.4|^4.0",
@@ -4555,20 +4595,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-01-27T13:50:53+00:00"
+            "time": "2021-03-04T18:00:27+00:00"
         },
         {
             "name": "symfony/mime",
-            "version": "v5.2.3",
+            "version": "v5.2.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/mime.git",
-                "reference": "7dee6a43493f39b51ff6c5bb2bd576fe40a76c86"
+                "reference": "554ba128f1955038b45db5e1fa7e93bfc683b139"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/mime/zipball/7dee6a43493f39b51ff6c5bb2bd576fe40a76c86",
-                "reference": "7dee6a43493f39b51ff6c5bb2bd576fe40a76c86",
+                "url": "https://api.github.com/repos/symfony/mime/zipball/554ba128f1955038b45db5e1fa7e93bfc683b139",
+                "reference": "554ba128f1955038b45db5e1fa7e93bfc683b139",
                 "shasum": ""
             },
             "require": {
@@ -4579,12 +4619,13 @@
                 "symfony/polyfill-php80": "^1.15"
             },
             "conflict": {
+                "egulias/email-validator": "~3.0.0",
                 "phpdocumentor/reflection-docblock": "<3.2.2",
                 "phpdocumentor/type-resolver": "<1.4.0",
                 "symfony/mailer": "<4.4"
             },
             "require-dev": {
-                "egulias/email-validator": "^2.1.10",
+                "egulias/email-validator": "^2.1.10|^3.1",
                 "phpdocumentor/reflection-docblock": "^3.0|^4.0|^5.0",
                 "symfony/dependency-injection": "^4.4|^5.0",
                 "symfony/property-access": "^4.4|^5.1",
@@ -4634,7 +4675,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-02-02T06:10:15+00:00"
+            "time": "2021-03-07T16:08:20+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
@@ -5262,7 +5303,7 @@
         },
         {
             "name": "symfony/process",
-            "version": "v4.4.19",
+            "version": "v4.4.20",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/process.git",
@@ -5320,16 +5361,16 @@
         },
         {
             "name": "symfony/routing",
-            "version": "v4.4.19",
+            "version": "v4.4.20",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/routing.git",
-                "reference": "87529f6e305c7acb162840d1ea57922038072425"
+                "reference": "69919991c845b34626664ddc9b3aef9d09d2a5df"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/routing/zipball/87529f6e305c7acb162840d1ea57922038072425",
-                "reference": "87529f6e305c7acb162840d1ea57922038072425",
+                "url": "https://api.github.com/repos/symfony/routing/zipball/69919991c845b34626664ddc9b3aef9d09d2a5df",
+                "reference": "69919991c845b34626664ddc9b3aef9d09d2a5df",
                 "shasum": ""
             },
             "require": {
@@ -5401,7 +5442,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-01-27T09:09:26+00:00"
+            "time": "2021-02-22T15:37:04+00:00"
         },
         {
             "name": "symfony/service-contracts",
@@ -5632,7 +5673,7 @@
         },
         {
             "name": "symfony/var-dumper",
-            "version": "v4.4.19",
+            "version": "v4.4.20",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/var-dumper.git",
@@ -6831,16 +6872,16 @@
         },
         {
             "name": "filp/whoops",
-            "version": "2.9.2",
+            "version": "2.10.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/filp/whoops.git",
-                "reference": "df7933820090489623ce0be5e85c7e693638e536"
+                "reference": "6ecda5217bf048088b891f7403b262906be5a957"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/filp/whoops/zipball/df7933820090489623ce0be5e85c7e693638e536",
-                "reference": "df7933820090489623ce0be5e85c7e693638e536",
+                "url": "https://api.github.com/repos/filp/whoops/zipball/6ecda5217bf048088b891f7403b262906be5a957",
+                "reference": "6ecda5217bf048088b891f7403b262906be5a957",
                 "shasum": ""
             },
             "require": {
@@ -6894,7 +6935,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-01-24T12:00:00+00:00"
+            "time": "2021-03-16T12:00:00+00:00"
         },
         {
             "name": "fzaninotto/faker",
@@ -7493,16 +7534,16 @@
         },
         {
             "name": "phpspec/prophecy",
-            "version": "1.12.2",
+            "version": "1.13.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpspec/prophecy.git",
-                "reference": "245710e971a030f42e08f4912863805570f23d39"
+                "reference": "be1996ed8adc35c3fd795488a653f4b518be70ea"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpspec/prophecy/zipball/245710e971a030f42e08f4912863805570f23d39",
-                "reference": "245710e971a030f42e08f4912863805570f23d39",
+                "url": "https://api.github.com/repos/phpspec/prophecy/zipball/be1996ed8adc35c3fd795488a653f4b518be70ea",
+                "reference": "be1996ed8adc35c3fd795488a653f4b518be70ea",
                 "shasum": ""
             },
             "require": {
@@ -7552,7 +7593,7 @@
                 "spy",
                 "stub"
             ],
-            "time": "2020-12-19T10:15:11+00:00"
+            "time": "2021-03-17T13:42:18+00:00"
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -8634,16 +8675,16 @@
         },
         {
             "name": "symfony/filesystem",
-            "version": "v5.2.3",
+            "version": "v5.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/filesystem.git",
-                "reference": "262d033b57c73e8b59cd6e68a45c528318b15038"
+                "reference": "710d364200997a5afde34d9fe57bd52f3cc1e108"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/filesystem/zipball/262d033b57c73e8b59cd6e68a45c528318b15038",
-                "reference": "262d033b57c73e8b59cd6e68a45c528318b15038",
+                "url": "https://api.github.com/repos/symfony/filesystem/zipball/710d364200997a5afde34d9fe57bd52f3cc1e108",
+                "reference": "710d364200997a5afde34d9fe57bd52f3cc1e108",
                 "shasum": ""
             },
             "require": {
@@ -8689,7 +8730,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-01-27T10:01:46+00:00"
+            "time": "2021-02-12T10:38:38+00:00"
         },
         {
             "name": "theseer/tokenizer",
@@ -8739,30 +8780,35 @@
         },
         {
             "name": "webmozart/assert",
-            "version": "1.9.1",
+            "version": "1.10.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/webmozarts/assert.git",
-                "reference": "bafc69caeb4d49c39fd0779086c03a3738cbb389"
+                "reference": "6964c76c7804814a842473e0c8fd15bab0f18e25"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webmozarts/assert/zipball/bafc69caeb4d49c39fd0779086c03a3738cbb389",
-                "reference": "bafc69caeb4d49c39fd0779086c03a3738cbb389",
+                "url": "https://api.github.com/repos/webmozarts/assert/zipball/6964c76c7804814a842473e0c8fd15bab0f18e25",
+                "reference": "6964c76c7804814a842473e0c8fd15bab0f18e25",
                 "shasum": ""
             },
             "require": {
-                "php": "^5.3.3 || ^7.0 || ^8.0",
+                "php": "^7.2 || ^8.0",
                 "symfony/polyfill-ctype": "^1.8"
             },
             "conflict": {
                 "phpstan/phpstan": "<0.12.20",
-                "vimeo/psalm": "<3.9.1"
+                "vimeo/psalm": "<4.6.1 || 4.6.2"
             },
             "require-dev": {
-                "phpunit/phpunit": "^4.8.36 || ^7.5.13"
+                "phpunit/phpunit": "^8.5.13"
             },
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.10-dev"
+                }
+            },
             "autoload": {
                 "psr-4": {
                     "Webmozart\\Assert\\": "src/"
@@ -8784,7 +8830,7 @@
                 "check",
                 "validate"
             ],
-            "time": "2020-07-08T17:02:28+00:00"
+            "time": "2021-03-09T10:59:23+00:00"
         }
     ],
     "aliases": [

@@ -32,7 +32,9 @@
                     {!! array_get($articleElements[0],'details.editor') !!}
                 </div>
                 <div class="contact-form">
-                    <form action="contact-alert">
+                    {{--<form action="contact-alert">--}}
+                    <form action="{{ langRoute('web.contact.post.submit') }}" method="POST" id="contactForm" name="contactForm">
+                        @csrf
                         <div class="form-box" >
                             <div class="item">
                                 <div class="tag">
@@ -40,9 +42,9 @@
                                 </div>
                                 <div class="inData">
                                     <div class="col">
-                                        <select class="selectpicker fs_16" name="serviceItem" title="選択して下さい" id="serviceItem">
+                                        <select class="selectpicker fs_16" name="details[諮詢服務]" title="選択して下さい" id="serviceItem">
                                             @foreach($serviceItem as $key => $item)
-                                                <option>{{array_get($item,'title')}}</option>
+                                                <option {{ (old('details.serviceItem') == array_get($item,'title')) ? 'selected="selected"':''}}>{{array_get($item,'title')}}</option>
                                             @endForeach
                                         </select>
                                     </div>
@@ -55,9 +57,9 @@
                                 </div>
                                 <div class="inData">
                                     <div class="col">
-                                        <select class="selectpicker fs_16" name="participation" title="選択して下さい" id="participation">
+                                        <select class="selectpicker fs_16" name="details[參加類別]" title="選択して下さい" id="participation">
                                             @foreach($participation as $key => $item)
-                                                <option>{{array_get($item,'title')}}</option>
+                                                <option {{ (old('details.participation') == array_get($item,'title')) ? 'selected="selected"':''}}>{{array_get($item,'title')}}</option>
                                             @endForeach
                                         </select>
                                     </div>
@@ -69,9 +71,9 @@
                                 </div>
                                 <div class="inData">
                                     <div class="col">
-                                        <select class="selectpicker fs_16" data-country="US" name="country" title="選択して下さい" id="country">
+                                        <select class="selectpicker fs_16" data-country="US" name="details[國家]" title="選択して下さい" id="country">
                                             @foreach($countrys as $key => $item)
-                                                <option>{{array_get($item,'title')}}</option>
+                                                <option {{ (old('details.country') == array_get($item,'title')) ? 'selected="selected"':''}}>{{array_get($item,'title')}}</option>
                                             @endForeach
                                         </select>
                                     </div>
@@ -84,7 +86,7 @@
                                 </div>
                                 <div class="inData">
                                     <div class="col">
-                                        <input type="text" class="input-style fs_16" name="company" id="company" placeholder="例）山田株式会社 / 山田クリニック">
+                                        <input type="text" class="input-style fs_16" name="details[公司]" id="company" placeholder="例）山田株式会社 / 山田クリニック" value="{{old('details.company')}}">
                                     </div>
 
                                 </div>
@@ -95,7 +97,7 @@
                                 </div>
                                 <div class="inData">
                                     <div class="col">
-                                        <input type="text" class="input-style fs_16" name="position" id="position" placeholder="例）部長">
+                                        <input type="text" class="input-style fs_16" name="details[標題]" id="position" placeholder="例）部長" {{old('details.position')}}>
                                     </div>
                                 </div>
                             </div>
@@ -106,10 +108,10 @@
                                 </div>
                                 <div class="inData">
                                     <div class="col">
-                                        <input type="text" class="input-style fs_16" name="firstname" id="firstname" placeholder="例）山田">
+                                        <input type="text" class="input-style fs_16" name="details[firstname]" id="firstname" placeholder="例）山田" {{old('details.firstname')}}>
                                     </div>
                                     <div class="col">
-                                        <input type="text" class="input-style fs_16" name="lastname" id="lastname" placeholder="例）太郎">
+                                        <input type="text" class="input-style fs_16" name="details[lastname]" id="lastname" placeholder="例）太郎" {{old('details.lastname')}}>
                                     </div>
                                 </div>
                             </div>
@@ -119,10 +121,10 @@
                                 </div>
                                 <div class="inData">
                                     <div class="col areacode">
-                                        <input type="number" class="input-style fs_16" name="areacode" id="areacode" >
+                                        <input type="number" class="input-style fs_16" name="details[區碼]" id="areacode" {{old('details.areacode')}}>
                                     </div>
                                     <div class="col telnumber">
-                                        <input type="number" class="input-style fs_16" name="tel" id="tel" placeholder="例)8478-0262">
+                                        <input type="number" class="input-style fs_16" name="details[電話]" id="tel" placeholder="例)8478-0262" {{old('details.tel')}}>
                                     </div>
 
                                 </div>
@@ -133,7 +135,7 @@
                                 </div>
                                 <div class="inData">
                                     <div class="col">
-                                        <input type="email" class="input-style fs_16" name="email" id="email" placeholder="info@yamata.com">
+                                        <input type="email" class="input-style fs_16" name="details[email]" id="email" placeholder="info@yamata.com" {{old('details.email')}}>
                                     </div>
                                 </div>
                             </div>
@@ -144,9 +146,9 @@
                                 </div>
                                 <div class="inData">
                                     <div class="col">
-                                        <select class="selectpicker fs_16" name="contact_item" title="選択して下さい" id="contact_item">
+                                        <select class="selectpicker fs_16" name="details[產品]" title="選択して下さい" id="contact_item">
                                             @foreach($contactItem as $key => $item)
-                                                <option>{{array_get($item,'title')}}</option>
+                                                <option {{ (old('details.country') == array_get($item,'title')) ? 'selected="selected"':''}}>{{array_get($item,'title')}}</option>
                                             @endForeach
                                         </select>
                                     </div>
@@ -158,7 +160,7 @@
                                 </div>
                                 <div class="inData">
                                     <div class="col">
-                                        <textarea class="input-style fs_16" name="opinion" id="opinion" rows="10"></textarea>
+                                        <textarea class="input-style fs_16" name="content" id="content" rows="10">{old('details.opinion')}}</textarea>
                                     </div>
                                 </div>
                             </div>
@@ -169,7 +171,7 @@
                                 <div class="g-recaptcha" data-sitekey="6Ldf4MMUAAAAACEjhzLRQ5YPucN5amDPxy-VUebw"></div>
                             </div>
                             <div class="submit-btn">
-                                <button>
+                                <button type="submit">
                                     <span class="word fs_16">送る</span>
                                     <span class="icon"><img src="/styles/images/common/icon-arrow-right-white.svg" alt=""></span>
                                 </button>
@@ -186,3 +188,8 @@
 
 
 @endsection
+
+@push('scripts')
+<script>
+</script>
+@endpush

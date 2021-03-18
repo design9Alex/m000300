@@ -6,6 +6,22 @@
 @section('content')
     <main class="main">
 
+        <div class="home-banner">
+            <div class="banner">
+                <div class="slider" data-aos="fade">
+                    <!-- 圖片尺寸 w1920 * h820 -->
+                    @foreach($bannerData as $key => $item)
+                        <div class="item jqimgFill rellax" data-rellax-speed="3" data-rellax-xs-speed="1" data-rellax-mobile-speed="2"
+                             data-rellax-tablet-speed="2">
+                            <img src="{{array_get($item,'details.pic.0.path')}}" alt="">
+                            {!! array_get($item,'details.editor') !!}
+                        </div>
+                    @endForeach
+                </div>
+            </div>
+        </div>
+
+
         @foreach($articleElements as $key => $item)
             {!! array_get($item,'details.editor') !!}
         @endForeach
