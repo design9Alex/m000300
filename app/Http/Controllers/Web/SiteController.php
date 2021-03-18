@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Web;
 use App\Repositories\Web\AdvertisingRepository;
 use App\Repositories\Web\ArticleElementRepository;
+use Minmax\Base\Models\WebData;
 
 /**
  * Class SiteController
@@ -17,9 +18,9 @@ class SiteController extends BaseController
         $this->viewData['bannerData'] = $bannerData = (new AdvertisingRepository())->getAdvertising('home_banner');
 
         $seo = array();
-        $seo['title'] = $this->viewData['mainMenuData']->title;
-        $seo['description'] = array_get($this->viewData['mainMenuData'],'seo.meta_description');
-        $seo['keywords'] = array_get($this->viewData['mainMenuData'],'seo.meta_keywords');
+        $seo['title'] = $this->viewData['webData']['website_name'];
+        $seo['description'] = $this->viewData['webData']['seo']['meta_description'];
+        $seo['keywords'] = $this->viewData['webData']['seo']['meta_keywords'];
 
         $this->viewData['seo'] = $seo;
 
