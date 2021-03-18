@@ -5,6 +5,7 @@ use App\Repositories\Web\ArticleElementRepository;
 
 
 use App\Http\Requests\Web\ContactRequest;
+use Minmax\Article\Web\ArticlePageRepository;
 use Minmax\Base\Helpers\Captcha;
 use Illuminate\Http\Request;
 use Minmax\Inbox\Models\InboxCategory;
@@ -157,79 +158,32 @@ class ContactController extends BaseController
 
 
 
-    /**
-     * 發信
-     * @param $toMail
-     * @param $toMailName
-     * @param $fromMail
-     * @param $fromName
-     * @param $body
-     * @param $Subject
-     * @return bool
-     * @throws phpmailerException
-     */
-    public static function sendEmail($toMail , $toMailName , $fromMail , $fromName , $body , $Subject){
+    public function privacy()
+    {
+        $this->viewData['thisMenu'] = 'contact';
+        $this->viewData['mainMenuData'] = $mainMenuData = $this->getMainMenuData($this->viewData['thisMenu']);
 
-        $webData = httpFunction::webData('tw');
-
-
-        $sql = 'select * from smtp_data where guid=? ';
-        $smtpData = DB::select($sql,array('1'));
-
-
-        $mail = new PHPMailer(true);
-
-        try {
-            $mail->CharSet = "utf-8";
-            $mail->Encoding = "base64";
-            $mail->IsSMTP(); //使用SMTP寄信
-
-            if($smtpData[0]->smtp_auth == 'N')
-            {
-                $mail->SMTPAuth = false;
-                //$mail->SMTPSecure = "tls"; //一定要用ssl
-            }else{
-                $mail->SMTPAuth = true;
-                //$mail->SMTPSecure = "tls"; //一定要用ssl
-                //$mail->SMTPSecure = "ssl"; //一定要用ssl
-                $mail->Username = $smtpData[0]->username; //gmail帳號
-                $mail->Password = $smtpData[0]->password; //gmail密碼
-            }
-
-
-            $mail->Host = $smtpData[0]->host; // SMTP server
-            $mail->Port = $smtpData[0]->port;
-            $mail->From = $smtpData[0]->form_email;
-            $mail->FromName = $fromName;
-            $mail->Subject = $Subject;
-            //注意：這裡要用明文設定Gmail的帳號密碼，所以有可能被他人盜用
-            //如果你是用虛擬主機的不建議使用(或申請另一個Gmail)
-
-            //IsHTML設為true才能用HTML格式化文件
-            $mail->IsHTML(true);
-            $mail->Body = $body;
-
-
-            $toMailArr = explode(",",$toMail);
-            for($ii=0;$ii<count($toMailArr);$ii++){
-                if(!empty($toMailArr)){
-                    $mail->AddAddress($toMailArr[$ii], $toMailName);
-                }
-            }
-
-            //判斷寄信是否成功
-            /*
-			if (!$mail->Send()) {
-                return false;
-			} else {
-				return true;
-			}
-            */
-            $mail->send();
-        }catch(phpmailerException $e){
-            dd($e);
-        }catch(Exception $e){
-            dd($e);
+        $mainMenuDataPic = array();
+        foreach(array_get($mainMenuData,'details.pic') as $key => $item){
+            $mainMenuDataPic[array_get($item,'device')] = array_get($item,'path');
         }
+        $this->viewData['mainMenuDataPic'] = $mainMenuDataPic;
+
+        $seo = array();
+        $seo['title'] = $this->viewData['mainMenuData']->title;
+        $seo['description'] = array_get($this->viewData['mainMenuData'],'seo.meta_description');
+        $seo['keywords'] = array_get($this->viewData['mainMenuData'],'seo.meta_keywords');
+
+        $this->viewData['seo'] = $seo;
+
+
+        $this->viewData['articlePage'] = $articlePage = (new ArticlePageRepository)->getPagesByCategory('privacy')->first();
+        if(!$articlePage){
+            abort(404);
+        }
+
+        return response()
+            ->view('web.privacy', $this->viewData)
+            ->header('X-Frame-Options', 'DENY');
     }
 }

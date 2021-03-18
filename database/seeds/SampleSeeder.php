@@ -101,19 +101,6 @@ class SampleSeeder extends Seeder
             ],
 
 
-            [
-
-                'id' => $menuId0 = uuidl(),
-                'parent_id' => $menuRootId1,
-                'title' => 'web_menu.title.' . $menuId0,
-                'details' => 'web_menu.details.' . $menuId0,
-                'uri' => 'index',
-                'controller' => null,
-                'model' => null,
-                'permission_key' => null,
-                'options' => json_encode(['target' => '_self']),
-                'sort' => 1, 'editable' => true, 'protected' => true, 'active' => true, 'created_at' => $timestamp, 'updated_at' => $timestamp
-            ],
 
             [
 
@@ -243,6 +230,19 @@ class SampleSeeder extends Seeder
                 'sort' => 4, 'editable' => true, 'protected' => true, 'active' => true, 'created_at' => $timestamp, 'updated_at' => $timestamp
             ],
 
+            [
+                'id' => $menuId5 = uuidl(),
+                'parent_id' => $menuRootId1,
+                'title' => 'web_menu.title.' . $menuId5,
+                'details' => 'web_menu.details.' . $menuId5,
+                'uri' => 'privacy',
+                'controller' => null,
+                'model' => null,
+                'permission_key' => null,
+                'options' => json_encode(['target' => '_self']),
+                'sort' => 5, 'editable' => true, 'protected' => true, 'active' => true, 'created_at' => $timestamp, 'updated_at' => $timestamp
+            ],
+
 
             [
                 'id' => $footerId = uuidl(),
@@ -301,6 +301,11 @@ HTML;
         $editor4 = <<<HTML
         <h1 class="bn-tit fs_36">お問い合わせ</h1>
          <p class="en fs_16">Contact Us</p>
+HTML;
+
+        $editor5 = <<<HTML
+        <h1 class="bn-tit fs_36">プライバシーポリシー</h1>
+                <p class="en fs_16">Privacy Policy</p>
 HTML;
 
 
@@ -412,6 +417,22 @@ HTML;
                     ]
                 ),],
 
+
+                ['id' => $menuId5, 'title' => 'プライバシーポリシー', 'link' => url('privacy') , 'details' => json_encode(
+                    [
+                        'pic' => [
+                            ['path' => '/styles/images/other/privacy-banner.jpg','device' => 'desktop'],
+                            ['path' => '/styles/images/other/privacy-banner.jpg','device' => 'mobile'],
+                        ],
+                        'topic' => '隱私政策',
+                        'description' => '',
+                        'link' => '/privacy',
+                        'editor' => $editor5
+                    ]
+                ),],
+
+
+
                 ['id' => $footerId, 'title' => '頁尾選單', 'link' => null]
             ],
             'en' => [
@@ -507,7 +528,7 @@ HTML;
                     ]
                 ),],
 
-                ['id' => $menuId4, 'title' => 'お問い合わせ', 'link' => url('about') , 'details' => json_encode(
+                ['id' => $menuId4, 'title' => 'お問い合わせ', 'link' => url('contact') , 'details' => json_encode(
                     [
                         'pic' => [
                             ['path' => '/styles/images/other/contact-banner.jpg','device' => 'desktop'],
@@ -519,6 +540,22 @@ HTML;
                         'editor' => $editor4
                     ]
                 ),],
+
+
+                ['id' => $menuId5, 'title' => 'プライバシーポリシー', 'link' => url('privacy') , 'details' => json_encode(
+                    [
+                        'pic' => [
+                            ['path' => '/styles/images/other/privacy-banner.jpg','device' => 'desktop'],
+                            ['path' => '/styles/images/other/privacy-banner.jpg','device' => 'mobile'],
+                        ],
+                        'topic' => '隱私政策',
+                        'description' => '',
+                        'link' => '/privacy',
+                        'editor' => $editor5
+                    ]
+                ),],
+
+
 
                 ['id' => $footerId, 'title' => '頁尾選單', 'link' => null]
             ],

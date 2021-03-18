@@ -26,6 +26,7 @@ class ArticlePagePrivacySeeder extends Seeder
 
     protected function insertData(){
         // 欄位擴充
+        /*
         DB::table('column_extension')->where('table_name','article_page')->where('sub_column_name','pic')->update(['options' => json_encode(['method' => 'getFieldMediaImage', 'hint' => '建議尺寸：1920px * 540px。圖片類型：jpg、png、gif。','limit' => 1])]);
 
         $startExtensionId = $extensionRowId = SeederHelper::getTableNextIncrement('column_extension');
@@ -36,6 +37,7 @@ class ArticlePagePrivacySeeder extends Seeder
         ];
         SeederHelper::setLanguageExchange($columnExtensionData, $this->languageResourceData, 'column_extension', 'title', $this->languageList, $startExtensionId);
         DB::table('column_extension')->insert($columnExtensionData);
+        */
 
 
 
@@ -140,8 +142,7 @@ HTML;
         $data = [
             ['id' => $pageId1,'title' => 'プライバシーポリシー', 'details' => json_encode(
                 [
-                    'pic' => [['path' => '/styles/images/other/privacy-banner.jpg']],
-                    'pic2' => [['path' => '/styles/images/other/privacy-banner.jpg']],
+                    'pic' => null,
                     'topic' => '隱私政策',
                     'description' => '',
                     'link' => 'privacy',
