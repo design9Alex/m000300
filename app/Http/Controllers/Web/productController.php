@@ -18,7 +18,6 @@ class productController extends BaseController
 
     public function product($uri)
     {
-        //dd($serial);
         $this->viewData['thisMenu'] = $thisMenu = $uri;
         $this->viewData['mainMenuData'] = $mainMenuData = $this->getMainMenuData($thisMenu);
         $this->viewData['tagID']  = $thisMenu;

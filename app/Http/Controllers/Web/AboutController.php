@@ -22,6 +22,8 @@ class AboutController extends BaseController
         $this->viewData['thisMenu'] = 'about';
         $this->viewData['mainMenuData'] = $mainMenuData = $this->getMainMenuData($this->viewData['thisMenu']);
 
+        //dd($this->viewData['mainMenu'][0]);
+
         $mainMenuDataPic = array();
         foreach(array_get($mainMenuData,'details.pic') as $key => $item){
             $mainMenuDataPic[array_get($item,'device')] = array_get($item,'path');

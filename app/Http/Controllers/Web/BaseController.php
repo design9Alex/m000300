@@ -24,25 +24,50 @@ class BaseController extends Controller
             exit;
         }
 
-
+        //dd(backendPath('admin'),backendPath('administrator'));
 
         $this->nowHost = request()->getSchemeAndHttpHost();
 
         $this->viewData['nowPathInfo'] = request()->getPathInfo();
 
-        $this->viewData['mainMenu'] = (new WebMenuRepository)->getMenu($this->checkUriOrID((new WebMenuRepository),'root-header'));
-        $this->viewData['footerMenu'] = (new WebMenuRepository)->getMenu($this->checkUriOrID((new WebMenuRepository),'root-footer'));
+        $mainMenuIcon = array();
+        $mainMenuIcon['about'] = '/styles/images/common/menu-icon-01.svg';
+        $mainMenuIcon['manufacturing'] = '/styles/images/common/menu-icon-02.svg';
+        $mainMenuIcon['manufacturing_2'] = '/styles/images/common/menu-icon-02-white.svg';
+        $mainMenuIcon['cellregeneration'] = '/styles/images/common/menu-icon-03.svg';
+        $mainMenuIcon['cellregeneration_2'] = '/styles/images/common/menu-icon-03-white.svg';
+        $mainMenuIcon['contact'] = '/styles/images/common/menu-icon-04.svg';
+
+        $this->viewData['mainMenuIcon'] = $mainMenuIcon;
+
+
+        $footerMenuIcon = array();
+        $footerMenuIcon['about'] = '/styles/images/common/menu-icon-01.svg';
+        $footerMenuIcon['manufacturing'] = '/styles/images/common/menu-icon-02.svg';
+        $footerMenuIcon['cellregeneration'] = '/styles/images/common/menu-icon-03.svg';
+        $footerMenuIcon['contact'] = '/styles/images/common/menu-icon-04.svg';
+
+        $this->viewData['mainMenuIcon'] = $mainMenuIcon;
+
+
+
+        $this->viewData['mainMenu'] = $mainMenu = (new WebMenuRepository)->getMenu($this->checkUriOrID((new WebMenuRepository),'root-header'));
+        //dd($mainMenu);
+
+        $this->viewData['footerMenu'] = $footerMenu = (new WebMenuRepository)->getMenu($this->checkUriOrID((new WebMenuRepository),'root-footer'));
 
         $this->viewData['BaseWebData'] = $BaseWebData;
 
         $this->viewData['rootUri'] = ($BaseWebData->system_language == app()->getLocale() ? '' : (app()->getLocale() . '/'));
-        $this->viewData['languageUri'] = ($this->viewData['rootUri'] == 'en/') ? '/'.substr(request()->getRequestUri(),4) : ((request()->getRequestUri() == "/")?'/en':'/en'.request()->getRequestUri());
-
+        $this->viewData['languageUri'] = ($this->viewData['rootUri'] == 'en/') ? '/'.substr(request()->getRequestUri(),4) : ((request()->getRequestUri() == "/")?'/en' : request()->getRequestUri());
+        //dd(request()->getRequestUri(),$this->viewData['languageUri']);
         $this->viewData['d4Pic'] = "/styles/".$this->viewData['rootUri']."images/common/img-logo.jpg";
+
     }
     public function getMainMenuData($uri){
         return (new WebMenuRepository)->one('uri',$uri);
     }
+
     public function checkUriOrID($Repository,$value){
         $result = $Repository->one('uri', $value);
         $return = (isset($result))?$result->id:$value;

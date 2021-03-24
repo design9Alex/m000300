@@ -120,8 +120,14 @@ $(function(){
         var $wp = $(this),
             pageId = $wp.attr('id');
             pageTag = $wp.data('tag');
+
+
         $("#header .headerbox nav").find('.menu li[data-id="' + pageId + '"]').children('.link').addClass('current');
         $("#header  .headerbox nav .menu li.has-sm .submenu .content .sublist").find('li[data-tag="' + pageTag + '"]').children('a').addClass('active');
+
+        if(location.pathname.indexOf('products') > 0){
+            $("#header .headerbox nav").find('.menu li[data-id="cellregenerations"]').children('.link').addClass('current');
+        }
     });
 
 

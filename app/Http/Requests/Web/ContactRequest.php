@@ -49,13 +49,13 @@ class ContactRequest extends FormRequest
             'details.參加類別' => 'required|string',
             'details.國家' => 'required|string',
             'details.公司' => 'required|string',
-            'details.標題' => 'required|string',
             'details.firstname' => 'required|string',
             'details.lastname' => 'required|string',
             'details.區碼' => 'required|string',
             'details.電話' => 'required|string',
             'details.email' => 'required|email',
             'details.產品' => 'required|string',
+            'hiddenRecaptcha' => 'required|string',
 
 
             /*
@@ -88,13 +88,13 @@ class ContactRequest extends FormRequest
             'details.參加類別' => '參加類別',
             'details.國家' => '國家',
             'details.公司' => '公司',
-            'details.標題' => '標題',
             'details.firstname' => 'firstname',
             'details.lastname' => 'lastname',
             'details.區碼' => '區碼',
             'details.電話' => '電話',
             'details.email' => 'email',
             'details.產品' => '產品',
+            'hiddenRecaptcha' => '我不是機器人',
 
             /*
             'details.諮詢服務' => __('web.contact-us-form.subject'),

@@ -86,6 +86,7 @@ class SampleSeeder extends Seeder
         $languageList = SeederHelper::getLanguageIdList();
         $languageResourceData = [];
 
+
         $insertWebMenuData = [
             [
                 'id' => $menuRootId1 = uuidl(),
@@ -93,6 +94,7 @@ class SampleSeeder extends Seeder
                 'title' => 'web_menu.title.' . $menuRootId1,
                 'details' => 'web_menu.details.' . $menuRootId1,
                 'uri' => 'root-header',
+                'link' => 'web_menu.link.' . $menuRootId1,
                 'controller' => null,
                 'model' => null,
                 'permission_key' => null,
@@ -109,6 +111,7 @@ class SampleSeeder extends Seeder
                 'title' => 'web_menu.title.' . $menuId1,
                 'details' => 'web_menu.details.' . $menuId1,
                 'uri' => 'about',
+                'link' => 'web_menu.link.' . $menuId1,
                 'controller' => null,
                 'model' => null,
                 'permission_key' => null,
@@ -124,6 +127,7 @@ class SampleSeeder extends Seeder
                 'title' => 'web_menu.title.' . $menuId2,
                 'details' => 'web_menu.details.' . $menuId2,
                 'uri' => 'manufacturings',
+                'link' => 'web_menu.link.' . $menuId2,
                 'controller' => null,
                 'model' => null,
                 'permission_key' => null,
@@ -137,6 +141,7 @@ class SampleSeeder extends Seeder
                     'title' => 'web_menu.title.' . $menuId2_1,
                     'details' => 'web_menu.details.' . $menuId2_1,
                     'uri' => 'manufacturing',
+                    'link' => 'web_menu.link.' . $menuId2_1,
                     'controller' => null,
                     'model' => null,
                     'permission_key' => null,
@@ -149,6 +154,7 @@ class SampleSeeder extends Seeder
                     'title' => 'web_menu.title.' . $menuId2_2,
                     'details' => 'web_menu.details.' . $menuId2_2,
                     'uri' => 'research',
+                    'link' => 'web_menu.link.' . $menuId2_2,
                     'controller' => null,
                     'model' => null,
                     'permission_key' => null,
@@ -162,6 +168,7 @@ class SampleSeeder extends Seeder
                 'title' => 'web_menu.title.' . $menuId3,
                 'details' => 'web_menu.details.' . $menuId3,
                 'uri' => 'cellregenerations',
+                'link' => 'web_menu.link.' . $menuId3,
                 'controller' => null,
                 'model' => null,
                 'permission_key' => null,
@@ -174,6 +181,7 @@ class SampleSeeder extends Seeder
                     'title' => 'web_menu.title.' . $menuId3_1,
                     'details' => 'web_menu.details.' . $menuId3_1,
                     'uri' => 'cellregeneration',
+                    'link' => 'web_menu.link.' . $menuId3_1,
                     'controller' => null,
                     'model' => null,
                     'permission_key' => null,
@@ -186,6 +194,7 @@ class SampleSeeder extends Seeder
                     'title' => 'web_menu.title.' . $menuId3_2,
                     'details' => 'web_menu.details.' . $menuId3_2,
                     'uri' => 'estheticmedicine',
+                    'link' => 'web_menu.link.' . $menuId3_2,
                     'controller' => null,
                     'model' => null,
                     'permission_key' => null,
@@ -198,6 +207,7 @@ class SampleSeeder extends Seeder
                     'title' => 'web_menu.title.' . $menuId3_3,
                     'details' => 'web_menu.details.' . $menuId3_3,
                     'uri' => 'diseaseprevention',
+                    'link' => 'web_menu.link.' . $menuId3_3,
                     'controller' => null,
                     'model' => null,
                     'permission_key' => null,
@@ -210,6 +220,7 @@ class SampleSeeder extends Seeder
                     'title' => 'web_menu.title.' . $menuId3_4,
                     'details' => 'web_menu.details.' . $menuId3_4,
                     'uri' => 'therapeutics',
+                    'link' => 'web_menu.link.' . $menuId3_4,
                     'controller' => null,
                     'model' => null,
                     'permission_key' => null,
@@ -223,6 +234,7 @@ class SampleSeeder extends Seeder
                 'title' => 'web_menu.title.' . $menuId4,
                 'details' => 'web_menu.details.' . $menuId4,
                 'uri' => 'contact',
+                'link' => 'web_menu.link.' . $menuId4,
                 'controller' => null,
                 'model' => null,
                 'permission_key' => null,
@@ -236,6 +248,7 @@ class SampleSeeder extends Seeder
                 'title' => 'web_menu.title.' . $menuId5,
                 'details' => 'web_menu.details.' . $menuId5,
                 'uri' => 'privacy',
+                'link' => 'web_menu.link.' . $menuId5,
                 'controller' => null,
                 'model' => null,
                 'permission_key' => null,
@@ -250,6 +263,7 @@ class SampleSeeder extends Seeder
                 'title' => 'web_menu.title.' . $footerId,
                 'details' => 'web_menu.details.' . $footerId,
                 'uri' => 'root-footer',
+                'link' => 'web_menu.link.' . $footerId,
                 'controller' => null,
                 'model' => null,
                 'permission_key' => null,
@@ -313,7 +327,7 @@ HTML;
 
             'ja' => [
                 ['id' => $menuRootId1, 'title' => '網站主選單', 'link' => null],
-                ['id' => $menuId1, 'title' => '私たちについて', 'link' => url('about') , 'details' => json_encode(
+                ['id' => $menuId1, 'title' => '私たちについて', 'link' => '/about' , 'details' => json_encode(
                     [
                         'pic' => [
                             ['path' => '/styles/images/about/banner.jpg','device' => 'desktop'],
@@ -325,8 +339,8 @@ HTML;
                         'editor' => $editor1
                     ]
                 ),],
-                ['id' => $menuId2, 'title' => '医学研究および製造', 'link' => url('manufacturing')],
-                    ['id' => $menuId2_1, 'title' => '製造と開発', 'link' => url('manufacturing') , 'details' => json_encode(
+                ['id' => $menuId2, 'title' => '医学研究および製造', 'link' => '/manufacturing'],
+                    ['id' => $menuId2_1, 'title' => '製造と開発', 'link' => '/manufacturing' , 'details' => json_encode(
                         [
                             'pic' => [
                                 ['path' => '/styles/images/manufacturing/banner.jpg','device' => 'desktop'],
@@ -338,7 +352,7 @@ HTML;
                             'editor' => $editor2_1
                         ]
                     ),],
-                    ['id' => $menuId2_2, 'title' => '医学研究', 'link' => url('research') , 'details' => json_encode(
+                    ['id' => $menuId2_2, 'title' => '医学研究', 'link' => '/research' , 'details' => json_encode(
                         [
                             'pic' => [
                                 ['path' => '/styles/images/research/banner.jpg','device' => 'desktop'],
@@ -353,9 +367,9 @@ HTML;
 
 
 
-                ['id' => $menuId3, 'title' => '私たちの製品', 'link' => url('products/cellregeneration')],
+                ['id' => $menuId3, 'title' => '私たちの製品', 'link' => '/products/cellregeneration'],
 
-                    ['id' => $menuId3_1, 'title' => '細胞再生', 'link' => url('products/cellregeneration') , 'details' => json_encode(
+                    ['id' => $menuId3_1, 'title' => '細胞再生', 'link' => '/products/cellregeneration' , 'details' => json_encode(
                         [
                             'pic' => [
                                 ['path' => '/styles/images/product/cell-banner.jpg','device' => 'desktop'],
@@ -363,11 +377,11 @@ HTML;
                             ],
                             'topic' => '細胞再生',
                             'description' => '',
-                            'link' => url('products/cellregeneration'),
+                            'link' => '/products/cellregeneration',
                             'editor' => $editor3_1
                         ]
                     ),],
-                    ['id' => $menuId3_2, 'title' => '医療美容', 'link' => url('products/estheticmedicine') , 'details' => json_encode(
+                    ['id' => $menuId3_2, 'title' => '医療美容', 'link' => '/products/estheticmedicine' , 'details' => json_encode(
                         [
                             'pic' => [
                                 ['path' => '/styles/images/product/medicine-banner.jpg','device' => 'desktop'],
@@ -375,11 +389,11 @@ HTML;
                             ],
                             'topic' => '医療美容',
                             'description' => '',
-                            'link' => url('products/estheticmedicine'),
+                            'link' => '/products/estheticmedicine',
                             'editor' => $editor3_2
                         ]
                     ),],
-                    ['id' => $menuId3_3, 'title' => '病気の予防', 'link' => url('products/diseaseprevention') , 'details' => json_encode(
+                    ['id' => $menuId3_3, 'title' => '病気の予防', 'link' => '/products/diseaseprevention' , 'details' => json_encode(
                         [
                             'pic' => [
                                 ['path' => '/styles/images/product/disease-banner.jpg','device' => 'desktop'],
@@ -387,11 +401,11 @@ HTML;
                             ],
                             'topic' => '病気の予防',
                             'description' => '',
-                            'link' => url('products/diseaseprevention'),
+                            'link' => '/products/diseaseprevention',
                             'editor' => $editor3_3
                         ]
                     ),],
-                    ['id' => $menuId3_4, 'title' => '疾病の治療', 'link' => url('products/therapeutics') , 'details' => json_encode(
+                    ['id' => $menuId3_4, 'title' => '疾病の治療', 'link' => '/products/therapeutics' , 'details' => json_encode(
                         [
                             'pic' => [
                                 ['path' => '/styles/images/product/therapeutics-banner.jpg','device' => 'desktop'],
@@ -399,12 +413,12 @@ HTML;
                             ],
                             'topic' => '疾病の治療',
                             'description' => '',
-                            'link' => url('products/therapeutics'),
+                            'link' => '/products/therapeutics',
                             'editor' => $editor3_4
                         ]
                     ),],
 
-                ['id' => $menuId4, 'title' => 'お問い合わせ', 'link' => url('contact') , 'details' => json_encode(
+                ['id' => $menuId4, 'title' => 'お問い合わせ', 'link' => '/contact' , 'details' => json_encode(
                     [
                         'pic' => [
                             ['path' => '/styles/images/other/contact-banner.jpg','device' => 'desktop'],
@@ -418,7 +432,7 @@ HTML;
                 ),],
 
 
-                ['id' => $menuId5, 'title' => 'プライバシーポリシー', 'link' => url('privacy') , 'details' => json_encode(
+                ['id' => $menuId5, 'title' => 'プライバシーポリシー', 'link' => '/privacy' , 'details' => json_encode(
                     [
                         'pic' => [
                             ['path' => '/styles/images/other/privacy-banner.jpg','device' => 'desktop'],
@@ -435,9 +449,10 @@ HTML;
 
                 ['id' => $footerId, 'title' => '頁尾選單', 'link' => null]
             ],
+
             'en' => [
                 ['id' => $menuRootId1, 'title' => '網站主選單', 'link' => null],
-                ['id' => $menuId1, 'title' => '私たちについて', 'link' => url('about') , 'details' => json_encode(
+                ['id' => $menuId1, 'title' => '私たちについて', 'link' => '/en/about' , 'details' => json_encode(
                     [
                         'pic' => [
                             ['path' => '/styles/images/about/banner.jpg','device' => 'desktop'],
@@ -445,12 +460,12 @@ HTML;
                         ],
                         'topic' => '關於我們',
                         'description' => '',
-                        'link' => '/about',
+                        'link' => '/en/about',
                         'editor' => $editor1
                     ]
                 ),],
-                ['id' => $menuId2, 'title' => '医学研究および製造', 'link' => url('manufacturing')],
-                ['id' => $menuId2_1, 'title' => '製造と開発', 'link' => url('manufacturing') , 'details' => json_encode(
+                ['id' => $menuId2, 'title' => '医学研究および製造', 'link' => '/en/manufacturing'],
+                ['id' => $menuId2_1, 'title' => '製造と開発', 'link' => '/en/manufacturing' , 'details' => json_encode(
                     [
                         'pic' => [
                             ['path' => '/styles/images/manufacturing/banner.jpg','device' => 'desktop'],
@@ -458,11 +473,11 @@ HTML;
                         ],
                         'topic' => '製造與開發',
                         'description' => '',
-                        'link' => '/manufacturing',
+                        'link' => '/en/manufacturing',
                         'editor' => $editor2_1
                     ]
                 ),],
-                ['id' => $menuId2_2, 'title' => '医学研究', 'link' => url('research') , 'details' => json_encode(
+                ['id' => $menuId2_2, 'title' => '医学研究', 'link' => '/en/research' , 'details' => json_encode(
                     [
                         'pic' => [
                             ['path' => '/styles/images/research/banner.jpg','device' => 'desktop'],
@@ -470,16 +485,16 @@ HTML;
                         ],
                         'topic' => '醫學研究',
                         'description' => '',
-                        'link' => '/research',
+                        'link' => '/en/research',
                         'editor' => $editor2_2
                     ]
                 ),],
 
 
 
-                ['id' => $menuId3, 'title' => '私たちの製品', 'link' => url('products/cellregeneration')],
+                ['id' => $menuId3, 'title' => '私たちの製品', 'link' => '/en/products/cellregeneration'],
 
-                ['id' => $menuId3_1, 'title' => '細胞再生', 'link' => url('products/cellregeneration') , 'details' => json_encode(
+                ['id' => $menuId3_1, 'title' => '細胞再生', 'link' => '/en/products/cellregeneration' , 'details' => json_encode(
                     [
                         'pic' => [
                             ['path' => '/styles/images/product/cell-banner.jpg','device' => 'desktop'],
@@ -487,11 +502,11 @@ HTML;
                         ],
                         'topic' => '細胞再生',
                         'description' => '',
-                        'link' => url('products/cellregeneration'),
+                        'link' => '/en/products/cellregeneration',
                         'editor' => $editor3_1
                     ]
                 ),],
-                ['id' => $menuId3_2, 'title' => '医療美容', 'link' => url('products/estheticmedicine') , 'details' => json_encode(
+                ['id' => $menuId3_2, 'title' => '医療美容', 'link' => '/en/products/estheticmedicine' , 'details' => json_encode(
                     [
                         'pic' => [
                             ['path' => '/styles/images/product/medicine-banner.jpg','device' => 'desktop'],
@@ -499,11 +514,11 @@ HTML;
                         ],
                         'topic' => '医療美容',
                         'description' => '',
-                        'link' => url('products/estheticmedicine'),
+                        'link' => '/en/products/estheticmedicine',
                         'editor' => $editor3_2
                     ]
                 ),],
-                ['id' => $menuId3_3, 'title' => '病気の予防', 'link' => url('products/diseaseprevention') , 'details' => json_encode(
+                ['id' => $menuId3_3, 'title' => '病気の予防', 'link' => '/en/products/diseaseprevention' , 'details' => json_encode(
                     [
                         'pic' => [
                             ['path' => '/styles/images/product/disease-banner.jpg','device' => 'desktop'],
@@ -511,11 +526,11 @@ HTML;
                         ],
                         'topic' => '病気の予防',
                         'description' => '',
-                        'link' => url('products/diseaseprevention'),
+                        'link' => '/en/products/diseaseprevention',
                         'editor' => $editor3_3
                     ]
                 ),],
-                ['id' => $menuId3_4, 'title' => '疾病の治療', 'link' => url('products/therapeutics') , 'details' => json_encode(
+                ['id' => $menuId3_4, 'title' => '疾病の治療', 'link' => '/en/products/therapeutics' , 'details' => json_encode(
                     [
                         'pic' => [
                             ['path' => '/styles/images/product/therapeutics-banner.jpg','device' => 'desktop'],
@@ -523,12 +538,12 @@ HTML;
                         ],
                         'topic' => '疾病の治療',
                         'description' => '',
-                        'link' => url('products/therapeutics'),
+                        'link' => '/en/products/therapeutics',
                         'editor' => $editor3_4
                     ]
                 ),],
 
-                ['id' => $menuId4, 'title' => 'お問い合わせ', 'link' => url('contact') , 'details' => json_encode(
+                ['id' => $menuId4, 'title' => 'お問い合わせ', 'link' => '/en/contact' , 'details' => json_encode(
                     [
                         'pic' => [
                             ['path' => '/styles/images/other/contact-banner.jpg','device' => 'desktop'],
@@ -536,13 +551,13 @@ HTML;
                         ],
                         'topic' => '聯繫我們',
                         'description' => '',
-                        'link' => '/contact',
+                        'link' => '/en/contact',
                         'editor' => $editor4
                     ]
                 ),],
 
 
-                ['id' => $menuId5, 'title' => 'プライバシーポリシー', 'link' => url('privacy') , 'details' => json_encode(
+                ['id' => $menuId5, 'title' => 'プライバシーポリシー', 'link' => '/en/privacy' , 'details' => json_encode(
                     [
                         'pic' => [
                             ['path' => '/styles/images/other/privacy-banner.jpg','device' => 'desktop'],
@@ -550,7 +565,7 @@ HTML;
                         ],
                         'topic' => '隱私政策',
                         'description' => '',
-                        'link' => '/privacy',
+                        'link' => '/en/privacy',
                         'editor' => $editor5
                     ]
                 ),],

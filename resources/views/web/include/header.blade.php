@@ -1,73 +1,45 @@
 <header id="header">
     <div class="headerbox">
-        <div class="logo"><a href="/"><img src="/styles/images/logo.svg" alt=""></a></div>
+        <div class="logo">
+            <a href="/{{ ($rootUri == 'ja/') ? '' : 'en/' }}"><img src="/styles/images/logo.svg" alt=""></a>
+        </div>
         <nav>
             <ul class="noneStyle menu">
-                <li class="" data-id="about">
-                    <a href="/about" class="link">
-                        <span class="icon"><img class="svg" src="/styles/images/common/menu-icon-01.svg" alt=""></span>
-                        <span class="fs_16">私たちについて</span>
-                    </a>
-                </li>
-                <li class="has-sm" data-id="/manufacturing">
-                    <a href="/manufacturing" class="link">
-                        <span class="icon"><img class="svg" src="/styles/images/common/menu-icon-02.svg" alt=""></span>
-                        <span class="fs_16">医学研究および製造</span>
-                        <span class="arrow"><img src="/styles/images/common/icon-menu-arrow.svg" alt=""></span>
-                    </a>
-                    <div class="submenu">
-                        <div class="content">
-                            <div class="navtag">
-                                <span class="icon"><img src="/styles/images/common/menu-icon-02-white.svg" alt=""></span>
-                                <span class="fs_20">医学研究および製造</span>
-                            </div>
-                            <ul class="noneStyle sublist">
-                                <li data-tag="manufacturing">
-                                    <a class="fs_16" href="/manufacturing">製造と開発</a>
-                                </li>
-                                <li data-tag="research">
-                                    <a class="fs_16" href="/research">医学研究</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </li>
-                <li class="has-sm" data-id="product">
-                    <a href="/products/cellregeneration" class="link">
-                        <span class="icon"><img class="svg" src="/styles/images/common/menu-icon-03.svg" alt=""></span>
-                        <span class="fs_16">私たちの製品</span>
-                        <span class="arrow"><img src="/styles/images/common/icon-menu-arrow.svg" alt=""></span>
-                    </a>
-                    <div class="submenu">
-                        <div class="content">
-                            <div class="navtag">
-                                <span class="icon"><img src="/styles/images/common/menu-icon-03-white.svg" alt=""></span>
-                                <span class="fs_20">私たちの製品</span>
-                            </div>
-                            <ul class="noneStyle sublist">
-                                <li data-tag="cellregeneration">
-                                    <a class="fs_16" href="/products/cellregeneration">細胞再生</a>
-                                </li>
-                                <li data-tag="estheticmedicine">
-                                    <a class="fs_16" href="/products/estheticmedicine">医療美容</a>
-                                </li>
-                                <li data-tag="diseaseprevention">
-                                    <a class="fs_16" href="/products/diseaseprevention">病気の予防</a>
-                                </li>
-                                <li data-tag="therapeutics">
-                                    <a class="fs_16" href="/products/therapeutics">疾病の治療</a>
-                                </li>
 
-                            </ul>
-                        </div>
-                    </div>
-                </li>
-                <li class="" data-id="contact">
-                    <a href="/contact" class="link">
-                        <span class="icon"><img class="svg" src="/styles/images/common/menu-icon-04.svg" alt=""></span>
-                        <span class="fs_16">お問い合わせ</span>
-                    </a>
-                </li>
+                @foreach($mainMenu as $item)
+                    @if(array_get($item,'uri') != 'privacy')
+                    <li class="{{array_get($item,'children') ? 'has-sm' : ''}}" data-id="{{str_replace('manufacturings','manufacturing',array_get($item,'uri'))  }}">
+                        <a href="{{array_get($item,'link')}}" class="link">
+                            <span class="icon"><img class="svg" src="{{array_get($mainMenuIcon,array_get($item,'uri'))}}" alt=""></span>
+                            <span class="fs_16">{{array_get($item,'title')}}</span>
+                        </a>
+
+                        @if(array_get($item,'children'))
+                            <div class="submenu">
+                                <div class="content">
+                                    <div class="navtag">
+                                        <span class="icon"><img src="{{array_get($mainMenuIcon,array_get($item,'uri').'_2')}}" alt=""></span>
+                                        <span class="fs_20">{{array_get($item,'title')}}</span>
+                                    </div>
+                                    <ul class="noneStyle sublist">
+
+                                        @foreach(array_get($item,'children') as $item2)
+                                            <li data-tag="{{array_get($item2,'uri')}}">
+                                                <a class="fs_16" href="{{array_get($item2,'link')}}">{{array_get($item2,'title')}}</a>
+                                            </li>
+                                        @endForeach
+                                    </ul>
+                                </div>
+                            </div>
+                        @endIf
+                    </li>
+
+
+                    @endIf
+                @endForeach
+
+
+
                 <li class="contactbox" data-id="">
                     <div class="contact-info">
                         <div class="info">
@@ -88,9 +60,9 @@
                 </li>
             </ul>
             <div class="lang fs_15">
-                <a href="" class="lang-btn active">JP</a>
+                <a href="{{($languageUri == '/en') ? '/' : $languageUri}}" class="lang-btn @if(Config::get('app.locale') != 'en') active @endIf">JP</a>
                 <span class="fs_12">/</span>
-                <a href="" class="lang-btn">EN</a>
+                <a href="/en{{($languageUri == '/en') ? '/' : $languageUri}}" class="lang-btn @if(Config::get('app.locale') == 'en') active @endIf">EN</a>
             </div>
             <div class="menu-toggle">
                 <div class="wrapper">

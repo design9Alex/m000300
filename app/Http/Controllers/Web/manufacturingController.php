@@ -21,6 +21,7 @@ class manufacturingController extends BaseController
         $this->viewData['thisMenu'] = 'manufacturing';
         $this->viewData['mainMenuData'] = $mainMenuData = $this->getMainMenuData($this->viewData['thisMenu']);
 
+
         $mainMenuDataPic = array();
         foreach(array_get($mainMenuData,'details.pic') as $key => $item){
             $mainMenuDataPic[array_get($item,'device')] = array_get($item,'path');

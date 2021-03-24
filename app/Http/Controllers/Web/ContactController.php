@@ -32,6 +32,7 @@ class ContactController extends BaseController
 
     public function contact()
     {
+
         $this->viewData['thisMenu'] = 'contact';
         $this->viewData['mainMenuData'] = $mainMenuData = $this->getMainMenuData($this->viewData['thisMenu']);
 
@@ -91,7 +92,7 @@ class ContactController extends BaseController
 
         $tSerial = self::recevedSerialNumberCreator();
 
-        array_forget($attributes,['_token','captcha']);
+        array_forget($attributes,['_token','captcha','hiddenRecaptcha']);
 
         $attributes['id'] = uuidl();
         $attributes['ip'] = $request->getClientIp();

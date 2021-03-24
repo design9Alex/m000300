@@ -187,8 +187,10 @@
                         </div>
                         <div class="script-box">
                             {!! array_get($articleElements[1],'details.editor') !!}
-                            <div class="techmarks">
-                                <div class="g-recaptcha" data-sitekey="6Ldf4MMUAAAAACEjhzLRQ5YPucN5amDPxy-VUebw"></div>
+                            <div class="techmarks"  id="Recaptcha">
+                                <div class="g-recaptcha" data-sitekey="6Ldf4MMUAAAAACEjhzLRQ5YPucN5amDPxy-VUebw" data-callback="recaptchaCallback"></div>
+                                <input type="hidden" class="hiddenRecaptcha required" name="hiddenRecaptcha" id="hiddenRecaptcha">
+                                {{--<div class="notice"></div>--}}
                             </div>
                             <div class="submit-btn">
                                 <button type="submit">
@@ -213,8 +215,13 @@
     <script src="{{asset('/scripts/plugins/jquery.validate.js')}}"></script>
     <script src="{{asset('/scripts/plugins/additional-methods.min.js')}}"></script>
     <script src="{{asset('/scripts/plugins/messages.js')}}"></script>
+    <script src='https://www.google.com/recaptcha/api.js?hl={{app()->getLocale()}}' async defer></script>
 
     <script>
+        function recaptchaCallback() {
+            $('#hiddenRecaptcha').valid();
+        };
+
         $(function(){
             @if($errors->count())
             function pagePosition(id,positionPx=0) {
@@ -232,19 +239,27 @@
                 ignore: '.ignore',
 
                 rules: {
-                    /*
+
                    'details[諮詢服務]': {required: true},
                    'details[參加類別]': {required: true},
                    'details[國家]': {required: true},
                    'details[公司]': {required: true},
-                   'details[標題]': {required: true},
                    'details[firstname]': {required: true},
                    'details[lastname]': {required: true},
                    'details[區碼]': {required: true},
                    'details[電話]': {required: true},
                    'details[email]': {required: true},
                    'details[產品]': {required: true},
-                     */
+
+                    hiddenRecaptcha: {
+                        required: function () {
+                            if (grecaptcha.getResponse() == '') {
+                                return true;
+                            } else {
+                                return false;
+                            }
+                        }
+                    },
 
                 },
                 messages: {
@@ -261,6 +276,9 @@
                 highlight: function(element){
                     if( $(element).is('select') ) {
                         $(element).closest('.bootstrap-select').css({'border': '1px solid #ff0000'});
+                    }else if($(element).attr('name') == 'hiddenRecaptcha'){
+                        //alert('aa');
+                        $('#Recaptcha').css({'border': '1px solid #a90a06'});
                     }else{
                         $(element).css({'border': '1px solid #ff0000'});
                     }
@@ -269,6 +287,8 @@
                 unhighlight: function(element) {
                     if( $(element).is('select') ) {
                         $(element).closest('.bootstrap-select').css({'border': ''});
+                    }else if($(element).attr('name') == 'hiddenRecaptcha'){
+                        $('#Recaptcha').css({border: '',margin:'0px',padding:'13px 10px'});
                     }else{
                         $(element).css({'border': ''});
                     }
