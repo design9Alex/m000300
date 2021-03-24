@@ -24,7 +24,7 @@
                                             <span class="icon"><img class="svg" src="/styles/images/common/icon-tel.svg" alt=""></span>
                                             <span class="fs_16">{{array_get($BaseWebData,'contact.phone','+65 84780262')}}</span>
                                         </a>
-                                        <a href="mailto:info@dag-regen.com">
+                                        <a href="mailto:{{array_get($BaseWebData,'contact.email','info@dag-regen.com')}}">
                                             <span class="icon"><img class="svg" src="/styles/images/common/icon-mail.svg" alt=""></span>
                                             <span class="fs_16">{{array_get($BaseWebData,'contact.email','info@dag-regen.com')}}</span>
                                         </a>

@@ -43,17 +43,17 @@
                 <li class="contactbox" data-id="">
                     <div class="contact-info">
                         <div class="info">
-                            <a href="https://goo.gl/maps/kqHXiGS2yonspLEc6" target="_blank">
+                            <a href="{{array_get($BaseWebData,'contact.map','https://goo.gl/maps/kqHXiGS2yonspLEc6')}}" target="_blank">
                                 <span class="icon"><img class="svg" src="/styles/images/common/icon-add.svg" alt=""></span>
-                                <span class="fs_14">Block 61, Ubi Road 1, Oxley Bizhub 1, #02-19 , Singapore 408732</span>
+                                <span class="fs_14">{{array_get($BaseWebData,'contact.address','Block 61, Ubi Road 1, Oxley Bizhub 1, #02-19 , Singapore 408732')}}</span>
                             </a>
                             <a href="tel:+6584780262">
                                 <span class="icon"><img class="svg" src="/styles/images/common/icon-tel.svg" alt=""></span>
-                                <span class="fs_14">+65 84780262</span>
+                                <span class="fs_14">{{array_get($BaseWebData,'contact.phone','+65 84780262')}}</span>
                             </a>
-                            <a href="mailto:info@dag-regen.com">
+                            <a href="mailto:{{array_get($BaseWebData,'contact.email','info@dag-regen.com')}}">
                                 <span class="icon"><img class="svg" src="/styles/images/common/icon-mail.svg" alt=""></span>
-                                <span class="fs_14">info@dag-regen.com</span>
+                                <span class="fs_14">{{array_get($BaseWebData,'contact.email','info@dag-regen.com')}}</span>
                             </a>
                         </div>
                     </div>

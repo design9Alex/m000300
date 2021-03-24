@@ -256,7 +256,7 @@ class SampleSeeder extends Seeder
                 'sort' => 5, 'editable' => true, 'protected' => true, 'active' => true, 'created_at' => $timestamp, 'updated_at' => $timestamp
             ],
 
-
+            /*
             [
                 'id' => $footerId = uuidl(),
                 'parent_id' => null,
@@ -270,6 +270,7 @@ class SampleSeeder extends Seeder
                 'options' => null,
                 'sort' => 2, 'editable' => false, 'protected' => true, 'active' => true, 'created_at' => $timestamp, 'updated_at' => $timestamp
             ],
+            */
         ];
 
         DB::table('web_menu')->insert($insertWebMenuData);
@@ -447,7 +448,7 @@ HTML;
 
 
 
-                ['id' => $footerId, 'title' => '頁尾選單', 'link' => null]
+                //['id' => $footerId, 'title' => '頁尾選單', 'link' => null]
             ],
 
             'en' => [
