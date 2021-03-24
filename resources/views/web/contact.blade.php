@@ -58,11 +58,11 @@
                         <div class="form-box" >
                             <div class="item">
                                 <div class="tag">
-                                    <span class="fs_16">アドバイザーリーサービス<span class="must fs_13">必須</span></span>
+                                    <span class="fs_16">@lang('auth.諮詢服務')<span class="must fs_13">@lang('auth.required'){{--必須--}}</span></span>
                                 </div>
                                 <div class="inData">
                                     <div class="col">
-                                        <select class="selectpicker fs_16" name="details[諮詢服務]" title="選択して下さい" id="serviceItem">
+                                        <select class="selectpicker fs_16" name="details[諮詢服務]" title="@lang('auth.諮詢服務')" id="serviceItem">
                                             @foreach($serviceItem as $key => $item)
                                                 <option {{ (old('details.諮詢服務') == array_get($item,'title')) ? 'selected="selected"':''}}>{{array_get($item,'title')}}</option>
                                             @endForeach
@@ -73,11 +73,11 @@
                             </div>
                             <div class="item">
                                 <div class="tag">
-                                    <span class="fs_16">参加カテゴリー <span class="must fs_13">必須</span></span>
+                                    <span class="fs_16">@lang('auth.參加類別') <span class="must fs_13">@lang('auth.required'){{--必須--}}</span></span>
                                 </div>
                                 <div class="inData">
                                     <div class="col">
-                                        <select class="selectpicker fs_16" name="details[參加類別]" title="選択して下さい" id="participation">
+                                        <select class="selectpicker fs_16" name="details[參加類別]" title=">@lang('auth.參加類別')" id="participation">
                                             @foreach($participation as $key => $item)
                                                 <option {{ (old('details.參加類別') == array_get($item,'title')) ? 'selected="selected"':''}}>{{array_get($item,'title')}}</option>
                                             @endForeach
@@ -87,11 +87,11 @@
                             </div>
                             <div class="item">
                                 <div class="tag">
-                                    <span class="fs_16">国<span class="must fs_13">必須</span></span>
+                                    <span class="fs_16">@lang('auth.國家')<span class="must fs_13">@lang('auth.required'){{--必須--}}</span></span>
                                 </div>
                                 <div class="inData">
                                     <div class="col">
-                                        <select class="selectpicker fs_16" data-country="US" name="details[國家]" title="選択して下さい" id="country">
+                                        <select class="selectpicker fs_16" data-country="US" name="details[國家]" title="@lang('auth.國家')" id="country">
                                             @foreach($countrys as $key => $item)
                                                 <option {{ (old('details.國家') == array_get($item,'title')) ? 'selected="selected"':''}}>{{array_get($item,'title')}}</option>
                                             @endForeach
@@ -102,56 +102,56 @@
                             </div>
                             <div class="item">
                                 <div class="tag">
-                                    <span class="fs_16">会社<span class="must fs_13">必須</span></span>
+                                    <span class="fs_16">@lang('auth.公司')<span class="must fs_13">@lang('auth.required'){{--必須--}}</span></span>
                                 </div>
                                 <div class="inData">
                                     <div class="col">
-                                        <input type="text" class="input-style fs_16" name="details[公司]" id="company" placeholder="例）山田株式会社 / 山田クリニック" value="{{old('details.公司')}}">
+                                        <input type="text" class="input-style fs_16" name="details[公司]" id="company" placeholder="@lang('auth.company_sample')" value="{{old('details.公司')}}">
                                     </div>
 
                                 </div>
                             </div>
                             <div class="item">
                                 <div class="tag">
-                                    <span class="fs_16">タイトル</span>
+                                    <span class="fs_16">@lang('auth.title')</span>
                                 </div>
                                 <div class="inData">
                                     <div class="col">
-                                        <input type="text" class="input-style fs_16" name="details[標題]" id="title" placeholder="例）部長" value="{{old('details.標題')}}">
+                                        <input type="text" class="input-style fs_16" name="details[標題]" id="title" placeholder="@lang('auth.title_sample')" value="{{old('details.標題')}}">
                                     </div>
                                 </div>
                             </div>
                             <div class="item">
                                 <div class="tag">
-                                    <span class="fs_16">氏名</span>
-                                    <span class="must fs_13">必須</span>
+                                    <span class="fs_16">@lang('auth.name')</span>
+                                    <span class="must fs_13">@lang('auth.required'){{--必須--}}</span>
                                 </div>
                                 <div class="inData">
                                     <div class="col">
-                                        <input type="text" class="input-style fs_16" name="details[firstname]" id="firstname" placeholder="例）山田" value="{{old('details.firstname')}}">
+                                        <input type="text" class="input-style fs_16" name="details[firstname]" id="firstname" placeholder="@lang('auth.first_name')" value="{{old('details.firstname')}}">
                                     </div>
                                     <div class="col">
-                                        <input type="text" class="input-style fs_16" name="details[lastname]" id="lastname" placeholder="例）太郎" value="{{old('details.lastname')}}">
+                                        <input type="text" class="input-style fs_16" name="details[lastname]" id="lastname" placeholder="@lang('auth.last_name')" value="{{old('details.lastname')}}">
                                     </div>
                                 </div>
                             </div>
                             <div class="item phone-item">
                                 <div class="tag">
-                                    <span class="fs_16">連絡先<span class="must fs_13">必須</span></span>
+                                    <span class="fs_16">@lang('auth.contact_msg')<span class="must fs_13">@lang('auth.required'){{--必須--}}</span></span>
                                 </div>
                                 <div class="inData">
                                     <div class="col areacode">
                                         <input type="number" class="input-style fs_16" name="details[區碼]" id="areacode" value="{{old('details.區碼')}}">
                                     </div>
                                     <div class="col telnumber">
-                                        <input type="number" class="input-style fs_16" name="details[電話]" id="tel" placeholder="例)8478-0262" value="{{old('details.電話')}}">
+                                        <input type="number" class="input-style fs_16" name="details[電話]" id="tel" placeholder="@lang('auth.phone_sample')" value="{{old('details.電話')}}">
                                     </div>
 
                                 </div>
                             </div>
                             <div class="item">
                                 <div class="tag">
-                                    <span class="fs_16">E-メール<span class="must fs_13">必須</span></span>
+                                    <span class="fs_16">@lang('auth.email')<span class="must fs_13">@lang('auth.required'){{--必須--}}</span></span>
                                 </div>
                                 <div class="inData">
                                     <div class="col">
@@ -161,12 +161,12 @@
                             </div>
                             <div class="item list-item">
                                 <div class="tag">
-                                    <span class="fs_16">項目</span>
-                                    <span class="must fs_13">必須</span>
+                                    <span class="fs_16">@lang('auth.item')</span>
+                                    <span class="must fs_13">@lang('auth.required'){{--必須--}}</span>
                                 </div>
                                 <div class="inData">
                                     <div class="col">
-                                        <select class="selectpicker fs_16" name="details[產品]" title="選択して下さい" id="contact_item">
+                                        <select class="selectpicker fs_16" name="details[產品]" title="@lang('auth.item')" id="contact_item">
                                             @foreach($contactItem as $key => $item)
                                                 <option {{ (old('details.產品') == array_get($item,'title')) ? 'selected="selected"':''}}>{{array_get($item,'title')}}</option>
                                             @endForeach
@@ -176,7 +176,7 @@
                             </div>
                             <div class="item textarea">
                                 <div class="tag">
-                                    <span class="fs_16">内容</span>
+                                    <span class="fs_16">@lang('auth.description')</span>
                                 </div>
                                 <div class="inData">
                                     <div class="col">
@@ -194,7 +194,7 @@
                             </div>
                             <div class="submit-btn">
                                 <button type="submit">
-                                    <span class="word fs_16">送る</span>
+                                    <span class="word fs_16">@lang('auth.send')</span>
                                     <span class="icon"><img src="/styles/images/common/icon-arrow-right-white.svg" alt=""></span>
                                 </button>
                             </div>
