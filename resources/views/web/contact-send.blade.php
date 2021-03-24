@@ -16,8 +16,7 @@
                 </picture>
             </div>
             <div class="bn-textbox">
-                <h1 class="bn-tit fs_36">お問い合わせ</h1>
-                <p class="en fs_16">Contact Us</p>
+                {!! array_get($mainMenuData,'details.editor') !!}
             </div>
         </div>
         <div class="page-inner">
@@ -32,11 +31,11 @@
             <div class="w1100 contact-send">
                 <div class="icon-envelope" data-aos="fade"><img src="/styles/images/common/icon-envelope.svg" alt=""></div>
                 <div class="send-textbox" data-aos="fade-up">
-                    <h2 class="tag darkgray fs_24 fw_bold text-center">成功に送りました</h2>
-                    <p class="text fs_16 text-center">ご質問をいただき、ありがとうございます。お問い合わせの内容については、三日間以内回答いたします。何卒よろしくお願いいたします。<br/>ＤＡＧ敬具</p>
+                    <h2 class="tag darkgray fs_24 fw_bold text-center">@lang('auth.sendOk') {{--成功に送りました--}}</h2>
+                    <p class="text fs_16 text-center">@lang('auth.sendMessage1'){{--ご質問をいただき、ありがとうございます。お問い合わせの内容については、三日間以内回答いたします。何卒よろしくお願いいたします。--}}<br/>@lang('auth.sendMessage2'){{--ＤＡＧ敬具--}}</p>
                     <div class="btn-style">
                         <a href="/" class="">
-                            <span class="word fs_16">確認</span>
+                            <span class="word fs_16">@lang('auth.sendBtn'){{--確認--}}</span>
                             <span class="icon"><img src="/styles/images/common/icon-arrow-right-white.svg" alt=""></span>
                         </a>
                     </div>
