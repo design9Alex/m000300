@@ -248,7 +248,7 @@
                    'details[lastname]': {required: true},
                    'details[區碼]': {required: true},
                    'details[電話]': {required: true},
-                   'details[email]': {required: true},
+                   'details[email]': {required: true , email: true,},
                    'details[產品]': {required: true},
 
                     hiddenRecaptcha: {
