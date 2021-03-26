@@ -1,6 +1,6 @@
 # ![](public/static/admin/images/common/logo.png) Minmax Admin
 
-`Current v3.2.39` `Laravel 5.6.33` `PHP ^7.1.3`
+`Current v3.2.43` `Laravel 5.6.33` `PHP ^7.1.3`
 
 ## Project Install
 

@@ -57,7 +57,7 @@ class RouteServiceProvider extends ServiceProvider
         Route::prefix(LaravelLocalization::setLocale())
             ->middleware(['web', 'localizationRedirect'])
             ->namespace($this->namespace . '\Web')
-            ->name('web.' . app()->getLocale() . '.')
+            ->name('web.')
             ->group(base_path('routes/web.php'));
     }
 
@@ -73,7 +73,7 @@ class RouteServiceProvider extends ServiceProvider
         Route::prefix(LaravelLocalization::setLocale())
             ->middleware(['admin', 'localizationRedirect'])
             ->namespace($this->namespace . '\Admin')
-            ->name('admin.' . app()->getLocale() . '.')
+            ->name('admin.')
             ->group(base_path('routes/admin.php'));
     }
 
@@ -89,7 +89,7 @@ class RouteServiceProvider extends ServiceProvider
         Route::prefix(LaravelLocalization::setLocale())
             ->middleware(['administrator', 'localizationRedirect'])
             ->namespace($this->namespace . '\Administrator')
-            ->name('administrator.' . app()->getLocale() . '.')
+            ->name('administrator.')
             ->group(base_path('routes/administrator.php'));
     }
 

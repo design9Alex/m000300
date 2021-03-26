@@ -6,7 +6,7 @@ var $contentBody = $(".content-body");
 var $contentHeader = $(".content-header");
 var $contentH = $(".contentH");
 var $pageFooter = $(".page-footer");
-var $panel = $(".panel");
+var $panel = $(".panel", $pageContent);
 var width = $(window).width();
 var $mobileW = 1199;
 

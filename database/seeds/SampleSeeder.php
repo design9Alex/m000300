@@ -21,6 +21,8 @@ class SampleSeeder extends Seeder
 
         $this->updateLanguageResource();
 
+        $this->insertTestAdmin();
+
         $this->insertWebMenu();
 
         $this->insertNotifyEmail();
@@ -50,6 +52,39 @@ class SampleSeeder extends Seeder
                 'password' => $admin->password, 'ip' => '127.0.0.1', 'created_at' => $timestamp],
         ]);
 
+    }
+
+    protected function insertTestAdmin()
+    {
+        $timestamp = date('Y-m-d H:i:s');
+
+        $admin = \Minmax\Base\Models\Admin::create([
+            'id' => $adminId = uuidl(), 'username' => 'test', 'password' => Hash::make('24241872'),
+            'name' => '測試管理員', 'email' => 'test@minmax.biz', 'mobile' => null,
+            'two_fa' => true, 'force_reset' => false,
+            'active' => true, 'created_at' => $timestamp, 'updated_at' => $timestamp
+        ]);
+
+        DB::table('password_history')->insert([
+            ['id' => uuidl(), 'user_id' => $admin->id, 'user_type' => \Minmax\Base\Models\Admin::class,
+                'password' => $admin->password, 'ip' => '127.0.0.1', 'created_at' => $timestamp],
+        ]);
+
+        $role = (new \Minmax\Base\Admin\RoleRepository)->create([
+            'guard' => 'admin', 'name' => 'testAdmin', 'display_name' => '測試管理員',
+            'details' => ['description' => '測試管理員', 'pic' => null],
+            'created_at' => $timestamp, 'updated_at' => $timestamp
+        ]);
+
+        $permissions = \Minmax\Base\Models\Permission::where('guard', 'admin')
+            ->whereNotIn('name', [
+                'roleEdit', 'roleCreate', 'roleDestroy'
+            ])
+            ->get();
+
+        $admin->attachRoles([$role->id]);
+
+        $role->attachPermissions($permissions);
     }
 
     protected function updateLanguageResource(){
@@ -573,7 +608,7 @@ HTML;
 
 
 
-                ['id' => $footerId, 'title' => '頁尾選單', 'link' => null]
+                //['id' => $footerId, 'title' => '頁尾選單', 'link' => null]
             ],
         ];
         SeederHelper::setLanguageResource($languageResourceData, 'web_menu', $webMenuLanguage, $languageList, null, false);

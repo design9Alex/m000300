@@ -21,6 +21,8 @@ return [
 
     'ecommerce_layer_limit' => env('ECOMMERCE_LAYER_LIMIT', 3),
 
+    'language_default_on' => false,
+
     'draft_limit' => env('DRAFT_LIMIT', 5),
 
     'repository_injections' => [
