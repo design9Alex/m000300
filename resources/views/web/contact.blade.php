@@ -62,7 +62,7 @@
                                 </div>
                                 <div class="inData">
                                     <div class="col">
-                                        <select class="selectpicker fs_16" name="details[諮詢服務]" title="@lang('auth.諮詢服務')" id="serviceItem">
+                                        <select class="selectpicker fs_16" name="details[諮詢服務]" title="@lang('auth.please_select')" id="serviceItem">
                                             @foreach($serviceItem as $key => $item)
                                                 <option {{ (old('details.諮詢服務') == array_get($item,'title')) ? 'selected="selected"':''}}>{{array_get($item,'title')}}</option>
                                             @endForeach
@@ -77,7 +77,7 @@
                                 </div>
                                 <div class="inData">
                                     <div class="col">
-                                        <select class="selectpicker fs_16" name="details[參加類別]" title=">@lang('auth.參加類別')" id="participation">
+                                        <select class="selectpicker fs_16" name="details[參加類別]" title="@lang('auth.please_select')" id="participation">
                                             @foreach($participation as $key => $item)
                                                 <option {{ (old('details.參加類別') == array_get($item,'title')) ? 'selected="selected"':''}}>{{array_get($item,'title')}}</option>
                                             @endForeach
@@ -91,7 +91,7 @@
                                 </div>
                                 <div class="inData">
                                     <div class="col">
-                                        <select class="selectpicker fs_16" data-country="US" name="details[國家]" title="@lang('auth.國家')" id="country">
+                                        <select class="selectpicker fs_16" data-country="US" name="details[國家]" title="@lang('auth.please_select')" id="country">
                                             @foreach($countrys as $key => $item)
                                                 <option {{ (old('details.國家') == array_get($item,'title')) ? 'selected="selected"':''}}>{{array_get($item,'title')}}</option>
                                             @endForeach
@@ -166,7 +166,7 @@
                                 </div>
                                 <div class="inData">
                                     <div class="col">
-                                        <select class="selectpicker fs_16" name="details[產品]" title="@lang('auth.item')" id="contact_item">
+                                        <select class="selectpicker fs_16" name="details[產品]" title="@lang('auth.please_select')" id="contact_item">
                                             @foreach($contactItem as $key => $item)
                                                 <option {{ (old('details.產品') == array_get($item,'title')) ? 'selected="selected"':''}}>{{array_get($item,'title')}}</option>
                                             @endForeach
@@ -288,7 +288,7 @@
                     if( $(element).is('select') ) {
                         $(element).closest('.bootstrap-select').css({'border': ''});
                     }else if($(element).attr('name') == 'hiddenRecaptcha'){
-                        $('#Recaptcha').css({border: '',margin:'0px',padding:'13px 10px'});
+                        $('#Recaptcha').css({border: ''});
                     }else{
                         $(element).css({'border': ''});
                     }

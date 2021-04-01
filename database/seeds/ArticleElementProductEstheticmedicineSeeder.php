@@ -127,12 +127,12 @@ HTML;
                                     <!-- 有上傳dm圖片時顯示, 若上傳的是pdf則另開視窗 -->
                                     <div class="dm-btn">
                                         <!-- 上傳的dm是圖片 -->
-                                        <a class="lightbtn dmclick" href="styles/images/product/pd-laracine-dm.jpg" title="ララシーン-ADH">
+                                        <a class="lightbtn dmclick" href="/styles/images/product/pd-laracine-dm.jpg" title="ララシーン-ADH">
                                             <span class="fs_16">ララシーン-ADH </span>
                                             <span class="icon"><img class="svg" src="/styles/images/common/icon-arrow-right-white.svg" alt="arrow"></span>
                                         </a>
                                         <!-- 上傳的dm是pdf檔案 dmclick拿掉 -->
-                                        <!-- <a class="lightbtn" href="styles/images/product/demo-dm.pdf" target="_blank" title="ララシーン-ADH">
+                                        <!-- <a class="lightbtn" href="/styles/images/product/demo-dm.pdf" target="_blank" title="ララシーン-ADH">
                                             <span class="fs_16">ララシーン-ADH </span>
                                             <span class="icon"><img class="svg" src="/styles/images/common/icon-arrow-right-white.svg" alt="arrow"></span>
                                         </a> -->
@@ -209,12 +209,12 @@ HTML;
                                     <!-- 有上傳dm圖片時顯示, 若上傳的是pdf則另開視窗 -->
                                     <div class="dm-btn">
                                         <!-- 上傳的dm是圖片 -->
-                                        <a class="lightbtn dmclick" href="styles/images/product/pd-laracine-dm.jpg" title="ララシーン-ADH">
+                                        <a class="lightbtn dmclick" href="/styles/images/product/pd-laracine-dm.jpg" title="ララシーン-ADH">
                                             <span class="fs_16">ララシーン-ADH </span>
                                             <span class="icon"><img class="svg" src="/styles/images/common/icon-arrow-right-white.svg" alt="arrow"></span>
                                         </a>
                                         <!-- 上傳的dm是pdf檔案 dmclick拿掉 -->
-                                        <!-- <a class="lightbtn" href="styles/images/product/180727_ADH_catalog_B01_ol.pdf" target="_blank" title="ララシーン-ADH">
+                                        <!-- <a class="lightbtn" href="/styles/images/product/180727_ADH_catalog_B01_ol.pdf" target="_blank" title="ララシーン-ADH">
                                             <span class="fs_16">ララシーン-ADH </span>
                                             <span class="icon"><img class="svg" src="/styles/images/common/icon-arrow-right-white.svg" alt="arrow"></span>
                                         </a> -->
@@ -288,12 +288,12 @@ HTML;
                                     <!-- 有上傳dm圖片時顯示, 若上傳的是pdf則另開視窗 -->
                                     <div class="dm-btn">
                                         <!-- 上傳的dm是圖片 -->
-                                        <a class="lightbtn dmclick" href="styles/images/product/pd-laracine-dm.jpg" title="ララシーン-ADH">
+                                        <a class="lightbtn dmclick" href="/styles/images/product/pd-laracine-dm.jpg" title="ララシーン-ADH">
                                             <span class="fs_16">ララシーン-ADH </span>
                                             <span class="icon"><img class="svg" src="/styles/images/common/icon-arrow-right-white.svg" alt="arrow"></span>
                                         </a>
                                         <!-- 上傳的dm是pdf檔案 dmclick拿掉 -->
-                                        <!-- <a class="lightbtn" href="styles/images/product/demo-dm.pdf" target="_blank" title="ララシーン-ADH">
+                                        <!-- <a class="lightbtn" href="/styles/images/product/demo-dm.pdf" target="_blank" title="ララシーン-ADH">
                                             <span class="fs_16">ララシーン-ADH </span>
                                             <span class="icon"><img class="svg" src="/styles/images/common/icon-arrow-right-white.svg" alt="arrow"></span>
                                         </a> -->
@@ -373,12 +373,12 @@ HTML;
                                     <!-- 有上傳dm圖片時顯示, 若上傳的是pdf則另開視窗 -->
                                     <div class="dm-btn">
                                         <!-- 上傳的dm是圖片 -->
-                                        <a class="lightbtn dmclick" href="styles/images/product/pd-laracine-dm.jpg" title="ララシーン-ADH">
+                                        <a class="lightbtn dmclick" href="/styles/images/product/pd-laracine-dm.jpg" title="ララシーン-ADH">
                                             <span class="fs_16">ララシーン-ADH </span>
                                             <span class="icon"><img class="svg" src="/styles/images/common/icon-arrow-right-white.svg" alt="arrow"></span>
                                         </a>
                                         <!-- 上傳的dm是pdf檔案 dmclick拿掉 -->
-                                        <a class="lightbtn" href="styles/images/product/180727_ADH_catalog_B01_ol.pdf" target="_blank" title="ララシーン-ADH">
+                                        <a class="lightbtn" href="/styles/images/product/180727_ADH_catalog_B01_ol.pdf" target="_blank" title="ララシーン-ADH">
                                             <span class="fs_16">ララシーン-ADH(PDF) </span>
                                             <span class="icon"><img class="svg" src="/styles/images/common/icon-arrow-right-white.svg" alt="arrow"></span>
                                         </a>

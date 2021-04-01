@@ -78,10 +78,15 @@
 
             var winW = $(window).width();
             var maxW;
+            var dmmaxW;
+            var dmmaxH;
             if(winW > 1068){
                 maxW = 1050;
+                dmmaxW = 90 + "%";
+                dmmaxH = 90 + "%";
             }else{
                 maxW = 100 + '%';
+                dmmaxW = 580;
             }
             $(".picgallery, .gallery").colorbox({
                 rel:'group4',
@@ -92,9 +97,20 @@
                 opacity: 0.72,
             });
 
+            $(".dmclick").colorbox({
+                rel:'group4',
+                slideshow:false,
+                maxHeight:dmmaxW,
+                maxHeight:dmmaxH,
+                close: "閉じる",
+                opacity: 0.72,
+            });
+
+
             $(window).resize(function(){
                 $.colorbox.close();
             });
+
 
             // lightcase
             $('[data-rel^="lightcase"]').lightcase({
@@ -120,7 +136,6 @@
                 arrow:false,
                 infinite:false,
             });
-
         });
     </script>
 @endpush

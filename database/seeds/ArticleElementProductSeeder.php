@@ -39,7 +39,7 @@ class ArticleElementProductSeeder extends Seeder
             ['id' => $articleElementCellregenerationId5 = uuidl(), 'title' => 'article_element.title.'.$articleElementCellregenerationId5, 'details' => 'article_element.details.'.$articleElementCellregenerationId5, 'sort' => 5, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp],
             ['id' => $articleElementCellregenerationId6 = uuidl(), 'title' => 'article_element.title.'.$articleElementCellregenerationId6, 'details' => 'article_element.details.'.$articleElementCellregenerationId6, 'sort' => 6, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp],
             ['id' => $articleElementCellregenerationId7 = uuidl(), 'title' => 'article_element.title.'.$articleElementCellregenerationId7, 'details' => 'article_element.details.'.$articleElementCellregenerationId7, 'sort' => 7, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp],
-            ['id' => $articleElementCellregenerationId8 = uuidl(), 'title' => 'article_element.title.'.$articleElementCellregenerationId8, 'details' => 'article_element.details.'.$articleElementCellregenerationId8, 'sort' => 7, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp],
+            ['id' => $articleElementCellregenerationId8 = uuidl(), 'title' => 'article_element.title.'.$articleElementCellregenerationId8, 'details' => 'article_element.details.'.$articleElementCellregenerationId8, 'sort' => 8, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp],
         ];
         DB::table('article_element')->insert($articleElementData);
 
@@ -128,25 +128,25 @@ HTML;
                                     </ul>
                                     <div class="listgroup">
                                         <div class="elelink">
-                                            <a class="picgallery" href="styles/images/product/cell/cell-group-01.jpg" title="遺伝子発現">
+                                            <a class="picgallery" href="/styles/images/product/cell/cell-group-01.jpg" title="遺伝子発現">
                                                 <span class="fs_16">遺伝子発現</span>
 								                <span class="icon"><img class="svg" src="/styles/images//common/icon-arrow-right-blue.svg" alt="arrow"></span>
                                             </a>
                                         </div>
                                         <div class="elelink">
-                                            <a class="picgallery" href="styles/images/product/cell/cell-group-02.jpg" title="細胞因子の種類と量">
+                                            <a class="picgallery" href="/styles/images/product/cell/cell-group-02.jpg" title="細胞因子の種類と量">
                                                 <span class="fs_16">細胞因子の種類と量</span>
 								                <span class="icon"><img class="svg" src="/styles/images//common/icon-arrow-right-blue.svg" alt="arrow"></span>
                                             </a>
                                         </div>
                                         <div class="elelink">
-                                            <a class="picgallery" href="styles/images/product/cell/cell-group-03.jpg" title="細胞増殖の特性">
+                                            <a class="picgallery" href="/styles/images/product/cell/cell-group-03.jpg" title="細胞増殖の特性">
                                                 <span class="fs_16">細胞増殖の特性</span>
 								                <span class="icon"><img class="svg" src="/styles/images//common/icon-arrow-right-blue.svg" alt="arrow"></span>
                                             </a>
                                         </div>
                                         <div class="elelink">
-                                            <a class="picgallery" href="styles/images/product/cell/cell-group-04.jpg" title="細胞表面マーカー">
+                                            <a class="picgallery" href="/styles/images/product/cell/cell-group-04.jpg" title="細胞表面マーカー">
                                                 <span class="fs_16">細胞表面マーカー</span>
 								                <span class="icon"><img class="svg" src="/styles/images//common/icon-arrow-right-blue.svg" alt="arrow"></span>
                                             </a>
@@ -172,19 +172,19 @@ HTML;
                                     </div>
                                     <div class="listgroup">
                                         <div class="elelink">
-                                            <a class="picgallery" href="styles/images/product/cell/cell-group-05.jpg" title="血管壁狭窄の臨床研究">
+                                            <a class="picgallery" href="/styles/images/product/cell/cell-group-05.jpg" title="血管壁狭窄の臨床研究">
                                                 <span class="fs_16">血管壁狭窄の臨床研究 </span>
 								                <span class="icon"><img class="svg" src="/styles/images//common/icon-arrow-right-blue.svg" alt="arrow"></span>
                                             </a>
                                         </div>
                                         <div class="elelink">
-                                            <a class="picgallery" href="styles/images/product/cell/cell-group-06.jpg" title="育毛臨床研究">
+                                            <a class="picgallery" href="/styles/images/product/cell/cell-group-06.jpg" title="育毛臨床研究">
                                                 <span class="fs_16">育毛臨床研究</span>
 								                <span class="icon"><img class="svg" src="/styles/images//common/icon-arrow-right-blue.svg" alt="arrow"></span>
                                             </a>
                                         </div>
                                         <div class="elelink">
-                                            <a class="picgallery" href="styles/images/product/cell/cell-group-07.jpg" title="膝軟骨変性症の臨床試験">
+                                            <a class="picgallery" href="/styles/images/product/cell/cell-group-07.jpg" title="膝軟骨変性症の臨床試験">
                                                 <span class="fs_16">膝軟骨変性症の臨床試験</span>
 								                <span class="icon"><img class="svg" src="/styles/images//common/icon-arrow-right-blue.svg" alt="arrow"></span>
                                             </a>
