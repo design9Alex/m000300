@@ -10,7 +10,7 @@
                     @if(array_get($item,'uri') != 'privacy')
                     <li class="{{array_get($item,'children') ? 'has-sm' : ''}}" data-id="{{str_replace('manufacturings','manufacturing',array_get($item,'uri'))  }}">
                         <a href="{{array_get($item,'link')}}" class="link">
-                            <span class="icon"><img class="svg" src="{{array_get($mainMenuIcon,array_get($item,'uri'))}}" alt=""></span>
+                            <span class="icon"><img class="svg" src="{{array_get($mainMenuIcon,array_get($item,'uri'))}}" alt="" data-uri="{{array_get($item,'uri')}}"></span>
                             <span class="fs_16">{{array_get($item,'title')}}</span>
                         </a>
 

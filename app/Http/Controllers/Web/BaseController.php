@@ -32,9 +32,9 @@ class BaseController extends Controller
 
         $mainMenuIcon = array();
         $mainMenuIcon['about'] = '/styles/images/common/menu-icon-01.svg';
-        $mainMenuIcon['manufacturing'] = '/styles/images/common/menu-icon-02.svg';
+        $mainMenuIcon['manufacturings'] = '/styles/images/common/menu-icon-02.svg';
         $mainMenuIcon['manufacturing_2'] = '/styles/images/common/menu-icon-02-white.svg';
-        $mainMenuIcon['cellregeneration'] = '/styles/images/common/menu-icon-03.svg';
+        $mainMenuIcon['cellregenerations'] = '/styles/images/common/menu-icon-03.svg';
         $mainMenuIcon['cellregeneration_2'] = '/styles/images/common/menu-icon-03-white.svg';
         $mainMenuIcon['contact'] = '/styles/images/common/menu-icon-04.svg';
 
@@ -47,7 +47,7 @@ class BaseController extends Controller
         $footerMenuIcon['cellregeneration'] = '/styles/images/common/menu-icon-03.svg';
         $footerMenuIcon['contact'] = '/styles/images/common/menu-icon-04.svg';
 
-        $this->viewData['mainMenuIcon'] = $mainMenuIcon;
+        $this->viewData['footerMenuIcon'] = $footerMenuIcon;
 
 
 

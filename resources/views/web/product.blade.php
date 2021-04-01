@@ -50,5 +50,77 @@
                 $(this).parents('.manufact-pdAdbox').toggleClass('hover');
             });
         });
+
+        // youtube video
+        var tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+        var players = new Array();
+        function onYouTubeIframeAPIReady() {
+            for ( var i = 0; i < $('.youtube-video').length; i++ ) {
+                players[i] = new YT.Player($('.youtube-video')[i]);
+            }
+        }
+
+        $(function(){
+            var wW = $(window).outerWidth();
+            $(".cell-charbox").each(function(){
+                var box_height = 0;
+                $('.zoom .databox .item .wordbox').each(function(index) {
+                    if ($(this).height() >= box_height)
+                        box_height = $(this).height();
+                });
+                if( wW >= 751){
+                    $('.zoom .databox .item .wordbox').height(box_height);
+                }
+            });
+
+            var winW = $(window).width();
+            var maxW;
+            if(winW > 1068){
+                maxW = 1050;
+            }else{
+                maxW = 100 + '%';
+            }
+            $(".picgallery, .gallery").colorbox({
+                rel:'group4',
+                slideshow:false,
+                width:maxW,
+                maxHeight:650,
+                close: "閉じる",
+                opacity: 0.72,
+            });
+
+            $(window).resize(function(){
+                $.colorbox.close();
+            });
+
+            // lightcase
+            $('[data-rel^="lightcase"]').lightcase({
+                showCaption: false,
+                showSequenceInfo: false,
+                maxHeight: 800,
+                labels: {
+                    'close': '閉じる',
+                    'navigator.prev': '',
+                    'navigator.next': '',
+                },
+                onClose: {
+                    grault: function() {
+                        $(players).each(function(i){
+                            this.stopVideo();
+                        });
+                    }
+                }
+            });
+
+            $('.pd-slider').slick({
+                dots:true,
+                arrow:false,
+                infinite:false,
+            });
+
+        });
     </script>
 @endpush
