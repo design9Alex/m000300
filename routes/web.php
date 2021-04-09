@@ -23,3 +23,8 @@ Route::get('contact', 'contactController@contact')->name('contact');
 Route::post('contact/submit', 'contactController@submitContactForm')->name('contact.submit'); // 收取聯絡我們表單
 Route::get('contact-send', 'ContactController@contactSend')->name('contact-send');
 Route::get('privacy', 'ContactController@privacy')->name('privacy');
+
+
+Route::get('test',function (){
+    dd(backendPath('admin'),backendPath('administrator'));
+});

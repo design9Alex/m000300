@@ -92,7 +92,7 @@ class ContactController extends BaseController
 
         $tSerial = self::recevedSerialNumberCreator();
 
-        array_forget($attributes,['_token','captcha','hiddenRecaptcha']);
+        array_forget($attributes,['_token','captcha','hiddenRecaptcha','g-recaptcha-response']);
 
         $attributes['id'] = uuidl();
         $attributes['ip'] = $request->getClientIp();

@@ -55,7 +55,7 @@ class ContactRequest extends FormRequest
             'details.電話' => 'required|string',
             'details.email' => 'required|email',
             'details.產品' => 'required|string',
-            'hiddenRecaptcha' => 'required|string',
+            //'hiddenRecaptcha' => 'required|string',
 
 
             /*
@@ -94,7 +94,7 @@ class ContactRequest extends FormRequest
             'details.電話' => '電話',
             'details.email' => 'email',
             'details.產品' => '產品',
-            'hiddenRecaptcha' => '我不是機器人',
+            //'hiddenRecaptcha' => '我不是機器人',
 
             /*
             'details.諮詢服務' => __('web.contact-us-form.subject'),
