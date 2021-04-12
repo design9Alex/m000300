@@ -39,7 +39,7 @@ class ArticleElementProductEstheticmedicineSeeder extends Seeder
             ['id' => $articleElementEstheticmedicineId5 = uuidl(), 'title' => 'article_element.title.'.$articleElementEstheticmedicineId5, 'details' => 'article_element.details.'.$articleElementEstheticmedicineId5, 'sort' => 5, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp],
             ['id' => $articleElementEstheticmedicineId6 = uuidl(), 'title' => 'article_element.title.'.$articleElementEstheticmedicineId6, 'details' => 'article_element.details.'.$articleElementEstheticmedicineId6, 'sort' => 6, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp],
             ['id' => $articleElementEstheticmedicineId7 = uuidl(), 'title' => 'article_element.title.'.$articleElementEstheticmedicineId7, 'details' => 'article_element.details.'.$articleElementEstheticmedicineId7, 'sort' => 7, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp],
-            ['id' => $articleElementEstheticmedicineId8 = uuidl(), 'title' => 'article_element.title.'.$articleElementEstheticmedicineId8, 'details' => 'article_element.details.'.$articleElementEstheticmedicineId8, 'sort' => 7, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp],
+            ['id' => $articleElementEstheticmedicineId8 = uuidl(), 'title' => 'article_element.title.'.$articleElementEstheticmedicineId8, 'details' => 'article_element.details.'.$articleElementEstheticmedicineId8, 'sort' => 8, 'active' => true, 'created_at' => $this->timestamp, 'updated_at' => $this->timestamp],
         ];
         DB::table('article_element')->insert($articleElementData);
 
@@ -400,6 +400,38 @@ HTML;
 HTML;
 
         $estheticmedicineEeditor7 = <<<HTML
+<div id="pdsection-05" class="pd-section">
+<div class="w1300 content">
+<div class="imgbox"><!-- 圖片尺寸 w600 * h460 建議為png透明背景-->
+<div class="pd-slider" data-aos="fade-up" data-aos-delay="50" data-aos-offset="20">
+<div class="pdimg jqimgFill"><img src="/styles/images/product/pd-laracinemask.png" alt="LA RACINE MASK" /></div>
+</div>
+<!-- 產品圖標籤，客戶可以自己增加樣式 w70 * h70，格式為svg檔案 -->
+<div class="pdlabel" data-aos="fade"><span class="label"><img src="/styles/images/product/label-09.svg" alt="" /></span> <span class="label"><img src="/styles/images/product/label-10.svg" alt="" /></span></div>
+<!--<div class="pdremarks">
+<div class="inData">&nbsp;</div>
+</div>-->
+</div>
+<div class="pdData" data-aos="fade-up" data-aos-offset="20">
+<div class="sublabel fs_14 fw_500 hidden"><!-- 沒有資料就hidden --></div>
+<p class="subtitle fs_16 hidden"><!-- 沒有資料就hidden --></p>
+<h3 class="pdname dash"><span class="name fs_28 fw_bold">LA RACINE MASK</span> <span class="madein fs_14">台湾生産</span></h3>
+<div class="pdtext fs_16 gray">すぐに持続する保湿効果があり、高効率の保湿活性成分であるセラミドにより、乾燥肌の活力を取り戻し、保湿機能を強化します。特に、皮膚の脱水状態を改善することができ、皮膚を傷つきやすい医療美容後の治療にもお勧めします。肌は光沢があり弾力性があります。</div>
+<ul class="ul-style">
+<li class="orange">
+<p class="fs_16 gray"><span class="fw_bold">主な成分：</span>SKフラックスV、スクアラン、セラミド複合体、有機フライシ ャーヤナギ葉抽出物、ヒアルロン酸、ヒアルロン酸</p>
+</li>
+</ul>
+<div class="detail">
+<div class="item"><span class="taglabel fs_14 fw_bold">適応症</span> <span class="script fs_16">くすみ、肌の色むら、乾燥、もろさ、過敏症</span></div>
+<div class="item"><span class="taglabel fs_14 fw_bold">容量</span> <span class="script fs_16">25mL&times;3個</span></div>
+</div>
+<!-- 客戶自訂連結到產品介紹頁面 --> <!-- <a class="pd-detaillink fs_16" href="https://www.bire.jp/" target="_blank">ブランドサイト</a> --></div>
+</div>
+</div>
+HTML;
+
+        $estheticmedicineEeditor8 = <<<HTML
 <div class="page-bt-linkbox">
                     <div class="bg-img jqimgFill"><img src="/styles/images/product/medicine-contact.jpg" alt=""></div>
                     <div class="w1100 zoom">
@@ -425,6 +457,7 @@ HTML;
             ['id' => $articleElementEstheticmedicineId5, 'title' => 'LACTOLAB PRO','details' => json_encode(['editor' => $estheticmedicineEeditor5])],
             ['id' => $articleElementEstheticmedicineId6, 'title' => 'La Racine - Automated Dermal Hydrator 医療美容機器は','details' => json_encode(['editor' => $estheticmedicineEeditor6])],
             ['id' => $articleElementEstheticmedicineId7, 'title' => 'お問い合わせ','details' => json_encode(['editor' => $estheticmedicineEeditor7])],
+            ['id' => $articleElementEstheticmedicineId8, 'title' => 'お問い合わせ','details' => json_encode(['editor' => $estheticmedicineEeditor8])],
         ];
         $articleTeamLanguage = ['ja' => $data, 'en' => $data];
         SeederHelper::setLanguageResource($this->languageResourceData, 'article_element', $articleTeamLanguage, $this->languageList, null, false);
@@ -438,6 +471,7 @@ HTML;
             ['category_id' => $categoryId4, 'object_id' => $articleElementEstheticmedicineId5, 'model' => 'Minmax\Article\Models\ArticleElement'],
             ['category_id' => $categoryId4, 'object_id' => $articleElementEstheticmedicineId6, 'model' => 'Minmax\Article\Models\ArticleElement'],
             ['category_id' => $categoryId4, 'object_id' => $articleElementEstheticmedicineId7, 'model' => 'Minmax\Article\Models\ArticleElement'],
+            ['category_id' => $categoryId4, 'object_id' => $articleElementEstheticmedicineId8, 'model' => 'Minmax\Article\Models\ArticleElement'],
         ];
         DB::table('article_category_relation')->insert($articleCategoryRelationData);
 
