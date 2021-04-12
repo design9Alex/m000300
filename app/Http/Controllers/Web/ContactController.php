@@ -161,7 +161,7 @@ class ContactController extends BaseController
 
     public function privacy()
     {
-        $this->viewData['thisMenu'] = 'contact';
+        $this->viewData['thisMenu'] = 'privacy';
         $this->viewData['mainMenuData'] = $mainMenuData = $this->getMainMenuData($this->viewData['thisMenu']);
 
         $mainMenuDataPic = array();
@@ -174,6 +174,7 @@ class ContactController extends BaseController
         $seo['title'] = $this->viewData['mainMenuData']->title;
         $seo['description'] = array_get($this->viewData['mainMenuData'],'seo.meta_description');
         $seo['keywords'] = array_get($this->viewData['mainMenuData'],'seo.meta_keywords');
+
 
         $this->viewData['seo'] = $seo;
 

@@ -100,9 +100,9 @@ HTML;
                         <div class="cell-repairbox" data-aos="fade" data-aos-delay="400">
                             <span class="imgbox">
                                 <picture>
-                                    <source media="(max-width: 768px)" srcset="styles/images/product/cell/cell-03_mobile.gif"/>
+                                    <source media="(max-width: 768px)" srcset="/styles/images/product/cell/cell-03_mobile.gif"/>
                                     <!-- 圖片尺寸  w920 * h670 -->
-                                    <img src="/styles/images//product/cell/cell-03.gif" alt=""/><!-- 圖片尺寸  w920 * h670 -->
+                                    <img src="/styles/images/product/cell/cell-03.gif" alt=""/><!-- 圖片尺寸  w920 * h670 -->
                                 </picture>
                             </span>
                         </div>
@@ -397,7 +397,7 @@ HTML;
                     <div class="bg-img jqimgFill"><img src="/styles/images/product/cell-contact.jpg" alt=""></div>
                     <div class="w1100 zoom">
                         <h2 class="hidden">お問い合わせ</h2>
-                        <a href="contact">
+                        <a href="/contact">
                             <span class="link-data">
                                 <span class="tit fs_28 fw_500" style="color:#413D3C">お問い合わせ</span>
                                 <span class="subtit fs_16" style="color:#0990D0">Contact</span>

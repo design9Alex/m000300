@@ -15,8 +15,7 @@
                 </picture>
             </div>
             <div class="bn-textbox">
-                <h1 class="bn-tit fs_36">{{array_get($articlePage,'title')}}</h1>
-                <p class="en fs_16">Privacy Policy</p>
+                {!! array_get($mainMenuData,'details.editor') !!}
             </div>
         </div>
         <div class="page-inner">

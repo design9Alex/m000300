@@ -21,6 +21,8 @@ class SampleSeeder extends Seeder
 
         $this->updateLanguageResource();
 
+        $this->updateGuideBook();
+
         $this->insertTestAdmin();
 
         $this->insertWebMenu();
@@ -108,6 +110,15 @@ class SampleSeeder extends Seeder
 
 
     }
+
+
+
+    protected function updateGuideBook(){
+
+        DB::table('guide_book')->update(["title" => DB::raw("REPLACE(title,  'zh-Hant','ja')")]);
+        DB::table('guide_book')->update(["content" => DB::raw("REPLACE(content,  'zh-Hant','ja')")]);
+    }
+
 
 
     protected function updateInboxReceived(){

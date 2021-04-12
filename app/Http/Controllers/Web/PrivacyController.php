@@ -33,6 +33,7 @@ class PrivacyController extends BaseController
         $seo['description'] = array_get($this->viewData['mainMenuData'],'seo.meta_description');
         $seo['keywords'] = array_get($this->viewData['mainMenuData'],'seo.meta_keywords');
 
+
         $this->viewData['seo'] = $seo;
 
         $this->viewData['articleElements'] = $articleElements = (new ArticleElementRepository)->getElementByCategory('privacy')->get();

@@ -124,12 +124,12 @@ HTML;
                                     <!-- 有上傳dm圖片時顯示, 若上傳的是pdf則另開視窗 -->
                                     <div class="dm-btn">
                                         <!-- 上傳的dm是圖片 -->
-                                        <a class="lightbtn dmclick" href="styles/images/product/pd-laracine-dm.jpg" title="ララシーン-ADH">
+                                        <a class="lightbtn dmclick" href="/styles/images/product/pd-laracine-dm.jpg" title="ララシーン-ADH">
                                             <span class="fs_16">ララシーン-ADH </span>
                                             <span class="icon"><img class="svg" src="/styles/images//common/icon-arrow-right-white.svg" alt="arrow"></span>
                                         </a>
                                         <!-- 上傳的dm是pdf檔案 dmclick拿掉 -->
-                                        <!-- <a class="lightbtn" href="styles/images/product/demo-dm.pdf" target="_blank" title="ララシーン-ADH">
+                                        <!-- <a class="lightbtn" href="/styles/images/product/demo-dm.pdf" target="_blank" title="ララシーン-ADH">
                                             <span class="fs_16">ララシーン-ADH </span>
                                             <span class="icon"><img class="svg" src="/styles/images//common/icon-arrow-right-white.svg" alt="arrow"></span>
                                         </a> -->
@@ -205,12 +205,12 @@ HTML;
                                     <!-- 有上傳dm圖片時顯示, 若上傳的是pdf則另開視窗 -->
                                     <div class="dm-btn hidden">
                                         <!-- 上傳的dm是圖片 -->
-                                        <a class="lightbtn dmclick" href="styles/images/product/pd-laracine-dm.jpg" title="ララシーン-ADH">
+                                        <a class="lightbtn dmclick" href="/styles/images/product/pd-laracine-dm.jpg" title="ララシーン-ADH">
                                             <span class="fs_16">ララシーン-ADH </span>
                                             <span class="icon"><img class="svg" src="/styles/images//common/icon-arrow-right-white.svg" alt="arrow"></span>
                                         </a>
                                         <!-- 上傳的dm是pdf檔案 dmclick拿掉 -->
-                                        <!-- <a class="lightbtn" href="styles/images/product/demo-dm.pdf" target="_blank" title="ララシーン-ADH">
+                                        <!-- <a class="lightbtn" href="/styles/images/product/demo-dm.pdf" target="_blank" title="ララシーン-ADH">
                                             <span class="fs_16">ララシーン-ADH </span>
                                             <span class="icon"><img class="svg" src="/styles/images//common/icon-arrow-right-white.svg" alt="arrow"></span>
                                         </a> -->
@@ -286,12 +286,12 @@ HTML;
                                     <!-- 有上傳dm圖片時顯示, 若上傳的是pdf則另開視窗 -->
                                     <div class="dm-btn hidden">
                                         <!-- 上傳的dm是圖片 -->
-                                        <a class="lightbtn dmclick" href="styles/images/product/pd-laracine-dm.jpg" title="ララシーン-ADH">
+                                        <a class="lightbtn dmclick" href="/styles/images/product/pd-laracine-dm.jpg" title="ララシーン-ADH">
                                             <span class="fs_16">ララシーン-ADH </span>
                                             <span class="icon"><img class="svg" src="/styles/images//common/icon-arrow-right-white.svg" alt="arrow"></span>
                                         </a>
                                         <!-- 上傳的dm是pdf檔案 dmclick拿掉 -->
-                                        <!-- <a class="lightbtn" href="styles/images/product/demo-dm.pdf" target="_blank" title="ララシーン-ADH">
+                                        <!-- <a class="lightbtn" href="/styles/images/product/demo-dm.pdf" target="_blank" title="ララシーン-ADH">
                                             <span class="fs_16">ララシーン-ADH </span>
                                             <span class="icon"><img class="svg" src="/styles/images//common/icon-arrow-right-white.svg" alt="arrow"></span>
                                         </a> -->
@@ -317,7 +317,7 @@ HTML;
                     <div class="bg-img jqimgFill"><img src="/styles/images/product/disease-contact.jpg" alt=""></div>
                     <div class="w1100 zoom">
                         <h2 class="hidden">お問い合わせ</h2>
-                        <a href="contact">
+                        <a href="/contact">
                             <span class="link-data">
                                 <span class="tit fs_28 fw_500" style="color:#ffffff">お問い合わせ</span>
                                 <span class="subtit fs_16" style="color:#0990D0">Contact</span>

@@ -22,7 +22,6 @@ class AboutController extends BaseController
         $this->viewData['thisMenu'] = 'about';
         $this->viewData['mainMenuData'] = $mainMenuData = $this->getMainMenuData($this->viewData['thisMenu']);
 
-        //dd($this->viewData['mainMenu'][0]);
 
         $mainMenuDataPic = array();
         foreach(array_get($mainMenuData,'details.pic') as $key => $item){
@@ -34,6 +33,7 @@ class AboutController extends BaseController
         $seo['title'] = $this->viewData['mainMenuData']->title;
         $seo['description'] = array_get($this->viewData['mainMenuData'],'seo.meta_description');
         $seo['keywords'] = array_get($this->viewData['mainMenuData'],'seo.meta_keywords');
+
 
         $this->viewData['seo'] = $seo;
 

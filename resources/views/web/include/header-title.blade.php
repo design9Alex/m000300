@@ -11,8 +11,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <title>{{$PageTitle}}</title>
 <meta name="author" content="MINMAX" />
-<meta name="description" content="{{ $SEO_description ? $SEO_description : $BaseWebData->seo['meta_description'] }}" />
-<meta name="keywords" content="{{ $SEO_keywords ? $SEO_keywords : $BaseWebData->seo['meta_keywords'] }}" />
+<meta name="description" content="{{ $seo['description'] ? $seo['description'] : $BaseWebData->seo['meta_description'] }}" />
+<meta name="keywords" content="{{ $seo['keywords'] ? $seo['keywords'] : $BaseWebData->seo['meta_keywords'] }}" />
 
 <!-- Facebook Open Graph Meta
 ================================================== -->

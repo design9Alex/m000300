@@ -53,7 +53,7 @@ HTML;
 
         $aboutEditor2 = <<<HTML
         <div class="about-blocks about-industrial">
-                    <div class="bg-img jqimgFill" data-aos="fade"><img src="styles/images/about/about-01.jpg" alt=""></div>
+                    <div class="bg-img jqimgFill" data-aos="fade"><img src="/styles/images/about/about-01.jpg" alt=""></div>
                     <div class="w1300">
                         <div class="zoom">
                             <div class="pagetextbox" data-aos="fade">
@@ -67,7 +67,7 @@ HTML;
 
         $aboutEditor3 = <<<HTML
         <div class="about-blocks about-academic">
-                    <div class="bg-img jqimgFill" data-aos="fade"><img src="styles/images/about/about-02.jpg" alt=""></div>
+                    <div class="bg-img jqimgFill" data-aos="fade"><img src="/styles/images/about/about-02.jpg" alt=""></div>
                     <div class="w1300">
                         <div class="zoom">
                             <div class="pagetextbox" data-aos="fade">
@@ -88,9 +88,9 @@ HTML;
                         <div class="strength-list">
                             <div class="item">
                                 <div class="ciclebox" style="color:rgba(50,149,207,1);" data-aos="zoom-in">
-                                    <span class="icon-plus"><img src="styles/images/about/icon-plus.svg" alt=""></span>
+                                    <span class="icon-plus"><img src="/styles/images/about/icon-plus.svg" alt=""></span>
                                     <span class="text fs_20">私たちのビジョン</span>
-                                    <span class="icon"><img src="styles/images/about/enterprise-01.svg" alt=""></span>
+                                    <span class="icon"><img src="/styles/images/about/enterprise-01.svg" alt=""></span>
                                 </div>
                                 <div class="databox" style="color:rgba(50,149,207,1);" data-aos="fade-up">
                                     <p class="word fs_16">私たちのビジョンは、人々の活力と生活の質を維持しながら、老化の過程をガイドすることです。</p>
@@ -98,9 +98,9 @@ HTML;
                             </div>
                             <div class="item">
                                 <div class="ciclebox" style="color:rgba(0,35,113,0.75);" data-aos="zoom-in" data-aos-delay="100">
-                                    <span class="icon-plus"><img src="styles/images/about/icon-plus.svg" alt=""></span>
+                                    <span class="icon-plus"><img src="/styles/images/about/icon-plus.svg" alt=""></span>
                                     <span class="text fs_20">私たちの使命</span>
-                                    <span class="icon"><img src="styles/images/about/enterprise-02.svg" alt=""></span>
+                                    <span class="icon"><img src="/styles/images/about/enterprise-02.svg" alt=""></span>
                                 </div>
                                 <div class="databox" style="color:#1B478E;" data-aos="fade-up" data-aos-delay="100">
                                     <p class="word fs_16">人類に利益をもたらす製品のみを造ります。</p>
@@ -108,9 +108,9 @@ HTML;
                             </div>
                             <div class="item">
                                 <div class="ciclebox" style="color:rgba(0,0,0,0.28);" data-aos="zoom-in" data-aos-delay="200">
-                                    <span class="icon-plus"><img src="styles/images/about/icon-plus.svg" alt=""></span>
+                                    <span class="icon-plus"><img src="/styles/images/about/icon-plus.svg" alt=""></span>
                                     <span class="text fs_20">ビジネス哲学</span>
-                                    <span class="icon"><img src="styles/images/about/enterprise-03.svg" alt=""></span>
+                                    <span class="icon"><img src="/styles/images/about/enterprise-03.svg" alt=""></span>
                                 </div>
                                 <div class="databox" style="color:#BFBFBF;" data-aos="fade-up" data-aos-delay="200">
                                     <p class="word fs_16">1.顧客の期待を超えるサビースを  提供すること。2.お客様との長期的な信頼関係を築くこと。3.クライアントと共感し、ニーズを理解し、問題を解決すること。</p>
@@ -118,9 +118,9 @@ HTML;
                             </div>
                             <div class="item">
                                 <div class="ciclebox" style="color:rgba(36,157,216,0.65);" data-aos="zoom-in" data-aos-delay="300">
-                                    <span class="icon-plus"><img src="styles/images/about/icon-plus.svg" alt=""></span>
+                                    <span class="icon-plus"><img src="/styles/images/about/icon-plus.svg" alt=""></span>
                                     <span class="text fs_20">私たちのサービス</span>
-                                    <span class="icon"><img src="styles/images/about/enterprise-04.svg" alt=""></span>
+                                    <span class="icon"><img src="/styles/images/about/enterprise-04.svg" alt=""></span>
                                 </div>
                                 <div class="databox" style="color:#87C5E4;" data-aos="fade-up" data-aos-delay="300">
                                     <p class="word fs_16">1.市場でユニークな高品質で革新的な製品を提供すること。2.医師を支援し、スキルを向上させ、医療分野での知識を拡大すること。3.患者の信頼を確立するために、医師の評判を高めること。</p>
@@ -133,27 +133,27 @@ HTML;
 
         $aboutEditor5 = <<<HTML
         <div class="about-section about-dds">
-                    <div class="half-pic jqimgFill" data-aos="fade"><img src="styles/images/about/about-dds-01.jpg" alt=""></div>
+                    <div class="half-pic jqimgFill" data-aos="fade"><img src="/styles/images/about/about-dds-01.jpg" alt=""></div>
                     <div class="databox">
                         <div class="scriptbox" data-aos="fade">
                             <h2 class="tit dash fw_bold fs_24">ドラッグデリバリーシステム（DDS）</h2>
                             <div class="text fs_16">これには、当社の事業開発プロジェクトに特許取得済みのドラッグデリバリー技術を適用することが含まれます。 DDSは、特許取得済みのNDS皮膚浸透システム、水溶性の透過性並びに吸収性エンハンサーなど、適応性の高い小分子輸送するという特性を備えています。 DDS伝達技術は、主に製品の皮膚伝達に使用され、局所的な皮膚の症状を改善し、初回通過効果を回避します。また、安全に使用でき、皮膚からの製品の適切な浸透を実現できます。</div>
                         </div>
                     </div>
-                    <div class="pic jqimgFill" data-aos="fade"><img src="styles/images/about/about-dds-02.jpg" alt=""></div>
+                    <div class="pic jqimgFill" data-aos="fade"><img src="/styles/images/about/about-dds-02.jpg" alt=""></div>
                 </div>
 HTML;
 
         $aboutEditor6 = <<<HTML
         <div class="about-section about-src">
-                    <div class="half-pic jqimgFill" data-aos="fade"><img src="styles/images/about/about-src-02.jpg" alt=""></div>
+                    <div class="half-pic jqimgFill" data-aos="fade"><img src="/styles/images/about/about-src-02.jpg" alt=""></div>
                     <div class="databox">
                         <div class="scriptbox" data-aos="fade">
                             <h2 class="tit dash fw_bold fs_24">皮膚研究センター</h2>
                             <div class="text fs_16">間葉系幹細胞は、皮膚細胞や血管細胞など、さまざまな成体細胞に変化できる原始細胞です。 間葉系幹細胞製品の開発のために、火傷や熱傷の治療に臨床経験と技術を導入しました。 これらの製品は、皮膚の老化防止というニーズを満たすために皮膚のケラチノサイトを刺激する成分を含みます。</div>
                         </div>
                     </div>
-                    <div class="pic jqimgFill" data-aos="fade"><img src="styles/images/about/about-src-01.jpg" alt=""></div>
+                    <div class="pic jqimgFill" data-aos="fade"><img src="/styles/images/about/about-src-01.jpg" alt=""></div>
                 </div>
 HTML;
 

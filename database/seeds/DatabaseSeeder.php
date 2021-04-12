@@ -40,5 +40,6 @@ class DatabaseSeeder extends Seeder
         $this->call(ArticlePagePrivacySeeder::class);
 
         $this->call(RolePermissionsSeeder::class);
+
     }
 }

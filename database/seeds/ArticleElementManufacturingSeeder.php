@@ -660,7 +660,7 @@ HTML;
                     <div class="bg-img jqimgFill"><img src="/styles/images/research/research-13.jpg" alt=""></div>
                     <div class="w1100 zoom">
                         <h2 class="hidden">お問い合わせ</h2>
-                        <a href="contact">
+                        <a href="/contact">
                             <span class="link-data">
                                 <span class="tit fs_28 fw_500" style="color:#fff">お問い合わせ</span>
                                 <span class="subtit fs_16" style="color:#fff">Contact</span>
