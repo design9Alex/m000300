@@ -153,7 +153,7 @@ $(function(){
         var $databox= $(this).children('.imgbox').children('.pdremarks').children(".inData").html();
         var $imgremarks = $(this).children('.imgbox').children('.pdremarks');
         var $dataremarks = $(this).children('.pdData');
-        if($databox==null||$databox==""){
+        if($databox==null||$databox==""||$databox=="&nbsp;"){
             // console.log("無資料");
             $imgremarks.addClass('hidden');
         }else{

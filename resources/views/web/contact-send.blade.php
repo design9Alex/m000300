@@ -23,7 +23,7 @@
             <div class="guideline"></div>
             <div class="breadnav">
                 <div class="w1300 navbox fs_16">
-                    <a href="/">>@lang('auth.home') {{--ホーム 首頁--}}</a>
+                    <a href="/">@lang('auth.home') {{--ホーム 首頁--}}</a>
                     <span class="separate">/</span>
                     <span>@lang('auth.contactUs') {{--お問い合わせ--}}</span>
                 </div>
