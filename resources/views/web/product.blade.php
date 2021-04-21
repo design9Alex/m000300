@@ -93,7 +93,7 @@
                 slideshow:false,
                 width:maxW,
                 maxHeight:650,
-                close: "閉じる",
+                close: "{{ trans('auth.close') }}",
                 opacity: 0.72,
             });
 
@@ -102,7 +102,7 @@
                 slideshow:false,
                 maxHeight:dmmaxW,
                 maxHeight:dmmaxH,
-                close: "閉じる",
+                close: "{{ trans('auth.close') }}",
                 opacity: 0.72,
             });
 
@@ -118,7 +118,7 @@
                 showSequenceInfo: false,
                 maxHeight: 800,
                 labels: {
-                    'close': '閉じる',
+                    'close': "{{ trans('auth.close') }}",
                     'navigator.prev': '',
                     'navigator.next': '',
                 },

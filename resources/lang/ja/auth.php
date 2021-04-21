@@ -39,5 +39,6 @@ return [
     'description' => '内容',
     'send' => '送る',
     'please_select' => '選択して下さい',
+    'close' => '閉じる',
 
 ];
