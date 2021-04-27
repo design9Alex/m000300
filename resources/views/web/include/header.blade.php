@@ -1,7 +1,7 @@
 <header id="header">
     <div class="headerbox">
         <div class="logo">
-            <a href="/{{ ($rootUri == 'ja/') ? '' : 'en/' }}"><img src="/styles/images/logo.svg" alt=""></a>
+            <a href="/{{ ($rootUri == 'ja/') ? '' : 'en/' }}"><img src="{{array_get($BaseWebData,'system_logo.0.path','/styles/images/logo.svg')}}" alt=""></a>
         </div>
         <nav>
             <ul class="noneStyle menu">
