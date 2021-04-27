@@ -1,7 +1,7 @@
 <footer>
     <div class="ft-top">
         <div class="content">
-            <div class="logo"><a href="/"><img src="{{array_get($BaseWebData,'system_logo.0.path','/styles/images/logo.svg')}}" alt=""></a></div>
+            <div class="logo"><a href="/"><img src="{{url(array_get($BaseWebData,'system_logo.0.path','/styles/images/logo.svg'))}}" alt=""></a></div>
             <div class="sitemap">
 
 
@@ -52,7 +52,7 @@
         </div>
     </div>
     <div class="ft-bottom">
-        <span class="copyright">Copyright © @php echo date('Y'); @endphp ANTI-AGING SCIENCES PROPULSION LABS PTE. LTD. All rights reserved</span>
+        <span class="copyright">Copyright © @php echo date('Y'); @endphp ANTI-AGING SCIENCES PROPULSION LABS CO.. LTD. All rights reserved</span>
         <a class="link fs_14" href="/{{ ($rootUri == 'ja/') ? '' : 'en/' }}privacy">›&nbsp;&nbsp;@lang('auth.privacy')</a>
 
     </div>
