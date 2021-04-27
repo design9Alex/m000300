@@ -40,5 +40,6 @@ return [
     'send' => '送信',
     'please_select' => '選択して下さい',
     'close' => '閉じる',
+    'privacy' => 'プライバシーポリシー',
 
 ];

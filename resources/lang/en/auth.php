@@ -40,5 +40,6 @@ return [
     'send' => 'Send',
     'please_select' => 'Please select',
     'close' => 'Close',
+    'privacy' => 'Privacy Policy',
 
 ];

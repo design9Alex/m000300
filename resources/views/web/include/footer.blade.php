@@ -52,8 +52,8 @@
         </div>
     </div>
     <div class="ft-bottom">
-        <span class="copyright">Copyright © @php echo date('Y'); @endphp DAG Regenerative Engineering Pte Ltd. All rights reserved</span>
-        <a class="link fs_14" href="/privacy">›&nbsp;&nbsp;プライバシーポリシー</a>
+        <span class="copyright">Copyright © @php echo date('Y'); @endphp ANTI-AGING SCIENCES PROPULSION LABS PTE. LTD. All rights reserved</span>
+        <a class="link fs_14" href="/{{ ($rootUri == 'ja/') ? '' : 'en/' }}privacy">›&nbsp;&nbsp;@lang('auth.privacy')</a>
 
     </div>
 </footer>
