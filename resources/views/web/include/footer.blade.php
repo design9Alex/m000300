@@ -1,7 +1,7 @@
 <footer>
     <div class="ft-top">
         <div class="content">
-            <div class="logo"><a href="/"><img src="/styles/images/logo-ft.svg" alt=""></a></div>
+            <div class="logo"><a href="/"><img src="{{array_get($BaseWebData,'system_logo.0.path','/styles/images/logo.svg')}}" alt=""></a></div>
             <div class="sitemap">
 
 
