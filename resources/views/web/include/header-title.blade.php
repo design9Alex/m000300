@@ -24,7 +24,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <meta name="format-detection" content="telephone=no">
-<link rel="icon" type="image/x-icon" href="{{asset('styles/images/favicon.png?20210204')}}" />
+<link rel="icon" type="image/x-icon" href="{{asset('styles/images/favicon.png?20210427')}}" />
 <link rel="stylesheet" type="text/css" href="{{asset('styles/style.css?2021')}}" />
 
 <!--[if lt IE 9]>
