@@ -52,7 +52,7 @@
         </div>
     </div>
     <div class="ft-bottom">
-        <span class="copyright">Copyright © @php echo date('Y'); @endphp ANTI-AGING SCIENCES PROPULSION LABS CO.. LTD. All rights reserved</span>
+        <span class="copyright">Copyright © @php echo date('Y'); @endphp ANTI-AGING SCIENCES PROPULSION LABS CO. LTD. All rights reserved</span>
         <a class="link fs_14" href="/{{ ($rootUri == 'ja/') ? '' : 'en/' }}privacy">›&nbsp;&nbsp;@lang('auth.privacy')</a>
 
     </div>
