@@ -144,7 +144,7 @@
                                         <input type="number" class="input-style fs_16" name="details[區碼]" id="areacode" value="{{old('details.區碼')}}">
                                     </div>
                                     <div class="col telnumber">
-                                        <input type="number" class="input-style fs_16" name="details[電話]" id="tel" placeholder="@lang('auth.phone_sample')" value="{{old('details.電話')}}">
+                                        <input type="text" class="input-style fs_16" name="details[電話]" id="tel" placeholder="@lang('auth.phone_sample')" value="{{old('details.電話')}}">
                                     </div>
 
                                 </div>

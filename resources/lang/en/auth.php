@@ -21,6 +21,7 @@ return [
     'sendMessage1' => 'Thanks for providing us with your valuable question(s) and/or opinion(s), we will reply to you within the next three days of receiving your response.',
     'sendMessage2' => 'DAG wishes you all the best',
     'sendBtn' => 'Send',
+    'sendEdBtn' => 'Confirmed',
     'required' => 'required',
     '諮詢服務' => 'Advisory Service',
     '參加類別' => 'Identity',

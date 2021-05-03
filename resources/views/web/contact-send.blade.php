@@ -35,7 +35,7 @@
                     <p class="text fs_16 text-center">@lang('auth.sendMessage1'){{--ご質問をいただき、ありがとうございます。お問い合わせの内容については、三日間以内回答いたします。何卒よろしくお願いいたします。--}}<br/>@lang('auth.sendMessage2'){{--ＤＡＧ敬具--}}</p>
                     <div class="btn-style">
                         <a href="/" class="">
-                            <span class="word fs_16">@lang('auth.sendBtn'){{--確認--}}</span>
+                            <span class="word fs_16">@lang('auth.sendEdBtn'){{--確認--}}</span>
                             <span class="icon"><img src="/styles/images/common/icon-arrow-right-white.svg" alt=""></span>
                         </a>
                     </div>
