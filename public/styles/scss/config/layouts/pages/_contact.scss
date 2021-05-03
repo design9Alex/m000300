@@ -42,9 +42,8 @@
 .contact-form{padding:75px 0;
 	.form-box{max-width:825px;margin:0 auto;padding-bottom:40px;
 		.item{display:flex;margin-bottom:40px; align-items: flex-end;
-			.tag{width:252px;color:#333;height:50px;//vertical-align: middle;display:inline-block;
-				display:flex; align-items: flex-start;align-items: center;flex-wrap:wrap;
-				.must{display:inline-block;background:#0990D0;min-width:33px;border-radius: 3px;padding:0 3px;color:#fff;min-height:20px;margin-left:10px;flex-shrink: 0;line-height:20px;}
+			.tag{width:252px;display:flex; align-items: center;color:#333;height:50px;
+				.must{display:inline-block;background:#0990D0;min-width:33px;border-radius: 3px;padding:0 3px;color:#fff;min-height:20px;margin-left:10px;}
 			}
 			.inData{width:calc(100% - 252px);display:flex;flex-grow:1;position:relative;flex-wrap:wrap;
 				.check-btn{padding-right:30px;}

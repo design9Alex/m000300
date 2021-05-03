@@ -23,7 +23,7 @@ img{max-width:100%;}
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button ,input,textarea{
 -webkit-appearance: none;margin: 0;}
-input[type=number]{-moz-appearance: textfield;-webkit-appearance: none;}
+input[type=number]{-moz-appearance: textfield !important;-webkit-appearance: none;}
 input:disabled{background:none;}
 
 ::placeholder{color:#b2b2b2 !important;font-weight:300;}
@@ -116,6 +116,9 @@ main{width: 100% !important;margin:0;padding:0;overflow: hidden;
 		a{width:150px;@include height-set(37px,35px);padding:0 18px;
 			.fs_16{font-size:13px;}
 			.icon{top:-1px;}
+			&:hover{
+				.icon{transform:translateX(5px);}
+			}
 		}
 	}
 }
@@ -167,13 +170,13 @@ main{width: 100% !important;margin:0;padding:0;overflow: hidden;
 
 .page-inner{position: relative;
 	.guideline{content:'';width:1px;height:0;background:#d0d0d0;position: absolute;top: -73px;margin:auto;left:0;right:0;transition:height 1s ease-in-out; transition-delay:0.2s;
-		&.active{height:147px;}
+		&.active{height:110px;}
 	}
 	@media(max-width:992px){
 		&:before{height:40px;}
-		.guideline{
-			&.active{height:114px;}
-		}
+		// .guideline{
+		// 	&.active{height:114px;}
+		// }
 	}
 	@media(max-width:576px){
 		&:before{height:20px;}
@@ -185,20 +188,16 @@ main{width: 100% !important;margin:0;padding:0;overflow: hidden;
 
 /*breadnav*/
 .breadnav{padding-top:45px;
-	.navbox{
+	.navbox{padding-left:45px;
 		a{width:auto;color:#000;
 			&:hover{color:$blue;}
-			&:nth-of-type(1){padding-left:45px;}
 		}
 		.separate{color:#000;padding:0 8px;position: relative;top:-1px;}
 		span{color:#0990D0;}
 	}
 	@media(max-width:576px){padding-top:30px;
-		.navbox{text-align:center;
-			a{
-				&:nth-of-type(1){padding-left:0;}
-			}
-		}
+		.navbox{text-align:center;padding-left:15px;}
+
 	}
 }
 
@@ -368,6 +367,12 @@ a[class*='lightcase-icon-'].lightcase-icon-close{width:100px;/*bottom:calc(50% -
 }
 @media(max-height:768px){
 	a[class*='lightcase-icon-'].lightcase-icon-close{display:none !important;}
+}
+
+//colorbox-en
+@media(max-width:768px){
+    #cboxTitle{top:-41px;}
+	#cboxLoadedContent{margin:90px 20px 50px 20px;}
 }
 
 

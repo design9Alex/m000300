@@ -174,8 +174,7 @@
 }
 .home-products{
     .pd-bn{height:500px;position: relative;
-        .zoom{max-width:1570px;position: absolute;margin:auto;top:0;left:0;right:0;height:100%;
-            padding:0 25px;display:flex; align-items: center; justify-content: flex-end;
+        .zoom{max-width:1570px;position: absolute;margin:auto;top:0;left:0;right:0;height:100%;padding:0 25px;display:flex; align-items: center; justify-content: flex-end;
             .scriptbox{max-width:475px;padding-right:10px;}
         }
         @media(max-width:768px){
@@ -212,11 +211,10 @@
                     a,span{display:block;}
                     .pic{height:321px;position: relative;overflow: hidden;transition:all 0.5s ease-in-out;
                          .databox{background:rgba(0,0,0,0.3);position: absolute;width:100%;height:100%;left:0;color:#fff;
-                            @include trans-set(all);padding:0 25px;display:flex;flex-wrap:wrap;align-items: center;align-content:center;
-                            bottom:calc(-100% + 65px);//bottom:0;opacity:1;
-                            .tit{width:100%;text-align:center;padding-bottom:13px;font-size:24px;@include height-set(65px,65px);@include trans-set(all);padding-top:25px;opacity:0;padding-top:0;//opacity:1;
-                            }
-                            .script{width:100%;text-align:center;line-height:1.5;letter-spacing: 0.03em;opacity:0;@include trans-set(opacity);
+                            @include trans-set(all);padding:0 60px;display:flex;flex-wrap:wrap;align-items: center;align-content:center;
+                            bottom:calc(-100% + 65px);//bottom:0;
+                            .tit{width:100%;text-align:center;padding-bottom:13px;font-size:24px;@include height-set(65px,65px);@include trans-set(all);padding-top:25px;opacity:0;}
+                            .script{width:100%;text-align:center;line-height:2;letter-spacing: 0.03em;opacity:0;@include trans-set(opacity);
                                 &:before{content:'';display:block;width:32px;height:1px;background:#fff;margin:0 auto 20px auto;}
                             }
                         }
@@ -237,13 +235,8 @@
             .zoom{
                 .pd-list{
                     .item{
-                        .pic{height:380px;
-                            .databox{padding:0 15px;
-                                .tit{height:50px;line-height: 50px;}
-                                .script{
-                                    &:before{margin:0 auto 10px auto;}
-                                }
-                            }
+                        .pic{
+                            .databox{padding:0 30px;}
                         }
                     }
                 }
@@ -253,11 +246,11 @@
             .zoom{
                 .pd-list{
                     .item{
-                        .pic{height:280px;
-                            .databox{
+                        .pic{
+                            .databox{padding:0 15px;
                                 .script{
                                     overflow:hidden;-webkit-box-orient:vertical;display:-webkit-box;
-                                    -webkit-line-clamp: 5;line-height:24px;max-height:131px;
+                                    -webkit-line-clamp: 5;line-height:32px;max-height:180px;
                                 }
                             }
                         }

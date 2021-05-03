@@ -33,7 +33,7 @@
 .cboxIframe{background:#fff;}
 #cboxError{padding:50px; border:1px solid #ccc;}
 #cboxLoadedContent{margin:70px 20px;}
-#cboxTitle{position:absolute; text-align:center; color:#fff;height:auto;font-size:18px;text-align:center;font-weight:500;display:inline-block;min-width:250px;margin:0;left:50%;transform:translateX(-50%);text-align:center;line-height:1.5;padding:14px 15px;background:#0990D0;border-radius: 5px;top:-27px;height:55px;z-index:100;
+#cboxTitle{position:absolute; text-align:center; color:#fff;height:auto;font-size:18px;text-align:center;font-weight:500;display:inline-block;min-width:250px;margin:0;left:50%;transform:translateX(-50%);text-align:center;line-height:1.5;padding:14px 15px;background:#0990D0;border-radius: 5px;top:-27px;min-height:55px;z-index:100;
 }
 #cboxCurrent{position:absolute; bottom:0px; left:100px; color:#999;opacity:0;}
 #cboxLoadingOverlay{background:#fff url(../../images/common/loading.gif) center center no-repeat;}

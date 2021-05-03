@@ -179,7 +179,7 @@
                 .ciclebox{background:currentColor;width:130px;height:130px;min-width:130px;display:flex; align-items: center; justify-content: center;border-radius: 50%;
                     span{display:inline-block;color:#fff;}
                 }
-                .arrow{width:75px;padding:0 15px;display:flex;align-items: center;
+                .arrow{width:75px;padding:0 15px;display:flex;align-items: center;font-size:0;
                     &:before{content:'';display:inline-block;width:calc(100% - 6px);height:1px;background:#000;}
                     &:after{content:'';display:inline-block;width:6px;height:6px;background:url(images/common/icon-triangle.png);}
                     .icon{display:inline-block;
@@ -452,6 +452,9 @@
             }
         }
     }
+    @media(max-width:360px){
+
+    }
 
 }
 
@@ -510,7 +513,7 @@
         .zoom{
             &:before{width:120%;height:110%;top:auto;bottom:-25%;}
             a{flex-wrap:wrap; //justify-content: center;
-                .pd-data{width:100%;padding:20px 0 0 0;
+                .pd-data{width:100%;padding:20px 0 0 0;max-width:100%;
                     .text{line-height:1.7;}
                 }
                 .bg-img{width:100%;

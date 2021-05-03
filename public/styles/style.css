@@ -706,7 +706,7 @@ input[type=number]::-webkit-outer-spin-button, input, textarea {
 }
 
 input[type=number] {
-  -moz-appearance: textfield;
+  -moz-appearance: textfield !important;
   -webkit-appearance: none;
 }
 
@@ -976,6 +976,10 @@ main {
   }
   .readmore a .icon {
     top: -1px;
+  }
+  .readmore a:hover .icon {
+    -webkit-transform: translateX(5px);
+            transform: translateX(5px);
   }
 }
 
@@ -4616,6 +4620,7 @@ footer .ft-bottom .link-gray:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  font-size: 0;
 }
 
 .manufact-section .content .flow-chart .item .arrow:before {
@@ -5400,6 +5405,7 @@ footer .ft-bottom .link-gray:hover {
   .manufact-pdAdbox .zoom a .pd-data {
     width: 100%;
     padding: 20px 0 0 0;
+    max-width: 100%;
   }
   .manufact-pdAdbox .zoom a .pd-data .text {
     line-height: 1.7;
@@ -7464,6 +7470,7 @@ footer .ft-bottom .link-gray:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  font-size: 0;
 }
 
 .cell-medicinebox .medicine-chart .item .arrow:before, .cell-medicinebox .medicine-chart .item .arrow:after {
@@ -8149,6 +8156,8 @@ footer .ft-bottom .link-gray:hover {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 
 .pd-section .content .pdData .detail .item .script {

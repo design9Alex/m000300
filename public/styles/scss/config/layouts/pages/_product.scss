@@ -136,7 +136,7 @@
 			}
 			.detail{margin-top:35px;padding-right:40px;
 				.item{display:flex; align-content: flex-start;
-					.taglabel{color:#1B549E;border:1px solid #1B549E;border-radius: 5px;background:#fff;display:block;min-width:70px;padding:6px 7px;text-align:center;margin-right:15px;height:fit-content;flex-shrink: 0;}
+					.taglabel{color:#1B549E;border:1px solid #1B549E;border-radius: 5px;background:#fff;display:block;min-width:70px;padding:6px 7px;text-align:center;margin-right:15px;height:fit-content;}
 					.script{margin-top:3px;color:#333;line-height:1.75;}
 					& + .item{margin-top:10px;}
 				}
