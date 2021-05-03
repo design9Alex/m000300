@@ -25,7 +25,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <meta name="format-detection" content="telephone=no">
 <link rel="icon" type="image/x-icon" href="{{asset('styles/images/favicon.png?20210427')}}" />
-<link rel="stylesheet" type="text/css" href="{{asset('styles/style.css?2021')}}" />
+@if($rootUri == 'ja/')
+    <link rel="stylesheet" type="text/css" href="{{asset('styles/style.css?2021')}}" />
+@else
+    <link rel="stylesheet" type="text/css" href="{{asset('styles/style_en.css?2021')}}" />
+@endIf
 
 <!--[if lt IE 9]>
 <script src="{{asset('scripts/plugins/html5shiv.min.js')}}"></script>

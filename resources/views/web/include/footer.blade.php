@@ -1,7 +1,9 @@
 <footer>
     <div class="ft-top">
         <div class="content">
-            <div class="logo"><a href="/"><img src="{{url(array_get($BaseWebData,'system_logo.0.path','/styles/images/logo.svg'))}}" alt=""></a></div>
+            <!-- <div class="logo"><a href="/"><img src="{{url(array_get($BaseWebData,'system_logo.0.path','/styles/images/logo.svg'))}}" alt=""></a></div> -->
+            <div class="logo"><a href="/"><img src="/styles/images/logo-ft_aaspl.svg" alt=""></a></div>
+
             <div class="sitemap">
 
 
@@ -10,7 +12,9 @@
                     @if(array_get($item,'uri') != 'privacy')
                         <div class="item">
                             <a class="tag" href="{{array_get($item,'link')}}">
-                                <span class="icon"><img class="svg" src="/styles/images/common/menu-icon-01-blue.svg" alt=""></span>
+                                {{--<span class="icon"><img class="svg" src="/styles/images/common/menu-icon-01-blue.svg" alt=""></span>--}}
+
+                                <span class="icon"><img src="{{array_get($footerMenuIcon,array_get($item,'uri'))}}" alt=""></span>
                                 <span class="word fs_16">{{array_get($item,'title')}}</span>
                             </a>
                             @if(array_get($item,'uri') == 'contact')

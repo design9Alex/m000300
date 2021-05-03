@@ -42,10 +42,10 @@ class BaseController extends Controller
 
 
         $footerMenuIcon = array();
-        $footerMenuIcon['about'] = '/styles/images/common/menu-icon-01.svg';
-        $footerMenuIcon['manufacturing'] = '/styles/images/common/menu-icon-02.svg';
-        $footerMenuIcon['cellregeneration'] = '/styles/images/common/menu-icon-03.svg';
-        $footerMenuIcon['contact'] = '/styles/images/common/menu-icon-04.svg';
+        $footerMenuIcon['about'] = '/styles/images/common/menu-icon-01-blue.svg';
+        $footerMenuIcon['manufacturings'] = '/styles/images/common/menu-icon-02-blue.svg';
+        $footerMenuIcon['cellregenerations'] = '/styles/images/common/menu-icon-03-blue.svg';
+        $footerMenuIcon['contact'] = '/styles/images/common/menu-icon-04-blue.svg';
 
         $this->viewData['footerMenuIcon'] = $footerMenuIcon;
 

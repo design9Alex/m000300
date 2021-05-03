@@ -1,0 +1,59 @@
+
+$blue:#098FD0;//hover→#0679b1
+// $lightblue:#008DDA;
+$lightblue:#DBF2FD;
+$lightingblue:#E7E9EE;
+$gray:#333;
+$darkgray:#423C3C;
+$lightgray:#757575;
+$lightinggray:#F2F2F2;
+$orange:#FFB20F;
+
+.blue{color:$blue;}
+.blue-bg{background-color:$blue;}
+.lightblue{color:$lightblue;}
+.lightblue-bg{background-color:$lightblue;}
+.lightingblue-bg{background-color:$lightingblue;}
+.darkgray{color:$darkgray;}
+.gray{color:$gray;}
+.lightgray{color:$lightgray;}
+.lightinggray-bg{background-color:$lightinggray;}
+.orange{color:$orange;}
+
+.fw_bold{font-weight:400;}
+.fw_500{font-weight:400;}
+.fw_300{font-weight:300;}
+
+.manrope{font-family: 'Manrope','Noto Sans JP', sans-serif;}
+.poppins{font-family: 'Poppins','Noto Sans JP', sans-serif;}
+
+.lh-175{line-height:1.75;}
+
+@mixin trans-set($element) {transition: $element .3s ease-in-out;}
+@mixin trans-none{transition:none;}
+@mixin img-set{width:100%;height:auto;display:block;}
+@mixin height-set($h,$lh){height:$h;line-height:$lh;}
+
+.fs_36{font-size:36px;}
+.fs_28{font-size:24px;}
+.fs_26{font-size:24px;}
+.fs_24{font-size:22px;}
+.fs_20{font-size:20px;}
+.fs_18{font-size:18px;}
+.fs_16{font-size:16px;}
+.fs_15{font-size:15px;}
+.fs_14{font-size:14px;}
+.fs_13{font-size:13px;}
+.fs_12{font-size:12px;}
+
+@media(max-width:992px){
+
+}
+@media(max-width:576px){
+    .fs_36{font-size:26px;}
+    .fs_28{font-size:20px;}
+    .fs_24{font-size:18px;}
+    .fs_20{font-size:16px;}
+    .fs_18{font-size:15px;}
+    .fs_16{font-size:15px;}
+}

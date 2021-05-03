@@ -1,0 +1,38 @@
+@charset 'utf-8';
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('scss/plugins/bootstrap.min.css');
+@import url('scss/plugins/bootstrap-reboot.min.css');
+@import url('scss/plugins/bootstrap-select.css');
+@import url('scss/plugins/animate.css');
+@import url('scss/plugins/aos.css');
+@import url('scss/plugins/mCustomScrollbar.css');
+@import url('scss/plugins/slick.css');
+@import url('scss/plugins/slick-theme.css');
+@import url('scss/plugins/colorbox.css');
+
+
+@import 'plugins/lightcase/_lightcase.scss';
+
+// config
+@import 'config_en/_config.scss';
+
+// layouts
+@import 'layouts_en/_common.scss';
+@import 'layouts_en/_layouts.scss';
+
+// pages
+@import 'layouts_en/pages/_index.scss';
+@import 'layouts_en/pages/_about.scss';
+@import 'layouts_en/pages/_manufacturing.scss';
+@import 'layouts_en/pages/_research.scss';
+@import 'layouts_en/pages/_pdcell.scss';
+@import 'layouts_en/pages/_product.scss';
+@import 'layouts_en/pages/_contact.scss';
+@import 'layouts_en/pages/_privacy.scss';
+
+
+
+
+
