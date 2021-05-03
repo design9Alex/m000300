@@ -10,6 +10,7 @@ use Minmax\Base\Helpers\Captcha;
 use Illuminate\Http\Request;
 use Minmax\Inbox\Models\InboxCategory;
 use Minmax\Inbox\Models\InboxReceived;
+use Minmax\World\Models\WorldCountry;
 use Session;
 use Minmax\Base\Web\SiteParameterGroupRepository;
 use Minmax\Base\Web\SiteParameterItemRepository;
@@ -53,7 +54,10 @@ class ContactController extends BaseController
 
         $this->viewData['serviceItem'] = $serviceItem = siteParam('service-item');   //諮詢服務
         $this->viewData['participation'] = $participation = siteParam('participation');   //參加類別
-        $this->viewData['countrys'] = $countrys = siteParam('country');        //國家
+
+        //$this->viewData['countrys'] = $countrys = siteParam('country');        //國家
+        $this->viewData['countrys'] = $countrys = $worldCountry = WorldCountry::where('active',true)->orderBy('sort','asc')->get();        //國家
+        //dd($countrys[0]['title'],$countrys[0]['options']['tpn']);
         $this->viewData['contactItem'] = $contactItem = siteParam('contact-item');   //項目
 
         return response()

@@ -91,9 +91,9 @@
                                 </div>
                                 <div class="inData">
                                     <div class="col">
-                                        <select class="selectpicker fs_16" data-country="US" name="details[國家]" title="@lang('auth.please_select')" id="country">
+                                        <select class="selectpicker fs_16" data-country="US" name="details[國家]" title="@lang('auth.please_select')" id="country" data-live-search="true">
                                             @foreach($countrys as $key => $item)
-                                                <option {{ (old('details.國家') == array_get($item,'title')) ? 'selected="selected"':''}}>{{array_get($item,'title')}}</option>
+                                                <option {{ (old('details.國家') == array_get($item,'name')) ? 'selected="selected"':''}} data-tpn="{{array_get($item,'options.tpn')}}">{{array_get($item,'name')}}</option>
                                             @endForeach
                                         </select>
                                     </div>
@@ -231,6 +231,11 @@
             }
             pagePosition('position_page',-100);
             @endif
+
+
+            $('#country').change(function(){
+              $('#areacode').val($('#country option:selected').attr('data-tpn'));
+            });
 
 
             $('#contactForm').validate({

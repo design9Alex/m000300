@@ -42,7 +42,6 @@ class productController extends BaseController
         $this->viewData['articleElements'] = $articleElements = (new ArticleElementRepository)->getElementByCategory($uri)->get();
 
 
-
         return response()
             ->view('web.product', $this->viewData)
             ->header('X-Frame-Options', 'DENY');
