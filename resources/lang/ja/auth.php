@@ -42,5 +42,6 @@ return [
     'please_select' => '選択して下さい',
     'close' => '閉じる',
     'privacy' => 'プライバシーポリシー',
+    'placeholder' => '国名',
 
 ];

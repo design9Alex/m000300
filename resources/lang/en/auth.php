@@ -42,5 +42,6 @@ return [
     'please_select' => 'Please select',
     'close' => 'Close',
     'privacy' => 'Privacy Policy',
+    'placeholder' => 'enter country name',
 
 ];
