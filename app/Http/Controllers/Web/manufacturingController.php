@@ -31,7 +31,7 @@ class manufacturingController extends BaseController
 
 
         $seo = array();
-        $seo['title'] = $this->viewData['mainMenuData']->title;
+        $seo['title'] = $this->viewData['PageTitle'] = $this->viewData['mainMenuData']->title;
         $seo['description'] = array_get($this->viewData['mainMenuData'],'seo.meta_description');
         $seo['keywords'] = array_get($this->viewData['mainMenuData'],'seo.meta_keywords');
 
@@ -59,7 +59,7 @@ class manufacturingController extends BaseController
         $this->viewData['mainMenuDataPic'] = $mainMenuDataPic;
 
         $seo = array();
-        $seo['title'] = $this->viewData['mainMenuData']->title;
+        $seo['title'] = $this->viewData['PageTitle'] = $this->viewData['mainMenuData']->title;
         $seo['description'] = array_get($this->viewData['mainMenuData'],'seo.meta_description');
         $seo['keywords'] = array_get($this->viewData['mainMenuData'],'seo.meta_keywords');
 
