@@ -2,7 +2,6 @@
     $PageTitle = (isset($PageTitle))?$PageTitle." - ".$BaseWebData->website_name : $BaseWebData->website_name;
     $SEO_keywords = (isset($SEO_keywords)) ? $SEO_keywords : '';
     $SEO_description = (isset($SEO_description)) ? $SEO_description : '';
-
 @endphp
 
 <!-- Title and Meta
@@ -16,11 +15,11 @@
 
 <!-- Facebook Open Graph Meta
 ================================================== -->
-<meta property="og:title" content="" />
-<meta property="og:url" content="" />
-<meta property="og:site_name" content="" />
-<meta property="og:description" content="" />
-<meta property="og:image" content="" />
+<meta property="og:title" content="{{ $PageTitle }}" />
+{{--<meta property="og:url" content="" />--}}
+<meta property="og:site_name" content="{{$BaseWebData->website_name}}" />
+<meta property="og:description" content="{{ $seo['description'] ? $seo['description'] : $BaseWebData->seo['meta_description'] }}" />
+{{--<meta property="og:image" content="" />--}}
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <meta name="format-detection" content="telephone=no">
