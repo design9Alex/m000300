@@ -9,6 +9,6 @@
 <script src="{{asset('scripts/plugins/lightcase.js')}}"></script>
 <script src="{{asset('scripts/plugins/jquery.colorbox.js')}}"></script>
 <script src="{{asset('scripts/plugins/rellax.js')}}"></script>
-<script src="{{asset('scripts/default/ui.js?0204')}}"></script>
+<script src="{{asset('scripts/default/ui.js?v3')}}"></script>
 
 

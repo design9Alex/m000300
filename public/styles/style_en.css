@@ -8358,6 +8358,20 @@ footer .ft-bottom .link-gray:hover {
           order: 2;
   -webkit-transition-delay: 0.2s;
           transition-delay: 0.2s;
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+.pd-section .content .pdData.noscrollbar {
+  max-height: 100%;
+}
+
+.pd-section .content .pdData.noscrollbar .mCSB_container {
+  padding-top: 0;
+}
+
+.pd-section .content .pdData .mCSB_container {
+  padding-top: 25px;
 }
 
 .pd-section .content .pdData .sublabel {
@@ -8414,6 +8428,7 @@ footer .ft-bottom .link-gray:hover {
 .pd-section .content .pdData .detail {
   margin-top: 35px;
   padding-right: 40px;
+  padding-bottom: 25px;
 }
 
 .pd-section .content .pdData .detail .item {
@@ -8796,9 +8811,16 @@ footer .ft-bottom .link-gray:hover {
     max-width: 800px;
     margin: 0 auto;
     padding-top: 35px;
+    max-height: 100%;
+  }
+  .pd-section .content .pdData .mCSB_container {
+    padding-top: 0;
   }
   .pd-section .content .pdData .pdtext, .pd-section .content .pdData .ul-style, .pd-section .content .pdData .detail {
     padding-right: 0;
+  }
+  .pd-section .content .pdData .detail {
+    padding-bottom: 0;
   }
   .pd-section .content .pdData .pdremarks {
     display: block;

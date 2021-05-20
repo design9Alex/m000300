@@ -25,9 +25,9 @@
 <meta name="format-detection" content="telephone=no">
 <link rel="icon" type="image/x-icon" href="{{asset('styles/images/favicon.png?20210427')}}" />
 @if($rootUri == 'ja/')
-    <link rel="stylesheet" type="text/css" href="{{asset('styles/style.css?2021')}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset('styles/style.css?v3')}}" />
 @else
-    <link rel="stylesheet" type="text/css" href="{{asset('styles/style_en.css?2021')}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset('styles/style_en.css?v3')}}" />
 @endIf
 
 <!--[if lt IE 9]>

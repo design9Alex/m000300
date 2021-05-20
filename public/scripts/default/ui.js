@@ -1,6 +1,7 @@
 $(function(){
     //'use strict';
-    var wW = $(window).width();
+    var wW = $(window).width(),
+        outW = $(window).outerWidth();
 
 	/* ==========================================================================
 		initialize
@@ -28,14 +29,28 @@ $(function(){
         });
     });
 
+    //mCustomScrollbar
+    // if (!/Android/i.test(window.navigator.userAgent)) {
+    //     if($(window).outerWidth()>575){
+    //         $('.pdData').mCustomScrollbar({
+    //             axis: "y"
+    //         });
+    //     }
+    // }
 
+    // if($(window).outerWidth()>768){
+    //     $('.pdData').mCustomScrollbar({
+    //         axis: "y",
+    //         theme: "light",
+    //     });
+    // }
 
     /* ==========================================================================
 		header
     ==========================================================================*/
     //選單
 
-    if(wW > 992){
+    if(outW > 992){
         var timeoutId;
         $('nav .menu li').each(function(){
             $(this).find('.link').mouseenter(function(){
@@ -120,14 +135,8 @@ $(function(){
         var $wp = $(this),
             pageId = $wp.attr('id');
             pageTag = $wp.data('tag');
-
-
         $("#header .headerbox nav").find('.menu li[data-id="' + pageId + '"]').children('.link').addClass('current');
         $("#header  .headerbox nav .menu li.has-sm .submenu .content .sublist").find('li[data-tag="' + pageTag + '"]').children('a').addClass('active');
-
-        if(location.pathname.indexOf('products') > 0){
-            $("#header .headerbox nav").find('.menu li[data-id="cellregenerations"]').children('.link').addClass('current');
-        }
     });
 
 
@@ -148,18 +157,28 @@ $(function(){
         $(this).parents('.page-bt-linkbox').children('.bg-img').toggleClass('hover');
     });
 
+
     //product remarks 無資料就藏起來
     $(".pd-section .content").each(function(){
         var $databox= $(this).children('.imgbox').children('.pdremarks').children(".inData").html();
         var $imgremarks = $(this).children('.imgbox').children('.pdremarks');
         var $dataremarks = $(this).children('.pdData');
+        var scrollbaropt;
         if($databox==null||$databox==""||$databox=="&nbsp;"){
             // console.log("無資料");
             $imgremarks.addClass('hidden');
+            scrollbaropt = {
+                axis: "y",
+                // theme: "light",
+                theme: "minimal-dark",
+            }
         }else{
             // console.log("有資料")
             $dataremarks.append($imgremarks.clone());
+            scrollbaropt = 'destroy';
+            $dataremarks.addClass('noscrollbar');
         }
+        $dataremarks.mCustomScrollbar(scrollbaropt);
     });
 
 
