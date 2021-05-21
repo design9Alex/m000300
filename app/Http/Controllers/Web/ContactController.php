@@ -111,9 +111,13 @@ class ContactController extends BaseController
         $contactModel->save();
 
         //dd($contactModel->details);
-
-        event(new Received($contactModel));
-
+        try {
+            //event(new Received($contactModel));
+            //sendNotifyEmail('contact-received',$this->viewData['member']->badge['email'], [$attributes]);
+        } catch (Exception $e) {
+            //echo 'Caught exception: ',  $e->getMessage(), "\n";
+            dd($e->getMessage());
+        }
 
         return redirect(langRoute('web.contact-send'))->header('X-Frame-Options', 'DENY');
     }
