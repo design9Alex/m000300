@@ -52,7 +52,6 @@ class BaseController extends Controller
 
 
         $this->viewData['mainMenu'] = $mainMenu = (new WebMenuRepository)->getMenu($this->checkUriOrID((new WebMenuRepository),'root-header'));
-        //dd($mainMenu);
 
         $this->viewData['footerMenu'] = $footerMenu = (new WebMenuRepository)->getMenu($this->checkUriOrID((new WebMenuRepository),'root-footer'));
 
